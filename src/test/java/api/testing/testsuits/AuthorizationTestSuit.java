@@ -1,10 +1,10 @@
-package api.testing;
+package api.testing.testsuits;
 
 import api.testing.pojo.requests.LoginRequest;
 import api.testing.pojo.responses.LoginFailedEmptyCredsResponse;
 import api.testing.pojo.responses.LoginFailedInvalidCredsResponse;
-import api.testing.utils.login.LoginRequests;
-import api.testing.utils.login.LoginResponses;
+import utils.login.LoginRequests;
+import utils.login.LoginResponses;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.RestAssured;
@@ -17,6 +17,7 @@ import static io.restassured.RestAssured.given;
 
 public class AuthorizationTestSuit {
     private String loginUrl = "https://api.av.by/auth/login/sign-in";
+
     @DisplayName("Authorization testing. Positive case: login with valid credentials")
     @Test
     public void checkAuthorizationWithValidCredentials() throws JsonProcessingException {
@@ -159,7 +160,7 @@ public class AuthorizationTestSuit {
     @DisplayName("Authorization testing. Negative case: login with spaces before valid email. Spaces need to be trimmed.")
     @Test
     public void checkAuthorizationWithSpacesAfterValidEmail() {
-        LoginRequest request = LoginRequests.getLoginRequestBodyValidCredsWithSpacesAfterLogin()
+        LoginRequest request = LoginRequests.getLoginRequestBodyValidCredsWithSpacesAfterLogin();
         given().contentType("application/json").log().body()
                 .body(request)
                 .when().post(loginUrl).then().statusCode(200);

@@ -1,2 +1,143 @@
-package po;public class HomePage {
+package po;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import driver.Singleton;
+import org.openqa.selenium.WebElement;
+
+import java.time.Duration;
+
+public class HomePage {
+    public WebDriver driver;
+    private String copyrightLocator = "//p[@class = 'footer__copy']";
+    private String loginButtonLocator = "//span[@class = 'nav__link-text'] [text() = 'Войти']";
+    private String cookiesButtonSubmitLocator = "//button[@class = 'button button--primary button--block button--large']";
+    private String profileDropDownMenuLocator = "//li[@class = 'nav__item nav__item--user nav__item--dropdown']";
+    private String financeTabLocator = "//span[@class = 'nav__link-text'][text() = 'Финансы']";
+    private String transportTabLocator = "//span[@class = 'nav__link-text'][text() = 'Транспорт']";
+    private String partTabLocator = "//span[@class = 'nav__link-text'][text() = 'Запчасти и шины']";
+    private String newsTabLocator = "//span[@class = 'nav__link-text'][text() = 'Журнал']";
+    private String infoTabLocator = "//span[@class = 'nav__link-text'][text() = 'Знания']";
+    private String vinCheckTabLocator = "//span[@class = 'nav__link-text'][text() ='Проверка VIN']";
+    private String addNewOfferButtonLocator = "//button[@class = 'button button--primary button--block button--small']";
+    private String brandDropdownButtonLocator = "//span[@class ='dropdown-floatlabel__value'][text() = 'Марка']";
+    private String selectedCarLocator = "//li[@class ='dropdown__listitem']/ button[@data-item-label = 'Audi']";
+    private String modelDropdownButtonLocator = "//span[@class = 'dropdown-floatlabel__value'][text() = 'Модель']";
+    private String selectModelLocator = "//li[@class ='dropdown__listitem']/button[@data-item-label = 'Q2']";
+    private String carGenerationDropDownLocator = "//span[@class = 'dropdown-floatlabel__value'][text() = 'Поколение']";
+    private String selectedCarGenerationLocator = "//div[@class = 'dropdown__card']";
+    private String yearFromDropDownLocator = "//span[@class = 'dropdown-floatlabel__value'][text() = 'Год от']";
+    private String selectedYearFromLocator = "//ul[@class='dropdown-list dropdown-list--opened']//button[@data-item-label='2015']";
+    private String yearUntilDropDownLocator = "//span[@class = 'dropdown-floatlabel__value'][text() = 'до']";
+    private String selectedYearUntil = "//ul[@class = 'dropdown-list dropdown-list--opened']//button[@data-item-label = '2023']";
+    private String priceFromDropDownMenuLocator = "//input[@id='p-9-price_usd']";
+    private String priceUntilDropDownMenuLocator = "//div[@class ='richinput-control'] //input [@id='p-9-price_usd']";
+
+    public HomePage() {
+        driver = Singleton.getDriver();
+    }
+
+    public void openHomePage() {
+        driver.get("https://av.by/");
+    }
+
+    public void openLoginForm() {
+        driver.findElement(By.xpath(loginButtonLocator)).click();
+    }
+
+    public void submitCookies() {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        driver.findElement(By.xpath(cookiesButtonSubmitLocator)).click();
+    }
+
+    public void openPersonalAccountPage() {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.findElement(By.xpath(profileDropDownMenuLocator)).click();
+    }
+
+    public String getCopyrightText() {
+        return driver.findElement(By.xpath(copyrightLocator)).getText();
+    }
+
+    public void openFinancePage() {
+        driver.findElement(By.xpath(financeTabLocator)).click();
+    }
+
+    public void openTransportPage() {
+        driver.findElement(By.xpath(transportTabLocator)).click();
+    }
+
+    public void openPartPage() {
+        driver.findElement(By.xpath(partTabLocator)).click();
+    }
+
+    public void openNewsPage() {
+        driver.findElement(By.xpath(newsTabLocator)).click();
+    }
+
+    public void openInfoPage() {
+        driver.findElement(By.xpath(infoTabLocator)).click();
+    }
+
+    public void openVinCheckPage() {
+        driver.findElement(By.xpath(vinCheckTabLocator)).click();
+    }
+
+    public void clickAddNewOfferButton() {
+        driver.findElement(By.xpath(addNewOfferButtonLocator)).click();
+    }
+
+    public void openBrandDropDownMenu() {
+        driver.findElement(By.xpath(brandDropdownButtonLocator)).click();
+    }
+
+    public void selectCarBrand() {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        driver.findElement(By.xpath(selectedCarLocator)).click();
+    }
+
+    public void openModelDropDownMenu() throws InterruptedException {
+        Thread.sleep(2000);
+        driver.findElement(By.xpath(modelDropdownButtonLocator)).click();
+    }
+
+    public void selectCarModel() {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        driver.findElement(By.xpath(selectModelLocator)).click();
+    }
+    public void openCarGenerationDropDownMenu() throws InterruptedException {
+    Thread.sleep(2000);
+        driver.findElement(By.xpath(carGenerationDropDownLocator)).click();
+    }
+    public void selectCarGeneration() {
+        driver.findElement(By.xpath(selectedCarGenerationLocator)).click();
+    }
+    public void openYearFromDropDown() {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        driver.findElement(By.xpath(yearFromDropDownLocator)).click();
+    }
+    public void selectYearFrom() {
+        driver.findElement(By.xpath(selectedYearFromLocator)).click();
+    }
+    public void openYearUntilDropDown() {
+       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        driver.findElement(By.xpath(yearUntilDropDownLocator)).click();
+    }
+    public void selectYearUntil() {
+       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        driver.findElement(By.xpath(selectedYearUntil)).click();
+    }
+    public void inputPriceFrom(String priceFrom) {
+       WebElement priceInputFieldElement = driver.findElement(By.xpath(priceFromDropDownMenuLocator));
+       priceInputFieldElement.click();
+       priceInputFieldElement.sendKeys(priceFrom);
+    }
+    public void inputPriceUntil(String priceUntil) throws InterruptedException {
+        Thread.sleep(5000);
+        WebElement priceInputFieldElement = driver.findElement(By.xpath(priceUntilDropDownMenuLocator));
+        priceInputFieldElement.click();
+        priceInputFieldElement.sendKeys(priceUntil);
+    }
+
 }

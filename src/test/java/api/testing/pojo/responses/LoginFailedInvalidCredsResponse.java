@@ -1,4 +1,4 @@
-package api.testing.pojo;
+package api.testing.pojo.responses;
 
 import java.util.Objects;
 

@@ -1,6 +1,5 @@
-package api.testing.pojo;
+package api.testing.pojo.responses;
 
-import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Objects;
 

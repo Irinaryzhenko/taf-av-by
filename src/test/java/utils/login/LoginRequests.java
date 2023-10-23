@@ -1,4 +1,4 @@
-package api.testing.utils.login;
+package utils.login;
 
 import api.testing.pojo.requests.LoginRequest;
 

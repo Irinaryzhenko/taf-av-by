@@ -1,4 +1,4 @@
-package ui.testing;
+package po;
 
 import driver.Singleton;
 import org.openqa.selenium.By;

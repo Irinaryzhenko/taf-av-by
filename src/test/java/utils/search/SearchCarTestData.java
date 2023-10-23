@@ -1,4 +1,4 @@
-package api.testing.utils.search;
+package utils.search;
 
 public class SearchCarTestData {
     private static String carBrandRequestBody = "{\n" +

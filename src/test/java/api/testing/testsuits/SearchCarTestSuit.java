@@ -1,6 +1,6 @@
-package api.testing;
+package api.testing.testsuits;
 
-import api.testing.utils.search.SearchCarTestData;
+import utils.search.SearchCarTestData;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
@@ -10,7 +10,7 @@ import static org.hamcrest.Matchers.equalTo;
 public class SearchCarTestSuit {
     private String searchCarWithFilterUrl = "https://api.av.by/offer-types/cars/filters/main/apply";
     private String searchResultResponseKey = "seo.canonicalPage.url";
-    @DisplayName("Check searching any car without filtres")
+    @DisplayName("Check searching any car without filters")
     @Test
     public void checkSearchingAnyCar() {
         when().get("https://cars.av.by/filter").then().log().status()

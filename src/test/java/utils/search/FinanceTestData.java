@@ -1,4 +1,4 @@
-package api.testing.utils.search;
+package utils.search;
 
 public class FinanceTestData {
     private static String allCreditOffersRequestBody = "{\n" +

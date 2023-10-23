@@ -1,6 +1,6 @@
-package api.testing;
+package api.testing.testsuits;
 
-import api.testing.utils.search.FinanceTestData;
+import utils.search.FinanceTestData;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
