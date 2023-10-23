@@ -1,4 +1,4 @@
-package utils.search;
+package domain.search;
 
 public class FinanceTestData {
     private static String allCreditOffersRequestBody = "{\n" +

@@ -5,7 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import po.HomePage;
 import po.VinCheckPage;
-import utils.vincode.Generator;
+import domain.vincode.Generator;
 
 public class VinCheckerTest extends BaseTest {
     @DisplayName("Check VinChecker with valid vin code")

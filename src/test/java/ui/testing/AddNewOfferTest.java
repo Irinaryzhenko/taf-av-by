@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import po.HomePage;
 import po.LoginFormPage;
 import po.NewOfferPage;
-import utils.login.LoginRequestTestData;
+import domain.login.LoginRequestTestData;
 
 public class AddNewOfferTest extends BaseTest {
     @DisplayName("Check adding new offer by non-authorized user")

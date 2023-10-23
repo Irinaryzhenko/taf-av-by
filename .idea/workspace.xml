@@ -4,40 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/driver/Singleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/driver/Singleton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/FinancePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/FinancePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/InfoPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/InfoPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/LoginFormPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/LoginFormPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/NewOfferPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/NewOfferPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/NewsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/NewsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/PartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/PartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/PersonalAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/PersonalAccountPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/TransportPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/TransportPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/VinCheckPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/VinCheckPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/testing/pojo/requests/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testing/pojo/requests/LoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/testing/pojo/responses/LoginFailedEmptyCredsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testing/pojo/responses/LoginFailedEmptyCredsResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/testing/pojo/responses/LoginFailedInvalidCredsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testing/pojo/responses/LoginFailedInvalidCredsResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/AuthorizationTestSuit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/AuthorizationTestSuit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/FinanceTestSuit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/FinanceTestSuit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/OpenPagesTestSuit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/OpenPagesTestSuit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/SearchCarTestSuit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/SearchCarTestSuit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/AddNewOfferTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/AddNewOfferTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/LoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/OpenPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/OpenPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/SearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/VinCheckerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/VinCheckerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/login/LoginRequestTestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/login/LoginRequestTestData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/login/LoginRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/login/LoginRequests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/login/LoginResponses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/login/LoginResponses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/search/FinanceTestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/search/FinanceTestData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/search/SearchCarTestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/search/SearchCarTestData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/vincode/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/vincode/Generator.java" afterDir="false" />
-    </list>
+    <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="add new methods" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -180,7 +147,19 @@
       <option name="presentableId" value="Default" />
       <updated>1695906014273</updated>
     </task>
+    <task id="LOCAL-00001" summary="add new methods">
+      <created>1698077253195</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698077253195</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add new methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new methods" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

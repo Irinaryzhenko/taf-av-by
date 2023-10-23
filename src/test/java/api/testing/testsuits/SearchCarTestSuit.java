@@ -1,6 +1,6 @@
 package api.testing.testsuits;
 
-import utils.search.SearchCarTestData;
+import domain.search.SearchCarTestData;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;

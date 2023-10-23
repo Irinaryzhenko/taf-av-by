@@ -1,6 +1,7 @@
 package utils.login;
 
 import api.testing.pojo.requests.LoginRequest;
+import domain.login.LoginRequestTestData;
 
 public class LoginRequests {
     public static LoginRequest getLoginRequestBodyValidCreds() {

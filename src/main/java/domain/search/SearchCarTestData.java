@@ -1,4 +1,4 @@
-package utils.search;
+package domain.search;
 
 public class SearchCarTestData {
     private static String carBrandRequestBody = "{\n" +

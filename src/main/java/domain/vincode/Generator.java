@@ -1,4 +1,4 @@
-package utils.vincode;
+package domain.vincode;
 
 import java.util.Random;
 

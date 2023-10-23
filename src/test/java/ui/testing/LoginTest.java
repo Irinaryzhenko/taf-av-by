@@ -3,7 +3,7 @@ package ui.testing;
 import org.junit.jupiter.api.Assertions;
 import po.LoginFormPage;
 import po.PersonalAccountPage;
-import utils.login.LoginRequestTestData;
+import domain.login.LoginRequestTestData;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import po.HomePage;
