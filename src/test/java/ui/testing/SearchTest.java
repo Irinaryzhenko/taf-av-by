@@ -23,8 +23,11 @@ public class SearchTest extends BaseTest {
         homePage.selectYearUntil();
         homePage.inputPriceFrom("10000");
         homePage.inputPriceUntil("50000");
-
-
+        homePage.openEngineCapacityFromDropDownMenu();
+        homePage.selectEngineCapacityFrom();
+        homePage.openEngineCapacityUntilDropDownMenu();
+        homePage.selectEngineCapacityUntil();
+        homePage.submitSearchQuery();
     }
 
 

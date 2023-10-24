@@ -1,11 +1,9 @@
 package po;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import driver.Singleton;
 import org.openqa.selenium.WebElement;
-
 import java.time.Duration;
 
 public class HomePage {
@@ -33,7 +31,11 @@ public class HomePage {
     private String selectedYearUntil = "//ul[@class = 'dropdown-list dropdown-list--opened']//button[@data-item-label = '2023']";
     private String priceFromDropDownMenuLocator = "//input[@id='p-9-price_usd']";
     private String priceUntilDropDownMenuLocator = "//div[@class ='richinput-control'] //input [@id='p-9-price_usd']";
-
+    private String engineCapacityFromDropDownLocator ="//div[@class='dropdown__box']/button[@name = 'p-12-engine_capacity']//span[@class = 'dropdown-floatlabel__value'][text() = 'Объём от']";
+    private String selectedCapacityFromLocator = "//ul[@class = 'dropdown-list dropdown-list--opened']/li[@class = 'dropdown__listitem']/button[@data-item-label = '1,6 л.']";
+    private String engineCapacityUntilDropDownLocator = "//div[@class = 'dropdown__box']//span[@class = 'dropdown-floatlabel__value'][text() = 'до']";
+    private String selectedCapacityUntilLocator = "//ul[@class = 'dropdown-list dropdown-list--opened']/li[@class = 'dropdown__listitem']/button[@data-item-label = '3,0 л.']";
+    private String showResultsButtonLocator = "//div[@class = 'filter__show-result']";
     public HomePage() {
         driver = Singleton.getDriver();
     }
@@ -133,11 +135,28 @@ public class HomePage {
        priceInputFieldElement.click();
        priceInputFieldElement.sendKeys(priceFrom);
     }
-    public void inputPriceUntil(String priceUntil) throws InterruptedException {
-        Thread.sleep(5000);
+    public void inputPriceUntil(String priceUntil) {
         WebElement priceInputFieldElement = driver.findElement(By.xpath(priceUntilDropDownMenuLocator));
         priceInputFieldElement.click();
         priceInputFieldElement.sendKeys(priceUntil);
+    }
+    public void openEngineCapacityFromDropDownMenu() {
+        driver.findElement(By.xpath(engineCapacityFromDropDownLocator)).click();
+    }
+    public void selectEngineCapacityFrom() {
+        driver.findElement(By.xpath(selectedCapacityFromLocator)).click();
+    }
+    public void openEngineCapacityUntilDropDownMenu() {
+        driver.findElement(By.xpath(engineCapacityUntilDropDownLocator)).click();
+    }
+    public void selectEngineCapacityUntil() {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        driver.findElement(By.xpath(selectedCapacityUntilLocator)).click();
+
+    }
+    public void submitSearchQuery() {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        driver.findElement(By.xpath(showResultsButtonLocator)).click();
     }
 
 }

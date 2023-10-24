@@ -58,8 +58,4 @@ public class LoginRequests {
         loginRequest.password = LoginRequestTestData.getValidPassword();
         return loginRequest;
     }
-
-
-
-
 }
