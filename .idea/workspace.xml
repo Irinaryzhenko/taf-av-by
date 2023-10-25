@@ -4,11 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="refactor structure">
+    <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="add test methods&#10;create searchresult page object">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/CommonSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/LoginSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/NewOfferSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/SearchSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ui/testing/test_suits/SearchTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/po/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/SearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/login/LoginRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/login/LoginRequests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/po/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/SearchResultPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/AddNewOfferTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/test_suits/AddNewOfferTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/test_suits/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/test_suits/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/OpenPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/test_suits/OpenPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/SearchTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/VinCheckerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/test_suits/VinCheckerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,80 +64,82 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SearchTest.searchCar">
-    <configuration name="AddNewOfferTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AddNewOfferTest.addNewOfferByNonAuthUser">
+    <configuration name="AddNewOfferTest.addNewOfferByNonAuthUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ui.testing.*" />
+          <option name="PATTERN" value="ui.testing.test_suits.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ui.testing" />
-      <option name="MAIN_CLASS_NAME" value="ui.testing.AddNewOfferTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OpenPageTest.openNewsPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="taf-av-by" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ui.testing.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ui.testing" />
-      <option name="MAIN_CLASS_NAME" value="ui.testing.OpenPageTest" />
-      <option name="METHOD_NAME" value="openNewsPageTest" />
+      <option name="PACKAGE_NAME" value="ui.testing.test_suits" />
+      <option name="MAIN_CLASS_NAME" value="ui.testing.test_suits.AddNewOfferTest" />
+      <option name="METHOD_NAME" value="addNewOfferByNonAuthUser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchTest.searchCar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AddNewOfferTest.checkUserPossibilityToAddNewOffer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ui.testing.*" />
+          <option name="PATTERN" value="ui.testing.test_suits.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ui.testing" />
-      <option name="MAIN_CLASS_NAME" value="ui.testing.SearchTest" />
-      <option name="METHOD_NAME" value="searchCar" />
+      <option name="PACKAGE_NAME" value="ui.testing.test_suits" />
+      <option name="MAIN_CLASS_NAME" value="ui.testing.test_suits.AddNewOfferTest" />
+      <option name="METHOD_NAME" value="checkUserPossibilityToAddNewOffer" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VinCheckerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginTest.loginWithInvalidLoginValidPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ui.testing.*" />
+          <option name="PATTERN" value="ui.testing.test_suits.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ui.testing" />
-      <option name="MAIN_CLASS_NAME" value="ui.testing.VinCheckerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="ui.testing.test_suits" />
+      <option name="MAIN_CLASS_NAME" value="ui.testing.test_suits.LoginTest" />
+      <option name="METHOD_NAME" value="loginWithInvalidLoginValidPassword" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VinCheckerTest.vinCheckerWithValidVinCode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginTest.loginWithValidCredentials" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ui.testing.*" />
+          <option name="PATTERN" value="ui.testing.test_suits.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ui.testing" />
-      <option name="MAIN_CLASS_NAME" value="ui.testing.VinCheckerTest" />
-      <option name="METHOD_NAME" value="vinCheckerWithValidVinCode" />
+      <option name="PACKAGE_NAME" value="ui.testing.test_suits" />
+      <option name="MAIN_CLASS_NAME" value="ui.testing.test_suits.LoginTest" />
+      <option name="METHOD_NAME" value="loginWithValidCredentials" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest.loginWithValidLoginInvalidPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="taf-av-by" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ui.testing.test_suits.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ui.testing.test_suits" />
+      <option name="MAIN_CLASS_NAME" value="ui.testing.test_suits.LoginTest" />
+      <option name="METHOD_NAME" value="loginWithValidLoginInvalidPassword" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -135,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SearchTest.searchCar" />
-        <item itemvalue="JUnit.VinCheckerTest" />
-        <item itemvalue="JUnit.VinCheckerTest.vinCheckerWithValidVinCode" />
-        <item itemvalue="JUnit.AddNewOfferTest" />
-        <item itemvalue="JUnit.OpenPageTest.openNewsPageTest" />
+        <item itemvalue="JUnit.AddNewOfferTest.addNewOfferByNonAuthUser" />
+        <item itemvalue="JUnit.AddNewOfferTest.checkUserPossibilityToAddNewOffer" />
+        <item itemvalue="JUnit.LoginTest.loginWithValidCredentials" />
+        <item itemvalue="JUnit.LoginTest.loginWithInvalidLoginValidPassword" />
+        <item itemvalue="JUnit.LoginTest.loginWithValidLoginInvalidPassword" />
       </list>
     </recent_temporary>
   </component>
@@ -166,27 +178,20 @@
       <option name="project" value="LOCAL" />
       <updated>1698085128807</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add test methods&#10;create searchresult page object">
+      <created>1698148176296</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1698148176296</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add new methods" />
     <MESSAGE value="refactor structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor structure" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/ui/testing/SearchTest.java</url>
-          <line>9</line>
-          <properties class="ui.testing.SearchTest" method="searchCar">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="add test methods&#10;create searchresult page object" />
+    <option name="LAST_COMMIT_MESSAGE" value="add test methods&#10;create searchresult page object" />
   </component>
 </project>

@@ -15,7 +15,7 @@ import org.junit.jupiter.api.Test;
 import java.io.IOException;
 import static io.restassured.RestAssured.given;
 
-public class AuthorizationTestSuit {
+public class AuthorizationTest {
     private String loginUrl = "https://api.av.by/auth/login/sign-in";
 
     @DisplayName("Authorization testing. Positive case: login with valid credentials")

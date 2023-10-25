@@ -1,4 +1,4 @@
-package ui.testing;
+package ui.testing.test_suits;
 
 import driver.Singleton;
 import org.junit.jupiter.api.AfterEach;
@@ -9,8 +9,8 @@ public class BaseTest {
     public void setupDriver() {
         Singleton.getDriver();
     }
-//    @AfterEach
-//    public void closeDriver() {
-//        Singleton.quitDriver();
-//    }
+    @AfterEach
+    public void closeDriver() {
+        Singleton.quitDriver();
+    }
 }

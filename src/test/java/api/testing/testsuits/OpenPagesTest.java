@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.when;
 import static org.hamcrest.Matchers.equalTo;
 
-public class OpenPagesTestSuit {
+public class OpenPagesTest {
     @DisplayName("Check opening the Home page - status code")
     @Test
     public void checkStatusCodeHomePage() {

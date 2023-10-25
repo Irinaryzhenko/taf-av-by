@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class FinanceTestSuit {
+public class FinanceTest {
     private String financeSearchUrl = "https://api.av.by/finance/products/search";
     @DisplayName("Check offer for credits")
     @Test

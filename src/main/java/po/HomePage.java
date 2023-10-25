@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import java.time.Duration;
 
 public class HomePage {
+
     public WebDriver driver;
     private String copyrightLocator = "//p[@class = 'footer__copy']";
     private String loginButtonLocator = "//span[@class = 'nav__link-text'] [text() = 'Войти']";
@@ -95,12 +96,16 @@ public class HomePage {
     }
 
     public void selectCarBrand() {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.findElement(By.xpath(selectedCarLocator)).click();
     }
 
-    public void openModelDropDownMenu() throws InterruptedException {
-        Thread.sleep(2000);
+    public void openModelDropDownMenu(){
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         driver.findElement(By.xpath(modelDropdownButtonLocator)).click();
     }
 
@@ -108,8 +113,12 @@ public class HomePage {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         driver.findElement(By.xpath(selectModelLocator)).click();
     }
-    public void openCarGenerationDropDownMenu() throws InterruptedException {
-    Thread.sleep(2000);
+    public void openCarGenerationDropDownMenu() {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         driver.findElement(By.xpath(carGenerationDropDownLocator)).click();
     }
     public void selectCarGeneration() {
@@ -158,5 +167,4 @@ public class HomePage {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         driver.findElement(By.xpath(showResultsButtonLocator)).click();
     }
-
 }

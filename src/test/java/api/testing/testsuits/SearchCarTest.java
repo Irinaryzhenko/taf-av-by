@@ -7,7 +7,7 @@ import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.when;
 import static org.hamcrest.Matchers.equalTo;
 
-public class SearchCarTestSuit {
+public class SearchCarTest {
     private String searchCarWithFilterUrl = "https://api.av.by/offer-types/cars/filters/main/apply";
     private String searchResultResponseKey = "seo.canonicalPage.url";
     @DisplayName("Check searching any car without filters")
