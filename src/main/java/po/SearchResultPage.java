@@ -31,10 +31,7 @@ public class SearchResultPage {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         return driver.findElement(By.xpath(topCarPriceLocator)).getText();
     }
-//    public String getTopCarParamsText() {
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-//        return driver.findElement(By.xpath(topCarParamsLocator)).getText();
-//    }
+
     public void getCarSearchTopResult() {
         String actualTitleTopCar = getTitleTopCarText();
         String actualPriceTopCar = getTopCarPriceText();
@@ -74,9 +71,9 @@ public class SearchResultPage {
         String actualPrice = priceElement.getText();
         System.out.println(actualPrice);
         int price = Integer.parseInt(actualPrice.replaceAll("[^0-9]", ""));
-        boolean isPriceInPange = price >= 10000 && price <= 50000;
+        boolean isPriceInRange = price >= 10000 && price <= 50000;
         Assertions.assertEquals("Audi Q2 I", actualText);
-        Assertions.assertTrue(isPriceInPange);
+        Assertions.assertTrue(isPriceInRange);
     }
 
     @Override

@@ -4,21 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="add test methods&#10;create searchresult page object">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/CommonSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/LoginSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/NewOfferSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/SearchSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ui/testing/test_suits/SearchTest.java" afterDir="false" />
+    <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="add search car test&#10;add step classes">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/VinCheckerSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/po/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/SearchResultPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/AddNewOfferTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/test_suits/AddNewOfferTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/test_suits/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/test_suits/LoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/OpenPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/test_suits/OpenPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/SearchTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/VinCheckerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/test_suits/VinCheckerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/test_suits/VinCheckerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/test_suits/VinCheckerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,8 +54,8 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AddNewOfferTest.addNewOfferByNonAuthUser">
-    <configuration name="AddNewOfferTest.addNewOfferByNonAuthUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SearchTest.searchCarByPopularParams">
+    <configuration name="SearchTest.searchCarByPopularParams" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
         <pattern>
@@ -74,14 +64,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ui.testing.test_suits" />
-      <option name="MAIN_CLASS_NAME" value="ui.testing.test_suits.AddNewOfferTest" />
-      <option name="METHOD_NAME" value="addNewOfferByNonAuthUser" />
+      <option name="MAIN_CLASS_NAME" value="ui.testing.test_suits.SearchTest" />
+      <option name="METHOD_NAME" value="searchCarByPopularParams" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddNewOfferTest.checkUserPossibilityToAddNewOffer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VinCheckerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
         <pattern>
@@ -90,14 +80,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ui.testing.test_suits" />
-      <option name="MAIN_CLASS_NAME" value="ui.testing.test_suits.AddNewOfferTest" />
-      <option name="METHOD_NAME" value="checkUserPossibilityToAddNewOffer" />
+      <option name="MAIN_CLASS_NAME" value="ui.testing.test_suits.VinCheckerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VinCheckerTest.vinCheckerWithInvalidFormatOfCharactersOfVinCode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="taf-av-by" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ui.testing.test_suits.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ui.testing.test_suits" />
+      <option name="MAIN_CLASS_NAME" value="ui.testing.test_suits.VinCheckerTest" />
+      <option name="METHOD_NAME" value="vinCheckerWithInvalidFormatOfCharactersOfVinCode" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTest.loginWithInvalidLoginValidPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VinCheckerTest.vinCheckerWithInvalidNumberOfCharactersOfVinCode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
         <pattern>
@@ -106,14 +111,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ui.testing.test_suits" />
-      <option name="MAIN_CLASS_NAME" value="ui.testing.test_suits.LoginTest" />
-      <option name="METHOD_NAME" value="loginWithInvalidLoginValidPassword" />
+      <option name="MAIN_CLASS_NAME" value="ui.testing.test_suits.VinCheckerTest" />
+      <option name="METHOD_NAME" value="vinCheckerWithInvalidNumberOfCharactersOfVinCode" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTest.loginWithValidCredentials" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VinCheckerTest.vinCheckerWithValidVinCode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
         <pattern>
@@ -122,24 +127,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ui.testing.test_suits" />
-      <option name="MAIN_CLASS_NAME" value="ui.testing.test_suits.LoginTest" />
-      <option name="METHOD_NAME" value="loginWithValidCredentials" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginTest.loginWithValidLoginInvalidPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="taf-av-by" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ui.testing.test_suits.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ui.testing.test_suits" />
-      <option name="MAIN_CLASS_NAME" value="ui.testing.test_suits.LoginTest" />
-      <option name="METHOD_NAME" value="loginWithValidLoginInvalidPassword" />
+      <option name="MAIN_CLASS_NAME" value="ui.testing.test_suits.VinCheckerTest" />
+      <option name="METHOD_NAME" value="vinCheckerWithValidVinCode" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -147,11 +136,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AddNewOfferTest.addNewOfferByNonAuthUser" />
-        <item itemvalue="JUnit.AddNewOfferTest.checkUserPossibilityToAddNewOffer" />
-        <item itemvalue="JUnit.LoginTest.loginWithValidCredentials" />
-        <item itemvalue="JUnit.LoginTest.loginWithInvalidLoginValidPassword" />
-        <item itemvalue="JUnit.LoginTest.loginWithValidLoginInvalidPassword" />
+        <item itemvalue="JUnit.SearchTest.searchCarByPopularParams" />
+        <item itemvalue="JUnit.VinCheckerTest.vinCheckerWithInvalidFormatOfCharactersOfVinCode" />
+        <item itemvalue="JUnit.VinCheckerTest.vinCheckerWithInvalidNumberOfCharactersOfVinCode" />
+        <item itemvalue="JUnit.VinCheckerTest.vinCheckerWithValidVinCode" />
+        <item itemvalue="JUnit.VinCheckerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -185,13 +174,21 @@
       <option name="project" value="LOCAL" />
       <updated>1698148176296</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add search car test&#10;add step classes">
+      <created>1698229422772</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698229422772</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add new methods" />
     <MESSAGE value="refactor structure" />
     <MESSAGE value="add test methods&#10;create searchresult page object" />
-    <option name="LAST_COMMIT_MESSAGE" value="add test methods&#10;create searchresult page object" />
+    <MESSAGE value="add search car test&#10;add step classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="add search car test&#10;add step classes" />
   </component>
 </project>
