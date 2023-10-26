@@ -4,11 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="add search car test&#10;add step classes">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/VinCheckerSteps.java" afterDir="false" />
+    <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="add VinCheckerSteps">
+      <change afterPath="$PROJECT_DIR$/src/main/java/domain/search/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/util/Waiter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4jk.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/po/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/po/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/SearchResultPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/test_suits/VinCheckerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/test_suits/VinCheckerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/AuthorizationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/AuthorizationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/steps/SearchSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/SearchSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/test_suits/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/test_suits/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/test_suits/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/test_suits/SearchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/login/LoginRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/LoginRequests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/login/LoginResponses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/LoginResponses.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +64,16 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.SearchTest.searchCarByPopularParams">
+    <configuration name="DemoSearchTest.testAudiSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="taf-av-by" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DemoSearchTest" />
+      <option name="METHOD_NAME" value="testAudiSearch" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SearchTest.searchCarByPopularParams" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
@@ -67,21 +86,6 @@
       <option name="MAIN_CLASS_NAME" value="ui.testing.test_suits.SearchTest" />
       <option name="METHOD_NAME" value="searchCarByPopularParams" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VinCheckerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="taf-av-by" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ui.testing.test_suits.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ui.testing.test_suits" />
-      <option name="MAIN_CLASS_NAME" value="ui.testing.test_suits.VinCheckerTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -137,10 +141,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.SearchTest.searchCarByPopularParams" />
+        <item itemvalue="JUnit.DemoSearchTest.testAudiSearch" />
         <item itemvalue="JUnit.VinCheckerTest.vinCheckerWithInvalidFormatOfCharactersOfVinCode" />
         <item itemvalue="JUnit.VinCheckerTest.vinCheckerWithInvalidNumberOfCharactersOfVinCode" />
         <item itemvalue="JUnit.VinCheckerTest.vinCheckerWithValidVinCode" />
-        <item itemvalue="JUnit.VinCheckerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698229422772</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add VinCheckerSteps">
+      <created>1698230626342</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1698230626342</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -189,6 +200,7 @@
     <MESSAGE value="refactor structure" />
     <MESSAGE value="add test methods&#10;create searchresult page object" />
     <MESSAGE value="add search car test&#10;add step classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="add search car test&#10;add step classes" />
+    <MESSAGE value="add VinCheckerSteps" />
+    <option name="LAST_COMMIT_MESSAGE" value="add VinCheckerSteps" />
   </component>
 </project>

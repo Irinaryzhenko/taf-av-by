@@ -1,4 +1,4 @@
-package utils.login;
+package utils;
 
 import api.testing.pojo.responses.LoginFailedEmptyCredsResponse;
 import api.testing.pojo.responses.LoginFailedInvalidCredsResponse;

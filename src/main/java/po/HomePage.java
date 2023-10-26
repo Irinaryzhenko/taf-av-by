@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import driver.Singleton;
 import org.openqa.selenium.WebElement;
+import util.Waiter;
+
 import java.time.Duration;
 
 public class HomePage {
@@ -101,11 +103,7 @@ public class HomePage {
     }
 
     public void openModelDropDownMenu(){
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        Waiter.waitFor(3);
         driver.findElement(By.xpath(modelDropdownButtonLocator)).click();
     }
 
@@ -114,11 +112,7 @@ public class HomePage {
         driver.findElement(By.xpath(selectModelLocator)).click();
     }
     public void openCarGenerationDropDownMenu() {
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        Waiter.waitFor(3);
         driver.findElement(By.xpath(carGenerationDropDownLocator)).click();
     }
     public void selectCarGeneration() {
