@@ -1,4 +1,4 @@
-package ui.testing.test_suits;
+package ui.testing.testsuits;
 
 import driver.Singleton;
 import org.junit.jupiter.api.AfterEach;

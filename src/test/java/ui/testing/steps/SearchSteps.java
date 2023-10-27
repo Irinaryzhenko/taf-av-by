@@ -1,9 +1,13 @@
 package ui.testing.steps;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import po.HomePage;
 import po.SearchResultPage;
+import ui.testing.testsuits.SearchTest;
 
 public class SearchSteps extends CommonSteps {
+    private static final Logger logger = LogManager.getLogger(SearchSteps.class);
     private static HomePage homePage;
     private static SearchResultPage searchResultPage;
 
@@ -56,5 +60,6 @@ public class SearchSteps extends CommonSteps {
         searchResultPage.getCarPriceSearchResult();
         searchResultPage.checkCarSearchParamsText();
         searchResultPage.checkCarSearchResult();
+        logger.info("Search result has been got");
     }
 }

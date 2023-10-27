@@ -1,4 +1,4 @@
-package ui.testing.test_suits;
+package ui.testing.testsuits;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

@@ -10,6 +10,7 @@ import util.Waiter;
 import java.time.Duration;
 import java.util.List;
 
+
 public class SearchResultPage {
     WebDriver driver;
     private String topCarTitleLocator = "//h3[@class ='listing-top__title']";
@@ -22,6 +23,7 @@ public class SearchResultPage {
     boolean isPriceInRange;
     private boolean isYearInRange;
     private boolean isCapacityInRange;
+
 
 
     public SearchResultPage() {
@@ -43,7 +45,7 @@ public class SearchResultPage {
     }
 
     public void checkCarSearchTopResult() {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
         String actualTitleTopCar = getTitleTopCarText();
         String actualPriceTopCar = getTopCarPriceText();
         int topPrice = Integer.parseInt(actualPriceTopCar.replaceAll("[^0-9]", ""));
