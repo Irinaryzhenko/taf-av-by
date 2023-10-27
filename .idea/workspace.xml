@@ -4,20 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="add VinCheckerSteps">
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/search/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/Waiter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4jk.xml" afterDir="false" />
+    <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="add checkSearchResult method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/search/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/search/Car.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/po/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/SearchResultPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/AuthorizationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/AuthorizationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/steps/SearchSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/SearchSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/test_suits/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/test_suits/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/test_suits/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/test_suits/SearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/login/LoginRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/LoginRequests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/login/LoginResponses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/LoginResponses.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698230626342</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add checkSearchResult method">
+      <created>1698305629505</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1698305629505</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -201,6 +200,7 @@
     <MESSAGE value="add test methods&#10;create searchresult page object" />
     <MESSAGE value="add search car test&#10;add step classes" />
     <MESSAGE value="add VinCheckerSteps" />
-    <option name="LAST_COMMIT_MESSAGE" value="add VinCheckerSteps" />
+    <MESSAGE value="add checkSearchResult method" />
+    <option name="LAST_COMMIT_MESSAGE" value="add checkSearchResult method" />
   </component>
 </project>

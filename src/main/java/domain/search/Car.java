@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Car {
     private String name;
-       private double capacity;
+    private double capacity;
     private int year;
     private int price;
 

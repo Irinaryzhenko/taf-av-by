@@ -46,9 +46,9 @@ public class SearchSteps extends CommonSteps {
         homePage.submitSearchQuery();
     }
 
-    public static void checkTopResult() {
+    public static void checkTopCarSearchResult() {
         searchResultPage = new SearchResultPage();
-        searchResultPage.getCarSearchTopResult();
+        searchResultPage.checkCarSearchTopResult();
     }
 
     public static void checkCarSearchResult() {
