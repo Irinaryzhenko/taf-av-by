@@ -5,7 +5,7 @@ import po.HomePage;
 public class CommonSteps {
     private static HomePage homePage;
 
-    public static void startIteration() {
+    public static void startWorking() {
         homePage = new HomePage();
         homePage.openHomePage();
         try {

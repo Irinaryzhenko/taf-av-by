@@ -23,9 +23,6 @@ public class SearchResultPage {
     boolean isPriceInRange;
     private boolean isYearInRange;
     private boolean isCapacityInRange;
-
-
-
     public SearchResultPage() {
         driver = Singleton.getDriver();
     }

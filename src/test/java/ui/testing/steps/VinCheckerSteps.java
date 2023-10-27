@@ -2,12 +2,15 @@ package ui.testing.steps;
 
 import domain.vincode.Generator;
 import org.junit.jupiter.api.Assertions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import po.HomePage;
 import po.VinCheckPage;
 
 public class VinCheckerSteps extends CommonSteps {
     private static HomePage homePage = new HomePage();
     private static VinCheckPage vinCheckPage = new VinCheckPage();
+    private final static Logger logger = LoggerFactory.getLogger(VinCheckerSteps.class);
 
     public static void inputValidVinCodeInChecker() {
         homePage.openVinCheckPage();
@@ -16,8 +19,10 @@ public class VinCheckerSteps extends CommonSteps {
     }
 
     public static void checkValidVinCode() {
-        Assertions.assertEquals("Купить отчёт",
+        String expectedPhrase = "Купить отчёт";
+        Assertions.assertEquals(expectedPhrase,
                 vinCheckPage.getBuyVinCodeResultButtonText());
+        logger.info("VinCode has been checked. User sees: \"{}\",", expectedPhrase);
     }
 
     public static void inputInvalidNumberVinCodeInChecker() {
@@ -26,8 +31,10 @@ public class VinCheckerSteps extends CommonSteps {
         vinCheckPage.clickCheckVinCode();
     }
     public static void checkInvalidNumberVinCode() {
-        Assertions.assertEquals("VIN-номер состоит из 17 символов",
+        String expectedPhrase = "VIN-номер состоит из 17 символов";
+        Assertions.assertEquals(expectedPhrase,
                 vinCheckPage.getErrorNumberVinMessageText());
+        logger.info("Vin Code is invalid, User sees \"{}\"", expectedPhrase);
     }
     public static void inputInvalidFormatVinCode() {
         homePage.openVinCheckPage();
@@ -35,7 +42,9 @@ public class VinCheckerSteps extends CommonSteps {
         vinCheckPage.clickCheckVinCode();
     }
     public static void checkInvalidFormatVinCode() {
-        Assertions.assertEquals("Неверно указан VIN-номер",
+        String expectedPhrase = "Неверно указан VIN-номер";
+        Assertions.assertEquals(expectedPhrase,
                 vinCheckPage.getErrorVinFormatMessageText());
+        logger.info("VinCode is invalid format. User sees \"{}\"", expectedPhrase);
     }
 }

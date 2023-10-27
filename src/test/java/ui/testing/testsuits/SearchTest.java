@@ -8,7 +8,7 @@ public class SearchTest extends BaseTest {
     @DisplayName("Check searching car Audi")
     @Test
     public void searchCarByPopularParams() {
-        SearchSteps.startIteration();
+        SearchSteps.startWorking();
         SearchSteps.selectCarBrand();
         SearchSteps.selectCarModel();
         SearchSteps.selectGeneration();

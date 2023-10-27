@@ -9,7 +9,7 @@ public class AddNewOfferTest extends BaseTest {
     @DisplayName("Check adding new offer by non-authorized user")
     @Test
     public void addNewOfferByNonAuthUser() {
-        LoginSteps.startIteration();
+        LoginSteps.startWorking();
         NewOfferSteps.addNewOffer();
         LoginSteps.checkNeedLoginTitle();
     }
@@ -17,7 +17,7 @@ public class AddNewOfferTest extends BaseTest {
     @DisplayName("Check adding new offer by authorized user")
     @Test
     public void checkUserPossibilityToAddNewOffer() {
-        LoginSteps.startIteration();
+        LoginSteps.startWorking();
         LoginSteps.openLoginFormViaEmail();
         LoginSteps.fillAuthDataWithValidCreds();
         NewOfferSteps.addNewOffer();

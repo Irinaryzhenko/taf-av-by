@@ -1,13 +1,12 @@
 package ui.testing.steps;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import po.HomePage;
 import po.SearchResultPage;
-import ui.testing.testsuits.SearchTest;
 
 public class SearchSteps extends CommonSteps {
-    private static final Logger logger = LogManager.getLogger(SearchSteps.class);
+    private final static Logger logger = LoggerFactory.getLogger(SearchSteps.class);
     private static HomePage homePage;
     private static SearchResultPage searchResultPage;
 
@@ -51,15 +50,16 @@ public class SearchSteps extends CommonSteps {
     }
 
     public static void checkTopCarSearchResult() {
+        logger.info("Checking top result");
         searchResultPage = new SearchResultPage();
         searchResultPage.checkCarSearchTopResult();
     }
 
     public static void checkCarSearchResult() {
+        logger.info("Checking result");
         searchResultPage.getCarTitleSearchResults();
         searchResultPage.getCarPriceSearchResult();
         searchResultPage.checkCarSearchParamsText();
         searchResultPage.checkCarSearchResult();
-        logger.info("Search result has been got");
     }
 }
