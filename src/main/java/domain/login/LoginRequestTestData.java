@@ -4,13 +4,13 @@ import java.security.SecureRandom;
 import java.util.Random;
 
 public class LoginRequestTestData {
-    private static String validLogin = "irisha_box@mail.ru";
-    private static String validPassword = "qatestteam12";
+    private final static String VALID_LOGIN = "irisha_box@mail.ru";
+    private final static String VALID_PASSWORD = "qatestteam12";
     public static String getValidLogin() {
-        return validLogin;
+        return VALID_LOGIN;
     }
     public static String getValidPassword() {
-        return validPassword;
+        return VALID_PASSWORD;
     }
 
     public static String generatePassword() {

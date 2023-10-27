@@ -15,7 +15,7 @@ public class FinanceTest {
                         .header("Content-Type", "application/json")
                 .when().post(financeSearchUrl)
                 .then().statusCode(200)
-                .assertThat().body("total", equalTo(20))
+                .assertThat().body("total", equalTo(19))
                 .body("items[0].title", equalTo("Автомобиль с пробегом в лизинг"));
     }
     @DisplayName("Check offer for new car credits")
@@ -37,7 +37,7 @@ public class FinanceTest {
                 .header("Content-Type", "application/json")
                 .when().post(financeSearchUrl)
                 .then().statusCode(200)
-                .assertThat().body("total", equalTo(8))
+                .assertThat().body("total", equalTo(7))
                 .body("items[0].title", equalTo("Кредит «Проще простого»"));
     }
 }

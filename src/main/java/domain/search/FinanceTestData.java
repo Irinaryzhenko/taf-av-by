@@ -1,15 +1,18 @@
 package domain.search;
 
 public class FinanceTestData {
-    private static String allCreditOffersRequestBody = "{\n" +
-            "    \"category\": \"null\"\n" +
-            "}";
-    private static String newCarCreditOfferRequestBody = "{\n" +
-            "    \"category\": \"new_cars\"\n" +
-            "}";
-    private static String truckCreditOfferRequestBody =  "{\n" +
-            "    \"category\": \"truck\"\n" +
-            "}";
+    private static String allCreditOffersRequestBody = """
+            {
+                "category": "null"
+            }""";
+    private static String newCarCreditOfferRequestBody = """
+            {
+                "category": "new_cars"
+            }""";
+    private static String truckCreditOfferRequestBody = """
+            {
+                "category": "truck"
+            }""";
 
     public static String getTruckCreditOfferRequestBody() {
         return truckCreditOfferRequestBody;

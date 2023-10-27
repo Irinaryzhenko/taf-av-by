@@ -1,96 +1,100 @@
 package domain.search;
 
 public class SearchCarTestData {
-    private static String carBrandRequestBody = "{\n" +
-            "    \"page\": 1,\n" +
-            "    \"properties\": [\n" +
-            "        {\n" +
-            "            \"name\": \"brands\",\n" +
-            "            \"property\": 6,\n" +
-            "            \"value\": [\n" +
-            "                [\n" +
-            "                    {\n" +
-            "                        \"name\": \"brand\",\n" +
-            "                        \"value\": 1444\n" +
-            "                    }\n" +
-            "                ]\n" +
-            "            ]\n" +
-            "        },\n" +
-            "        {\n" +
-            "            \"name\": \"price_currency\",\n" +
-            "            \"value\": 2\n" +
-            "        }\n" +
-            "    ],\n" +
-            "    \"sorting\": 1\n" +
-            "}";
-    private static String transmissionTypeRequestBody = "{\n" +
-            "    \"page\": 1,\n" +
-            "    \"properties\": [\n" +
-            "        {\n" +
-            "            \"name\": \"brands\",\n" +
-            "            \"property\": 6,\n" +
-            "            \"value\": [\n" +
-            "                [\n" +
-            "                    {\n" +
-            "                        \"name\": \"brand\",\n" +
-            "                        \"value\": 1\n" +
-            "                    }\n" +
-            "                ]\n" +
-            "            ]\n" +
-            "        },\n" +
-            "        {\n" +
-            "            \"name\": \"price_currency\",\n" +
-            "            \"value\": 2\n" +
-            "        },\n" +
-            "        {\n" +
-            "            \"name\": \"transmission_type\",\n" +
-            "            \"value\": 1\n" +
-            "        }\n" +
-            "    ],\n" +
-            "    \"sorting\": 1\n" +
-            "}";
-    private static String customTextRequestBody = "{\n" +
-            "    \"page\": 1,\n" +
-            "    \"properties\": [\n" +
-            "        {\n" +
-            "            \"name\": \"brands\",\n" +
-            "            \"property\": 6,\n" +
-            "            \"value\": [\n" +
-            "                [\n" +
-            "                    {\n" +
-            "                        \"name\": \"brand\",\n" +
-            "                        \"value\": 589\n" +
-            "                    }\n" +
-            "                ]\n" +
-            "            ]\n" +
-            "        },\n" +
-            "        {\n" +
-            "            \"name\": \"price_currency\",\n" +
-            "            \"value\": 2\n" +
-            "        },\n" +
-            "        {\n" +
-            "            \"name\": \"description\",\n" +
-            "            \"value\": \"мультируль\"\n" +
-            "        }\n" +
-            "    ],\n" +
-            "    \"sorting\": 1\n" +
-            "}";
-    private static String bodyTypeRequestBody = "{\n" +
-            "    \"page\": 1,\n" +
-            "    \"properties\": [\n" +
-            "        {\n" +
-            "            \"name\": \"price_currency\",\n" +
-            "            \"value\": 2\n" +
-            "        },\n" +
-            "        {\n" +
-            "            \"name\": \"body_type\",\n" +
-            "            \"value\": [\n" +
-            "                7\n" +
-            "            ]\n" +
-            "        }\n" +
-            "    ],\n" +
-            "    \"sorting\": 1\n" +
-            "}";
+    private static String carBrandRequestBody = """
+            {
+                "page": 1,
+                "properties": [
+                    {
+                        "name": "brands",
+                        "property": 6,
+                        "value": [
+                            [
+                                {
+                                    "name": "brand",
+                                    "value": 1444
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        "name": "price_currency",
+                        "value": 2
+                    }
+                ],
+                "sorting": 1
+            }""";
+    private static String transmissionTypeRequestBody = """
+            {
+                "page": 1,
+                "properties": [
+                    {
+                        "name": "brands",
+                        "property": 6,
+                        "value": [
+                            [
+                                {
+                                    "name": "brand",
+                                    "value": 1
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        "name": "price_currency",
+                        "value": 2
+                    },
+                    {
+                        "name": "transmission_type",
+                        "value": 1
+                    }
+                ],
+                "sorting": 1
+            }""";
+    private static String customTextRequestBody = """
+            {
+                "page": 1,
+                "properties": [
+                    {
+                        "name": "brands",
+                        "property": 6,
+                        "value": [
+                            [
+                                {
+                                    "name": "brand",
+                                    "value": 589
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        "name": "price_currency",
+                        "value": 2
+                    },
+                    {
+                        "name": "description",
+                        "value": "мультируль"
+                    }
+                ],
+                "sorting": 1
+            }""";
+    private static String bodyTypeRequestBody = """
+            {
+                "page": 1,
+                "properties": [
+                    {
+                        "name": "price_currency",
+                        "value": 2
+                    },
+                    {
+                        "name": "body_type",
+                        "value": [
+                            7
+                        ]
+                    }
+                ],
+                "sorting": 1
+            }""";
 
     public static String getTransmissionTypeRequestBody() {
         return transmissionTypeRequestBody;

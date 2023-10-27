@@ -16,16 +16,17 @@ import java.io.IOException;
 import static io.restassured.RestAssured.given;
 
 public class AuthorizationTest {
-    private String loginUrl = "https://api.av.by/auth/login/sign-in";
+    private final static String LOGIN_URL = "https://api.av.by/auth/login/sign-in";
+    private final static String CONTENT_TYPE = "application/json";
 
     @DisplayName("Authorization testing. Positive case: login with valid credentials")
     @Test
-    public void checkAuthorizationWithValidCredentials() throws JsonProcessingException {
+    public void checkAuthorizationWithValidCredentials() {
         LoginRequest request = LoginRequests.getLoginRequestBodyValidCreds();
 
-        given().contentType("application/json").log().body()
+        given().contentType(CONTENT_TYPE).log().body()
                 .body(request)
-                .when().post(loginUrl).then().statusCode(200);
+                .when().post(LOGIN_URL).then().statusCode(200);
     }
 
     @DisplayName("Authorization testing. Negative case: login with empty redentials")
@@ -35,9 +36,9 @@ public class AuthorizationTest {
         ObjectMapper objectMapperRequest = new ObjectMapper();
         var requestBody = objectMapperRequest.writeValueAsString(request);
         Response responseBody = RestAssured
-                .given().contentType("application/json").log().body()
+                .given().contentType(CONTENT_TYPE).log().body()
                 .body(requestBody)
-                .when().post(loginUrl);
+                .when().post(LOGIN_URL);
         if (responseBody.getStatusCode() == 400) {
 
             String response = responseBody.getBody().asString();
@@ -57,9 +58,9 @@ public class AuthorizationTest {
         var requestBody = objectMapperRequest.writeValueAsString(request);
 
         Response responseBody = RestAssured
-                .given().contentType("application/json")
+                .given().contentType(CONTENT_TYPE)
                 .body(requestBody).log().body()
-                .when().post(loginUrl);
+                .when().post(LOGIN_URL);
         if (responseBody.getStatusCode() == 400) {
 
             String response = responseBody.getBody().asString();
@@ -77,9 +78,9 @@ public class AuthorizationTest {
         ObjectMapper objectMapperRequest = new ObjectMapper();
         var requestBody = objectMapperRequest.writeValueAsString(request);
         Response responseBody = RestAssured
-                .given().contentType("application/json")
+                .given().contentType(CONTENT_TYPE)
                 .body(requestBody).log().body()
-                .when().post(loginUrl);
+                .when().post(LOGIN_URL);
         if (responseBody.getStatusCode() == 400) {
 
             String response = responseBody.getBody().asString();
@@ -92,14 +93,14 @@ public class AuthorizationTest {
 
     @DisplayName("Authorization testing. Negative case: login with non-existing user's credentials ")
     @Test
-    public void checkAuthorizationWithInvalidCredentials() throws IOException, JsonProcessingException {
+    public void checkAuthorizationWithInvalidCredentials() throws IOException {
         LoginRequest request = LoginRequests.getLoginRequestBodyInvalidCreds();
         ObjectMapper objectMapperRequest = new ObjectMapper();
         var requestBody = objectMapperRequest.writeValueAsString(request);
         Response responseBody = RestAssured
-                .given().contentType("application/json")
+                .given().contentType(CONTENT_TYPE)
                 .body(requestBody).log().body()
-                .when().post(loginUrl);
+                .when().post(LOGIN_URL);
 
         if (responseBody.getStatusCode() == 400) {
 
@@ -118,9 +119,9 @@ public class AuthorizationTest {
         ObjectMapper objectMapperRequest = new ObjectMapper();
         var requestBody = objectMapperRequest.writeValueAsString(request);
         Response responseBody = RestAssured
-                .given().contentType("application/json")
+                .given().contentType(CONTENT_TYPE)
                 .body(requestBody).log().body()
-                .when().post(loginUrl);
+                .when().post(LOGIN_URL);
         if (responseBody.getStatusCode() == 400) {
 
             String response = responseBody.getBody().asString();
@@ -137,9 +138,9 @@ public class AuthorizationTest {
         ObjectMapper objectMapperRequest = new ObjectMapper();
         var requestBody = objectMapperRequest.writeValueAsString(request);
         Response responseBody = RestAssured
-                .given().contentType("application/json")
+                .given().contentType(CONTENT_TYPE)
                 .body(requestBody).log().body()
-                .when().post(loginUrl);
+                .when().post(LOGIN_URL);
         String response = responseBody.getBody().asString();
         ObjectMapper objectMapper = new ObjectMapper();
         LoginFailedInvalidCredsResponse loginResponse = objectMapper.readValue(response, LoginFailedInvalidCredsResponse.class);
@@ -152,17 +153,17 @@ public class AuthorizationTest {
     public void checkAuthorizationWithSpacesBeforeValidLogin() {
         LoginRequest request = LoginRequests.getLoginRequestBodyValidCredsWithSpacesBeforeLogin();
 
-        given().contentType("application/json").log().body()
+        given().contentType(CONTENT_TYPE).log().body()
                 .body(request)
-                .when().post(loginUrl).then().statusCode(200);
+                .when().post(LOGIN_URL).then().statusCode(200);
     }
 
     @DisplayName("Authorization testing. Negative case: login with spaces before valid email. Spaces need to be trimmed.")
     @Test
     public void checkAuthorizationWithSpacesAfterValidEmail() {
         LoginRequest request = LoginRequests.getLoginRequestBodyValidCredsWithSpacesAfterLogin();
-        given().contentType("application/json").log().body()
+        given().contentType(CONTENT_TYPE).log().body()
                 .body(request)
-                .when().post(loginUrl).then().statusCode(200);
+                .when().post(LOGIN_URL).then().statusCode(200);
     }
 }
