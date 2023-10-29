@@ -38,7 +38,7 @@ public class OpenPageTest extends BaseTest {
         HomePage homePage = new HomePage();
         homePage.openHomePage();
         homePage.openTransportPage();
-        TransportPage transportPage = new TransportPage();
+        VehiclePage transportPage = new VehiclePage();
         Assertions.assertEquals("Объявления о продаже автомобилей с пробегом в Беларуси",
                 transportPage.getTransportTitleText());
     }

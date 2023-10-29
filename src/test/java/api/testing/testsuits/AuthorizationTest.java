@@ -23,7 +23,7 @@ public class AuthorizationTest {
     @DisplayName("Authorization testing. Positive case: login with valid credentials")
     @Test
     public void checkAuthorizationWithValidCredentials() {
-        LoginRequest request = LoginRequests.getLoginRequestBodyValidCreds();
+        LoginRequest request = LoginRequests.getLoginRequestBodyValidCredentials();
 
         given().contentType(Constant.getContentType()).log().body()
                 .body(request)
@@ -34,7 +34,7 @@ public class AuthorizationTest {
     @DisplayName("Authorization testing. Negative case: login with empty credentials")
     @Test
     public void checkAuthorizationWithEmptyCredentials() throws IOException {
-        LoginRequest request = LoginRequests.getLoginRequestBodyEmptyCreds();
+        LoginRequest request = LoginRequests.getLoginRequestBodyEmptyCredentals();
         ObjectMapper objectMapperRequest = new ObjectMapper();
         var requestBody = objectMapperRequest.writeValueAsString(request);
         Response responseBody = RestAssured
@@ -100,7 +100,7 @@ public class AuthorizationTest {
     @DisplayName("Authorization testing. Negative case: login with non-existing user's credentials ")
     @Test
     public void checkAuthorizationWithInvalidCredentials() throws IOException {
-        LoginRequest request = LoginRequests.getLoginRequestBodyInvalidCreds();
+        LoginRequest request = LoginRequests.getLoginRequestBodyInvalidCredentials();
         ObjectMapper objectMapperRequest = new ObjectMapper();
         var requestBody = objectMapperRequest.writeValueAsString(request);
         Response responseBody = RestAssured

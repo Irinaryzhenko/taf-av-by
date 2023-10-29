@@ -1,6 +1,6 @@
 package ui.testing.steps;
 
-import domain.login.LoginRequestTestData;
+import domain.login.LoginTestData;
 import org.junit.jupiter.api.Assertions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,26 +18,26 @@ public class LoginSteps {
     }
     public static void fillAuthDataWithInvalidCredentials() {
         logger.info("Invalid creds have been generated and filled in login form");
-        loginFormPage.fillLoginPasswordField(LoginRequestTestData.generateLogin(),
-                LoginRequestTestData.generatePassword());
+        loginFormPage.fillLoginPasswordField(LoginTestData.generateLogin(),
+                LoginTestData.generatePassword());
         loginFormPage.submitAuthData();
     }
     public static void fillAuthDataWithValidloginInvalidPassword() {
         logger.info("Invalid password has been generated , valid login has been filled in login form");
-        loginFormPage.fillLoginPasswordField(LoginRequestTestData.getValidLogin(),
-                LoginRequestTestData.generatePassword());
+        loginFormPage.fillLoginPasswordField(LoginTestData.getValidLogin(),
+                LoginTestData.generatePassword());
         loginFormPage.submitAuthData();
     }
     public static void fillAuthDataInvalidLoginValidPasswords() {
         logger.info("Invalid Login has been generated and filled in the login form with valid password");
-        loginFormPage.fillLoginPasswordField(LoginRequestTestData.generateLogin(),
-                LoginRequestTestData.getValidPassword());
+        loginFormPage.fillLoginPasswordField(LoginTestData.generateLogin(),
+                LoginTestData.getValidPassword());
         loginFormPage.submitAuthData();
     }
     public static void fillAuthDataWithValidCredentials() {
         logger.info("Valid credentials have been filled in the login form");
-        loginFormPage.fillLoginPasswordField(LoginRequestTestData.getValidLogin(),
-                LoginRequestTestData.getValidPassword());
+        loginFormPage.fillLoginPasswordField(LoginTestData.getValidLogin(),
+                LoginTestData.getValidPassword());
         loginFormPage.submitAuthData();
     }
     public static void checkErrorMessageLoginInvalidCredentials() {

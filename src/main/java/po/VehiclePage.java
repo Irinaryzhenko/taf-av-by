@@ -6,11 +6,11 @@ import org.openqa.selenium.WebDriver;
 
 import java.time.Duration;
 
-public class TransportPage {
+public class VehiclePage {
     WebDriver driver;
     private String transportTitleLocator = "//h1[@class = 'heading__text']";
 
-    public TransportPage() {
+    public VehiclePage() {
         driver = Singleton.getDriver();
     }
     public String getTransportTitleText() {

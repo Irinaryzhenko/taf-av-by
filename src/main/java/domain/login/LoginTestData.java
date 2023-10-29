@@ -3,7 +3,7 @@ package domain.login;
 import java.security.SecureRandom;
 import java.util.Random;
 
-public class LoginRequestTestData {
+public class LoginTestData {
     private final static String VALID_LOGIN = "irisha_box@mail.ru";
     private final static String VALID_PASSWORD = "qatestteam12";
     public static String getValidLogin() {

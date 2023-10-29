@@ -1,22 +1,22 @@
 package utils;
 
 import api.testing.pojo.requests.LoginRequest;
-import domain.login.LoginRequestTestData;
+import domain.login.LoginTestData;
 
 public class LoginRequests {
-    public static LoginRequest getLoginRequestBodyValidCreds() {
+    public static LoginRequest getLoginRequestBodyValidCredentials() {
         LoginRequest loginRequest = new LoginRequest();
-        loginRequest.login = LoginRequestTestData.getValidLogin();
-        loginRequest.password = LoginRequestTestData.getValidPassword();
+        loginRequest.login = LoginTestData.getValidLogin();
+        loginRequest.password = LoginTestData.getValidPassword();
         return loginRequest;
     }
-    public static LoginRequest getLoginRequestBodyInvalidCreds() {
+    public static LoginRequest getLoginRequestBodyInvalidCredentials() {
         LoginRequest loginRequest = new LoginRequest();
-        loginRequest.login = LoginRequestTestData.generateLogin();
-        loginRequest.password = LoginRequestTestData.generatePassword();
+        loginRequest.login = LoginTestData.generateLogin();
+        loginRequest.password = LoginTestData.generatePassword();
         return loginRequest;
     }
-    public static LoginRequest getLoginRequestBodyEmptyCreds() {
+    public static LoginRequest getLoginRequestBodyEmptyCredentals() {
         LoginRequest loginRequest = new LoginRequest();
         loginRequest.login = "";
         loginRequest.password = "";
@@ -25,37 +25,37 @@ public class LoginRequests {
     public static LoginRequest getLoginRequestBodyEmptyloginAnyPassword() {
         LoginRequest loginRequest = new LoginRequest();
         loginRequest.login = "";
-        loginRequest.password = LoginRequestTestData.generatePassword();
+        loginRequest.password = LoginTestData.generatePassword();
         return loginRequest;
     }
     public static LoginRequest getLoginRequestBodyEmptyPasswordAnylogin() {
         LoginRequest loginRequest = new LoginRequest();
-        loginRequest.login = LoginRequestTestData.generateLogin();
+        loginRequest.login = LoginTestData.generateLogin();
         loginRequest.password = "";
         return loginRequest;
     }
     public static LoginRequest getLoginRequestBodyValidLoginInvalidPassword() {
         LoginRequest loginRequest = new LoginRequest();
-        loginRequest.login = LoginRequestTestData.getValidLogin();
-        loginRequest.password = LoginRequestTestData.generatePassword();
+        loginRequest.login = LoginTestData.getValidLogin();
+        loginRequest.password = LoginTestData.generatePassword();
         return loginRequest;
     }
     public static LoginRequest getLoginRequestBodyInvalidLoginValidPassword() {
         LoginRequest loginRequest = new LoginRequest();
-        loginRequest.login = LoginRequestTestData.generateLogin();
-        loginRequest.password = LoginRequestTestData.getValidPassword();
+        loginRequest.login = LoginTestData.generateLogin();
+        loginRequest.password = LoginTestData.getValidPassword();
         return loginRequest;
     }
     public static LoginRequest getLoginRequestBodyValidCredsWithSpacesBeforeLogin() {
         LoginRequest loginRequest = new LoginRequest();
-        loginRequest.login = "   " + LoginRequestTestData.getValidLogin();
-        loginRequest.password = LoginRequestTestData.getValidPassword();
+        loginRequest.login = "   " + LoginTestData.getValidLogin();
+        loginRequest.password = LoginTestData.getValidPassword();
         return loginRequest;
     }
     public static LoginRequest getLoginRequestBodyValidCredsWithSpacesAfterLogin() {
         LoginRequest loginRequest = new LoginRequest();
-        loginRequest.login = LoginRequestTestData.getValidLogin() + "    ";
-        loginRequest.password = LoginRequestTestData.getValidPassword();
+        loginRequest.login = LoginTestData.getValidLogin() + "    ";
+        loginRequest.password = LoginTestData.getValidPassword();
         return loginRequest;
     }
 }

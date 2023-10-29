@@ -5,29 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="refactor code">
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/constant/Constant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/LoginFormPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/LoginFormPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/SearchResultPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4jk.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/testing/pojo/responses/LoginFailedInvalidCredsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testing/pojo/responses/LoginFailedInvalidCredsResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/login/LoginRequestTestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/login/LoginTestData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/po/PersonalAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/PersonalAccountPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/po/TransportPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/VehiclePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/AuthorizationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/AuthorizationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/FinanceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/FinanceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/OpenPagesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/OpenPagesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/SearchCarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/SearchCarTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/steps/CommonSteps.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/steps/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/LoginSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/steps/NewOfferSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/NewOfferSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/steps/SearchSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/SearchSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/steps/VinCheckerSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/VinCheckerSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/AddNewOfferTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/AddNewOfferTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/LoginTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/OpenPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/OpenPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/SearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/VinCheckerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/VinCheckerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/LoginResponses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/LoginResponses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/LoginRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/LoginRequests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698400613422</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="refactor code">
+      <created>1698591668747</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1698591668747</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="UnknownFeatures">
