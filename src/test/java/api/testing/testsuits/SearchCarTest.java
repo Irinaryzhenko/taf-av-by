@@ -3,60 +3,67 @@ package api.testing.testsuits;
 import domain.search.SearchCarTestData;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import domain.constant.Constant;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.when;
 import static org.hamcrest.Matchers.equalTo;
 
 public class SearchCarTest {
-    private String searchCarWithFilterUrl = "https://api.av.by/offer-types/cars/filters/main/apply";
-    private String searchResultResponseKey = "seo.canonicalPage.url";
+    private final static Logger logger = LoggerFactory.getLogger(SearchCarTest.class);
+
     @DisplayName("Check searching any car without filters")
     @Test
     public void checkSearchingAnyCar() {
-        when().get("https://cars.av.by/filter").then().log().status()
+        when().get(Constant.getSearchAnyCarUrl()).then().log().status()
                 .assertThat().statusCode(200);
+        logger.info("All cars are available for selecting");
     }
 
-    @DisplayName("Check searching by brand")
+    @DisplayName("Check searching by brand - Acura")
     @Test
     public void searchingByCarBrand() {
-        String searchingCar = "https://cars.av.by/acura";
-        given().body(SearchCarTestData.getCarBrandRequestBody())
-                .header("Content-Type", "application/json")
-                .when().post(searchCarWithFilterUrl)
+                given().body(SearchCarTestData.getCarBrandRequestBody())
+                .header(Constant.getContentTypeHeader(), Constant.getContentType())
+                .when().post(Constant.getSearchCarByFilterUrl())
                 .then().statusCode(200)
-                .assertThat().body(searchResultResponseKey, equalTo(searchingCar));
+                .assertThat().body(Constant.getSearchResultResponseKey(), equalTo(Constant.getSearchByBrandAcura()));
+                logger.info("Selected car has been found by brand");
     }
 
-    @DisplayName("Check searching by transmission type")
+    @DisplayName("Check searching by transmission type - automatic transmission")
     @Test
     public void searchingByTransmissionType() {
-        String searchingTransmissionType = "https://cars.av.by/filter?brands[0][brand]=1&transmission_type=1";
-        given().body(SearchCarTestData.getTransmissionTypeRequestBody())
-                .header("Content-Type", "application/json")
-                .when().post(searchCarWithFilterUrl)
+                given().body(SearchCarTestData.getTransmissionTypeRequestBody())
+                .header(Constant.getContentTypeHeader(), Constant.getContentType())
+                .when().post(Constant.getSearchCarByFilterUrl())
                 .then().statusCode(200)
-                .assertThat().body(searchResultResponseKey, equalTo(searchingTransmissionType));
+                .assertThat().body(Constant.getSearchResultResponseKey(),
+                                equalTo(Constant.getSearchByTransmissionTypeAutomatic()));
+                logger.info("Car has been found by selected transmission type");
     }
 
-    @DisplayName("Check searching by custom client's text in discription")
+    @DisplayName("Check searching by custom client's text in description. Search word - multiroule")
     @Test
     public void checkSearchingByCustomText() {
-        String searchingCustomText = "https://cars.av.by/filter?brands[0][brand]=589&description=%D0%BC%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D1%80%D1%83%D0%BB%D1%8C";
-        given().body(SearchCarTestData.getCustomTextRequestBody())
-                .header("Content-Type", "application/json")
-                .when().post(searchCarWithFilterUrl)
+                given().body(SearchCarTestData.getCustomTextRequestBody())
+                .header(Constant.getContentTypeHeader(), Constant.getContentType())
+                .when().post(Constant.getSearchCarByFilterUrl())
                 .then().statusCode(200)
-                .assertThat().body( searchResultResponseKey, equalTo(searchingCustomText));
+                .assertThat().body(Constant.getSearchResultResponseKey(),
+                                equalTo(Constant.getSearchCustomTextQueryMultiroule()));
+        logger.info("Car offer has been found by selected word in custom client text");
     }
 
-    @DisplayName("Check searching by car body type")
+    @DisplayName("Check searching by car body type - convertible")
     @Test
     public void checkSearchingByBodyType() {
-        String serchingBodyType = "https://cars.av.by/filter?body_type[0]=7";
-        given().body(SearchCarTestData.getBodyTypeRequestBody()).header("Content-Type", "application/json")
-                .when().post(searchCarWithFilterUrl)
+                given().body(SearchCarTestData.getBodyTypeRequestBody())
+                .header(Constant.getContentTypeHeader(), Constant.getContentType())
+                .when().post(Constant.getSearchCarByFilterUrl())
                 .then().statusCode(200)
-                .assertThat().body( searchResultResponseKey, equalTo(serchingBodyType));
+                .assertThat().body(Constant.getSearchResultResponseKey(), equalTo(Constant.getSearchBodyTypeConvertible()));
+        logger.info("Car has been found by selected body type");
     }
 }

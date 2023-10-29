@@ -40,7 +40,7 @@ public class HomePage {
     private String selectedCapacityUntilLocator = "//ul[@class = 'dropdown-list dropdown-list--opened']/li[@class = 'dropdown__listitem']/button[@data-item-label = '3,0 л.']";
     private String showResultsButtonLocator = "//div[@class = 'filter__show-result']";
     public HomePage() {
-        driver = Singleton.getDriver();
+        this.driver = Singleton.getDriver();
     }
 
     public void openHomePage() {
@@ -48,6 +48,7 @@ public class HomePage {
     }
 
     public void openLoginForm() {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         driver.findElement(By.xpath(loginButtonLocator)).click();
     }
 
@@ -78,6 +79,7 @@ public class HomePage {
     }
 
     public void openNewsPage() {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         driver.findElement(By.xpath(newsTabLocator)).click();
     }
 

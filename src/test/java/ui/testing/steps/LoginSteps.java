@@ -8,16 +8,15 @@ import po.HomePage;
 import po.LoginFormPage;
 import po.PersonalAccountPage;
 
-public class LoginSteps extends CommonSteps {
+public class LoginSteps {
     private static  HomePage homePage = new HomePage();;
     private static LoginFormPage loginFormPage = new LoginFormPage();
     private final static Logger logger = LoggerFactory.getLogger(LoginSteps.class);
     public static void openLoginFormViaEmail() {
         homePage.openLoginForm();
-        LoginFormPage loginFormPage = new LoginFormPage();
         loginFormPage.openLoginFormViaMail();
     }
-    public static void fillAuthDataWithInvalidCreds() {
+    public static void fillAuthDataWithInvalidCredentials() {
         logger.info("Invalid creds have been generated and filled in login form");
         loginFormPage.fillLoginPasswordField(LoginRequestTestData.generateLogin(),
                 LoginRequestTestData.generatePassword());
@@ -35,13 +34,13 @@ public class LoginSteps extends CommonSteps {
                 LoginRequestTestData.getValidPassword());
         loginFormPage.submitAuthData();
     }
-    public static void fillAuthDataWithValidCreds() {
+    public static void fillAuthDataWithValidCredentials() {
         logger.info("Valid credentials have been filled in the login form");
         loginFormPage.fillLoginPasswordField(LoginRequestTestData.getValidLogin(),
                 LoginRequestTestData.getValidPassword());
         loginFormPage.submitAuthData();
     }
-    public static void checkErrorMessageLoginInvalidCreds() {
+    public static void checkErrorMessageLoginInvalidCredentials() {
         String actualErrorMessageText = loginFormPage.getErrorMessageText();
         String expectedErrorMessageText = "Неверный логин или пароль. Если забыли пароль, восстановите его";
         Assertions.assertEquals(expectedErrorMessageText, actualErrorMessageText);

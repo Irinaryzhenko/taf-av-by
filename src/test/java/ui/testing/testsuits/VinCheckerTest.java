@@ -8,7 +8,6 @@ public class VinCheckerTest extends BaseTest {
     @DisplayName("Check VinChecker with valid vin code")
     @Test
     public void vinCheckerWithValidVinCode() {
-        VinCheckerSteps.startWorking();
         VinCheckerSteps.inputValidVinCodeInChecker();
         VinCheckerSteps.checkValidVinCode();
     }
@@ -16,7 +15,6 @@ public class VinCheckerTest extends BaseTest {
     @DisplayName("Check VinChecker with invalid number of characters of vin code")
     @Test
     public void vinCheckerWithInvalidNumberOfCharactersOfVinCode() {
-        VinCheckerSteps.startWorking();
         VinCheckerSteps.inputInvalidNumberVinCodeInChecker();
         VinCheckerSteps.checkInvalidNumberVinCode();
     }
@@ -24,7 +22,6 @@ public class VinCheckerTest extends BaseTest {
     @DisplayName("Check VinChecker with invalid format of characters of vin code")
     @Test
     public void vinCheckerWithInvalidFormatOfCharactersOfVinCode() {
-        VinCheckerSteps.startWorking();
         VinCheckerSteps.inputInvalidFormatVinCode();
         VinCheckerSteps.checkInvalidFormatVinCode();
     }

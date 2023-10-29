@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 import po.HomePage;
 import po.VinCheckPage;
 
-public class VinCheckerSteps extends CommonSteps {
+public class VinCheckerSteps {
     private static HomePage homePage = new HomePage();
     private static VinCheckPage vinCheckPage = new VinCheckPage();
     private final static Logger logger = LoggerFactory.getLogger(VinCheckerSteps.class);

@@ -1,6 +1,5 @@
 package po;
 
-import domain.search.Car;
 import driver.Singleton;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;

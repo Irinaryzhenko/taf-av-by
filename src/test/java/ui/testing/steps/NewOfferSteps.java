@@ -7,7 +7,7 @@ import po.HomePage;
 import po.LoginFormPage;
 import po.NewOfferPage;
 
-public class NewOfferSteps extends CommonSteps {
+public class NewOfferSteps {
     private static HomePage homePage = new HomePage();;
     private static LoginFormPage loginFormPage = new LoginFormPage();
     private final static Logger logger = LoggerFactory.getLogger(NewOfferSteps.class);

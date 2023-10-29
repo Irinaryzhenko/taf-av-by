@@ -3,6 +3,9 @@ package api.testing.testsuits;
 import api.testing.pojo.requests.LoginRequest;
 import api.testing.pojo.responses.LoginFailedEmptyCredsResponse;
 import api.testing.pojo.responses.LoginFailedInvalidCredsResponse;
+import domain.constant.Constant;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import utils.LoginRequests;
 import utils.LoginResponses;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -16,37 +19,38 @@ import java.io.IOException;
 import static io.restassured.RestAssured.given;
 
 public class AuthorizationTest {
-    private final static String LOGIN_URL = "https://api.av.by/auth/login/sign-in";
-    private final static String CONTENT_TYPE = "application/json";
-
+    private final static Logger logger = LoggerFactory.getLogger(AuthorizationTest.class);
     @DisplayName("Authorization testing. Positive case: login with valid credentials")
     @Test
     public void checkAuthorizationWithValidCredentials() {
         LoginRequest request = LoginRequests.getLoginRequestBodyValidCreds();
 
-        given().contentType(CONTENT_TYPE).log().body()
+        given().contentType(Constant.getContentType()).log().body()
                 .body(request)
-                .when().post(LOGIN_URL).then().statusCode(200);
+                .when().post(Constant.getLoginUrl()).then().statusCode(200);
+        logger.info("User has been authorized successfully");
     }
 
-    @DisplayName("Authorization testing. Negative case: login with empty redentials")
+    @DisplayName("Authorization testing. Negative case: login with empty credentials")
     @Test
     public void checkAuthorizationWithEmptyCredentials() throws IOException {
         LoginRequest request = LoginRequests.getLoginRequestBodyEmptyCreds();
         ObjectMapper objectMapperRequest = new ObjectMapper();
         var requestBody = objectMapperRequest.writeValueAsString(request);
         Response responseBody = RestAssured
-                .given().contentType(CONTENT_TYPE).log().body()
+                .given().contentType(Constant.getContentType()).log().body()
                 .body(requestBody)
-                .when().post(LOGIN_URL);
+                .when().post(Constant.getLoginUrl());
         if (responseBody.getStatusCode() == 400) {
 
             String response = responseBody.getBody().asString();
             ObjectMapper objectMapper = new ObjectMapper();
 
             var actualResult = objectMapper.readValue(response, LoginFailedEmptyCredsResponse.class);
-            Assertions.assertEquals(LoginResponses.getLoginResponceEmptyCredentional(), actualResult);
+            Assertions.assertEquals(LoginResponses.getLoginResponseEmptyCredentials(), actualResult);
             Assertions.assertEquals("exception.validation.failed", actualResult.getMessage());
+            logger.info("Authorization failed: user sees error: \" {}\" . User need to input credentials",
+                    actualResult.getMessage());
         }
     }
 
@@ -58,16 +62,17 @@ public class AuthorizationTest {
         var requestBody = objectMapperRequest.writeValueAsString(request);
 
         Response responseBody = RestAssured
-                .given().contentType(CONTENT_TYPE)
+                .given().contentType(Constant.getContentType())
                 .body(requestBody).log().body()
-                .when().post(LOGIN_URL);
+                .when().post(Constant.getLoginUrl());
         if (responseBody.getStatusCode() == 400) {
 
             String response = responseBody.getBody().asString();
             ObjectMapper objectMapper = new ObjectMapper();
 
             var actualResult = objectMapper.readValue(response, LoginFailedEmptyCredsResponse.class);
-            Assertions.assertEquals(LoginResponses.getLoginResponceEmptyCredentional(), actualResult);
+            Assertions.assertEquals(LoginResponses.getLoginResponseEmptyCredentials(), actualResult);
+            logger.info("Authorization failed. User sees error: \" {} \"", actualResult);
         }
     }
 
@@ -78,16 +83,17 @@ public class AuthorizationTest {
         ObjectMapper objectMapperRequest = new ObjectMapper();
         var requestBody = objectMapperRequest.writeValueAsString(request);
         Response responseBody = RestAssured
-                .given().contentType(CONTENT_TYPE)
+                .given().contentType(Constant.getContentType())
                 .body(requestBody).log().body()
-                .when().post(LOGIN_URL);
+                .when().post(Constant.getLoginUrl());
         if (responseBody.getStatusCode() == 400) {
 
             String response = responseBody.getBody().asString();
             ObjectMapper objectMapper = new ObjectMapper();
 
             var actualResult = objectMapper.readValue(response, LoginFailedEmptyCredsResponse.class);
-            Assertions.assertEquals(LoginResponses.getLoginResponceEmptyCredentional(), actualResult);
+            Assertions.assertEquals(LoginResponses.getLoginResponseEmptyCredentials(), actualResult);
+            logger.info("Authorization failed. User sees error: \" {} \"", actualResult);
         }
     }
 
@@ -98,9 +104,9 @@ public class AuthorizationTest {
         ObjectMapper objectMapperRequest = new ObjectMapper();
         var requestBody = objectMapperRequest.writeValueAsString(request);
         Response responseBody = RestAssured
-                .given().contentType(CONTENT_TYPE)
+                .given().contentType(Constant.getContentType())
                 .body(requestBody).log().body()
-                .when().post(LOGIN_URL);
+                .when().post(Constant.getLoginUrl());
 
         if (responseBody.getStatusCode() == 400) {
 
@@ -108,7 +114,8 @@ public class AuthorizationTest {
             ObjectMapper objectMapper = new ObjectMapper();
             LoginFailedInvalidCredsResponse loginResponse = objectMapper
                     .readValue(response, LoginFailedInvalidCredsResponse.class);
-            Assertions.assertEquals(LoginResponses.getLoginResponceInvalidCredentials(), loginResponse);
+            Assertions.assertEquals(LoginResponses.getLoginResponseInvalidCredentials(), loginResponse);
+            logger.info("Authorization failed. User sees error: \" {} \"", loginResponse);
         }
     }
 
@@ -119,33 +126,34 @@ public class AuthorizationTest {
         ObjectMapper objectMapperRequest = new ObjectMapper();
         var requestBody = objectMapperRequest.writeValueAsString(request);
         Response responseBody = RestAssured
-                .given().contentType(CONTENT_TYPE)
+                .given().contentType(Constant.getContentType())
                 .body(requestBody).log().body()
-                .when().post(LOGIN_URL);
+                .when().post(Constant.getLoginUrl());
         if (responseBody.getStatusCode() == 400) {
 
             String response = responseBody.getBody().asString();
             ObjectMapper objectMapper = new ObjectMapper();
             LoginFailedInvalidCredsResponse loginResponse = objectMapper.readValue(response, LoginFailedInvalidCredsResponse.class);
-            Assertions.assertEquals(LoginResponses.getLoginResponceInvalidCredentials(), loginResponse);
+            Assertions.assertEquals(LoginResponses.getLoginResponseInvalidCredentials(), loginResponse);
+            logger.info("Authorization failed. User sees error: \" {} \"", loginResponse);
         }
     }
 
     @DisplayName("Authorization testing. Negative case: login with invalid user's email and valid password ")
     @Test
-    public void checkAuthorizationWithInalidloginAndValidPassword() throws JsonProcessingException {
+    public void checkAuthorizationWithInvalidloginAndValidPassword() throws JsonProcessingException {
         LoginRequest request = LoginRequests.getLoginRequestBodyInvalidLoginValidPassword();
         ObjectMapper objectMapperRequest = new ObjectMapper();
         var requestBody = objectMapperRequest.writeValueAsString(request);
         Response responseBody = RestAssured
-                .given().contentType(CONTENT_TYPE)
+                .given().contentType(Constant.getContentType())
                 .body(requestBody).log().body()
-                .when().post(LOGIN_URL);
+                .when().post(Constant.getLoginUrl());
         String response = responseBody.getBody().asString();
         ObjectMapper objectMapper = new ObjectMapper();
         LoginFailedInvalidCredsResponse loginResponse = objectMapper.readValue(response, LoginFailedInvalidCredsResponse.class);
-        Assertions.assertEquals(LoginResponses.getLoginResponceInvalidCredentials(), loginResponse);
-
+        Assertions.assertEquals(LoginResponses.getLoginResponseInvalidCredentials(), loginResponse);
+        logger.info("Authorization failed. User sees error: \" {} \"", loginResponse);
     }
 
     @DisplayName("Authorization testing. Negative case: login with spaces before valid email. Spaces need to be trimmed.")
@@ -153,17 +161,19 @@ public class AuthorizationTest {
     public void checkAuthorizationWithSpacesBeforeValidLogin() {
         LoginRequest request = LoginRequests.getLoginRequestBodyValidCredsWithSpacesBeforeLogin();
 
-        given().contentType(CONTENT_TYPE).log().body()
+        given().contentType(Constant.getContentType()).log().body()
                 .body(request)
-                .when().post(LOGIN_URL).then().statusCode(200);
+                .when().post(Constant.getLoginUrl()).then().statusCode(200);
+        logger.info("User has been authorized successfully. Spaces have been trimmed");
     }
 
     @DisplayName("Authorization testing. Negative case: login with spaces before valid email. Spaces need to be trimmed.")
     @Test
     public void checkAuthorizationWithSpacesAfterValidEmail() {
         LoginRequest request = LoginRequests.getLoginRequestBodyValidCredsWithSpacesAfterLogin();
-        given().contentType(CONTENT_TYPE).log().body()
+        given().contentType(Constant.getContentType()).log().body()
                 .body(request)
-                .when().post(LOGIN_URL).then().statusCode(200);
+                .when().post(Constant.getLoginUrl()).then().statusCode(200);
+        logger.info("User has been authorized successfully. Spaces have been trimmed");
     }
 }

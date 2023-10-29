@@ -7,7 +7,6 @@
                 charset="UTF-8"
             </PatternLayout>
         </Console>
-
         <RollingFile name="ErrorFile"
                      fileName="logs/error.log"
                      filePattern="logs/archived/error.%d{yyyyMMdd}-%i.gz">
@@ -21,22 +20,7 @@
                 <TimeBasedTriggeringPolicy/>
             </Policies>
         </RollingFile>
-
-        <RollingFile name="WarningFile"
-                     fileName="logs/warning.log"
-                     filePattern="logs/archived/warning.%d{yyyyMMdd}-%i.gz">
-            <PatternLayout>
-                <charset>UTF-8</charset>
-                <pattern>%d{YYYY-MM-dd HH:mm:ss,SSS} [%-6p] [%t] %c{3} - %m%n</pattern>
-                <LevelRangeFilter minLevel="ERROR" maxLevel="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
-            </PatternLayout>
-            <Policies>
-                <OnStartupTriggeringPolicy/>
-                <TimeBasedTriggeringPolicy/>
-            </Policies>
-        </RollingFile>
-
-        <RollingFile name="RollingFile"
+                <RollingFile name="RollingFile"
                      fileName="logs/appLog.log"
                      filePattern="logs/archived/appLog.%d{yyyyMMdd}-%i.gz">
             <PatternLayout>
@@ -48,13 +32,11 @@
                 <TimeBasedTriggeringPolicy/>
             </Policies>
         </RollingFile>
-
     </Appenders>
     <Loggers>
         <Root level="INFO">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="ErrorFile" level="ERROR"/>
-            <AppenderRef ref="WarningFile" level="WARNING"/>
             <AppenderRef ref="RollingFile"/>
         </Root>
     </Loggers>

@@ -18,13 +18,11 @@ public class LoginFormPage {
     private String logInTitleLocator = "//div[@class = 'auth__title'][text() = 'Вход']";
 
     public LoginFormPage() {
-        driver = Singleton.getDriver();
+        this.driver = Singleton.getDriver();
     }
     public void openLoginFormViaMail() {
-            new WebDriverWait(driver, Duration.ofSeconds(5))
-                .until(ExpectedConditions
-                        .presenceOfAllElementsLocatedBy(By.xpath(authFormLocator)));
-        driver.findElement(By.xpath(loginViaMailLocator)).click();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+       driver.findElement(By.xpath(loginViaMailLocator)).click();
 
     }
     public void fillLoginPasswordField(String loginText, String passwordText) {

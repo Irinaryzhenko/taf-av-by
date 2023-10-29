@@ -1,18 +1,20 @@
 package ui.testing.testsuits;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.slf4j.LoggerFactory;
 import po.*;
+import org.junit.jupiter.api.Test;
+
 
 public class OpenPageTest extends BaseTest {
-    private static final Logger logger = LogManager.getLogger(OpenPageTest.class);
+    private final static Logger logger = LoggerFactory.getLogger(OpenPageTest.class);
+
     @DisplayName("Check home page opening")
     @Test
     public void openHomePageTest() {
-        logger.info("Open home");
+        logger.info("Home page opens");
         HomePage homePage = new HomePage();
         homePage.openHomePage();
         Assertions.assertEquals("© 2001, ООО «Автоклассифайд», УНП 192787977, Минск, ул. Кутузова, 15",

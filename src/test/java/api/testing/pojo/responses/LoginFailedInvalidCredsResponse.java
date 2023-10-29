@@ -14,9 +14,17 @@ public class LoginFailedInvalidCredsResponse {
         LoginFailedInvalidCredsResponse that = (LoginFailedInvalidCredsResponse) o;
         return Objects.equals(message, that.message) && Objects.equals(messageText, that.messageText);
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(message, context, messageText);
+    }
+
+    @Override
+    public String toString() {
+        return "LoginFailedInvalidCredsResponse{" +
+                "message='" + message + '\'' +
+                ", context=" + context +
+                ", messageText='" + messageText + '\'' +
+                '}';
     }
 }

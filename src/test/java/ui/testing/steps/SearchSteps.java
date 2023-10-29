@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 import po.HomePage;
 import po.SearchResultPage;
 
-public class SearchSteps extends CommonSteps {
+public class SearchSteps {
     private final static Logger logger = LoggerFactory.getLogger(SearchSteps.class);
     private static HomePage homePage;
     private static SearchResultPage searchResultPage;
