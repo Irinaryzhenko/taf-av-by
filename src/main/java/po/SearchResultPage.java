@@ -37,11 +37,12 @@ public class SearchResultPage {
     }
 
     public String getTopCarParamsText() {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         return driver.findElement(By.xpath(topCarParamsLocator)).getText();
     }
 
     public void checkCarSearchTopResult() {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         String actualTitleTopCar = getTitleTopCarText();
         String actualPriceTopCar = getTopCarPriceText();
         int topPrice = Integer.parseInt(actualPriceTopCar.replaceAll("[^0-9]", ""));

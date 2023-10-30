@@ -10,7 +10,7 @@ import java.time.Duration;
 
 public class HomePage {
 
-    public WebDriver driver;
+    private WebDriver driver;
     private String copyrightLocator = "//p[@class = 'footer__copy']";
     private String loginButtonLocator = "//span[@class = 'nav__link-text'] [text() = 'Войти']";
     private String cookiesButtonSubmitLocator = "//button[@class = 'button button--primary button--block button--large']";

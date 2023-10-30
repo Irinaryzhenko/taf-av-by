@@ -32,9 +32,9 @@ public class OpenPageTest extends BaseTest {
                 financePage.getFinanceTitleText());
     }
 
-    @DisplayName("Check Transport Page opening")
+    @DisplayName("Check Vehicle Page opening")
     @Test
-    public void openTransportPageTest() {
+    public void openVehiclePageTest() {
         HomePage homePage = new HomePage();
         homePage.openHomePage();
         homePage.openTransportPage();

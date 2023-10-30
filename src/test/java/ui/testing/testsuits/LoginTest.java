@@ -9,6 +9,7 @@ public class LoginTest extends BaseTest {
     @DisplayName("Check login with invalid credentials")
     @Test
     public void loginWithInvalidCredentials() {
+        LoginSteps.openHomePageSubmitCookies();
         LoginSteps.openLoginFormViaEmail();
         LoginSteps.fillAuthDataWithInvalidCredentials();
         LoginSteps.checkErrorMessageLoginInvalidCredentials();
@@ -17,6 +18,7 @@ public class LoginTest extends BaseTest {
     @DisplayName("Check login with valid login and invalid password")
     @Test
     public void loginWithValidLoginInvalidPassword() {
+        LoginSteps.openHomePageSubmitCookies();
         LoginSteps.openLoginFormViaEmail();
         LoginSteps.fillAuthDataWithValidloginInvalidPassword();
         LoginSteps.checkErrorMessageLoginInvalidCredentials();
@@ -25,6 +27,7 @@ public class LoginTest extends BaseTest {
     @DisplayName("Check login with invalid login and valid password")
     @Test
     public void loginWithInvalidLoginValidPassword() {
+        LoginSteps.openHomePageSubmitCookies();
         LoginSteps.openLoginFormViaEmail();
         LoginSteps.fillAuthDataInvalidLoginValidPasswords();
         LoginSteps.checkErrorMessageLoginInvalidCredentials();
@@ -33,6 +36,7 @@ public class LoginTest extends BaseTest {
     @DisplayName("Check login with valid credentials")
     @Test
     public void loginWithValidCredentials() {
+        LoginSteps.openHomePageSubmitCookies();
         LoginSteps.openLoginFormViaEmail();
         LoginSteps.fillAuthDataWithValidCredentials();
         LoginSteps.checkAuthorizationSuccess();
