@@ -1,11 +1,12 @@
 package api.testing.testsuits;
 
 import domain.search.SearchCarTestData;
+import io.restassured.http.ContentType;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import domain.constant.Constant;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import static domain.constant.Constant.*;
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.when;
 import static org.hamcrest.Matchers.equalTo;
@@ -16,7 +17,7 @@ public class SearchCarTest {
     @DisplayName("Check searching any car without filters")
     @Test
     public void checkSearchingAnyCar() {
-        when().get(Constant.getSearchAnyCarUrl()).then().log().status()
+        when().get(SEARCH_ANY_CAR_URL).then().log().status()
                 .assertThat().statusCode(200);
         logger.info("All cars are available for selecting");
     }
@@ -25,10 +26,10 @@ public class SearchCarTest {
     @Test
     public void searchingByCarBrand() {
                 given().body(SearchCarTestData.getCarBrandRequestBody())
-                .header(Constant.getContentTypeHeader(), Constant.getContentType())
-                .when().post(Constant.getSearchCarByFilterUrl())
+                .header(CONTENT_TYPE_HEADER, ContentType.JSON)
+                .when().post(SEARCH_CAR_BY_FILTER_URL)
                 .then().statusCode(200)
-                .assertThat().body(Constant.getSearchResultResponseKey(), equalTo(Constant.getSearchByBrandAcura()));
+                .assertThat().body(SEARCH_RESULT_RESPONSE_KEY, equalTo(SEARCH_BY_BRAND_ACURA));
                 logger.info("Selected car has been found by brand");
     }
 
@@ -36,11 +37,11 @@ public class SearchCarTest {
     @Test
     public void searchingByTransmissionType() {
                 given().body(SearchCarTestData.getTransmissionTypeRequestBody())
-                .header(Constant.getContentTypeHeader(), Constant.getContentType())
-                .when().post(Constant.getSearchCarByFilterUrl())
+                .header(CONTENT_TYPE_HEADER,ContentType.JSON)
+                .when().post(SEARCH_CAR_BY_FILTER_URL)
                 .then().statusCode(200)
-                .assertThat().body(Constant.getSearchResultResponseKey(),
-                                equalTo(Constant.getSearchByTransmissionTypeAutomatic()));
+                .assertThat().body(SEARCH_RESULT_RESPONSE_KEY,
+                                equalTo(SEARCH_BY_TRANSMISSION_TYPE_AUTOMATIC));
                 logger.info("Car has been found by selected transmission type");
     }
 
@@ -48,11 +49,11 @@ public class SearchCarTest {
     @Test
     public void checkSearchingByCustomText() {
                 given().body(SearchCarTestData.getCustomTextRequestBody())
-                .header(Constant.getContentTypeHeader(), Constant.getContentType())
-                .when().post(Constant.getSearchCarByFilterUrl())
+                .header(CONTENT_TYPE_HEADER, ContentType.JSON)
+                .when().post(SEARCH_CAR_BY_FILTER_URL)
                 .then().statusCode(200)
-                .assertThat().body(Constant.getSearchResultResponseKey(),
-                                equalTo(Constant.getSearchCustomTextQueryMultiroule()));
+                .assertThat().body(SEARCH_RESULT_RESPONSE_KEY,
+                                equalTo(SEARCH_CUSTOM_TEXT_QUERY_MULTIROULE));
         logger.info("Car offer has been found by selected word in custom client text");
     }
 
@@ -60,10 +61,10 @@ public class SearchCarTest {
     @Test
     public void checkSearchingByBodyType() {
                 given().body(SearchCarTestData.getBodyTypeRequestBody())
-                .header(Constant.getContentTypeHeader(), Constant.getContentType())
-                .when().post(Constant.getSearchCarByFilterUrl())
+                .header(CONTENT_TYPE_HEADER, ContentType.JSON)
+                .when().post(SEARCH_CAR_BY_FILTER_URL)
                 .then().statusCode(200)
-                .assertThat().body(Constant.getSearchResultResponseKey(), equalTo(Constant.getSearchBodyTypeConvertible()));
+                .assertThat().body(SEARCH_RESULT_RESPONSE_KEY, equalTo(SEARCH_BODY_TYPE_CONVERTIBLE));
         logger.info("Car has been found by selected body type");
     }
 }

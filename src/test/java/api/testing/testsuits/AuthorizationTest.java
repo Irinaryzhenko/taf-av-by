@@ -3,7 +3,7 @@ package api.testing.testsuits;
 import api.testing.pojo.requests.LoginRequest;
 import api.testing.pojo.responses.LoginFailedEmptyCredsResponse;
 import api.testing.pojo.responses.LoginFailedInvalidCredsResponse;
-import domain.constant.Constant;
+import io.restassured.http.ContentType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import utils.LoginRequests;
@@ -16,6 +16,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.io.IOException;
+import static domain.constant.Constant.LOGIN_URL;
 import static io.restassured.RestAssured.given;
 
 public class AuthorizationTest {
@@ -25,9 +26,9 @@ public class AuthorizationTest {
     public void checkAuthorizationWithValidCredentials() {
         LoginRequest request = LoginRequests.getLoginRequestBodyValidCredentials();
 
-        given().contentType(Constant.getContentType()).log().body()
+        given().contentType(ContentType.JSON).log().body()
                 .body(request)
-                .when().post(Constant.getLoginUrl()).then().statusCode(200);
+                .when().post(LOGIN_URL).then().statusCode(200);
         logger.info("User has been authorized successfully");
     }
 
@@ -38,9 +39,9 @@ public class AuthorizationTest {
         ObjectMapper objectMapperRequest = new ObjectMapper();
         var requestBody = objectMapperRequest.writeValueAsString(request);
         Response responseBody = RestAssured
-                .given().contentType(Constant.getContentType()).log().body()
+                .given().contentType(ContentType.JSON).log().body()
                 .body(requestBody)
-                .when().post(Constant.getLoginUrl());
+                .when().post(LOGIN_URL);
         if (responseBody.getStatusCode() == 400) {
 
             String response = responseBody.getBody().asString();
@@ -62,9 +63,9 @@ public class AuthorizationTest {
         var requestBody = objectMapperRequest.writeValueAsString(request);
 
         Response responseBody = RestAssured
-                .given().contentType(Constant.getContentType())
+                .given().contentType(ContentType.JSON)
                 .body(requestBody).log().body()
-                .when().post(Constant.getLoginUrl());
+                .when().post(LOGIN_URL);
         if (responseBody.getStatusCode() == 400) {
 
             String response = responseBody.getBody().asString();
@@ -83,9 +84,9 @@ public class AuthorizationTest {
         ObjectMapper objectMapperRequest = new ObjectMapper();
         var requestBody = objectMapperRequest.writeValueAsString(request);
         Response responseBody = RestAssured
-                .given().contentType(Constant.getContentType())
+                .given().contentType(ContentType.JSON)
                 .body(requestBody).log().body()
-                .when().post(Constant.getLoginUrl());
+                .when().post(LOGIN_URL);
         if (responseBody.getStatusCode() == 400) {
 
             String response = responseBody.getBody().asString();
@@ -104,9 +105,9 @@ public class AuthorizationTest {
         ObjectMapper objectMapperRequest = new ObjectMapper();
         var requestBody = objectMapperRequest.writeValueAsString(request);
         Response responseBody = RestAssured
-                .given().contentType(Constant.getContentType())
+                .given().contentType(ContentType.JSON)
                 .body(requestBody).log().body()
-                .when().post(Constant.getLoginUrl());
+                .when().post(LOGIN_URL);
 
         if (responseBody.getStatusCode() == 400) {
 
@@ -126,9 +127,9 @@ public class AuthorizationTest {
         ObjectMapper objectMapperRequest = new ObjectMapper();
         var requestBody = objectMapperRequest.writeValueAsString(request);
         Response responseBody = RestAssured
-                .given().contentType(Constant.getContentType())
+                .given().contentType(ContentType.JSON)
                 .body(requestBody).log().body()
-                .when().post(Constant.getLoginUrl());
+                .when().post(LOGIN_URL);
         if (responseBody.getStatusCode() == 400) {
 
             String response = responseBody.getBody().asString();
@@ -146,9 +147,9 @@ public class AuthorizationTest {
         ObjectMapper objectMapperRequest = new ObjectMapper();
         var requestBody = objectMapperRequest.writeValueAsString(request);
         Response responseBody = RestAssured
-                .given().contentType(Constant.getContentType())
+                .given().contentType(ContentType.JSON)
                 .body(requestBody).log().body()
-                .when().post(Constant.getLoginUrl());
+                .when().post(LOGIN_URL);
         String response = responseBody.getBody().asString();
         ObjectMapper objectMapper = new ObjectMapper();
         LoginFailedInvalidCredsResponse loginResponse = objectMapper.readValue(response, LoginFailedInvalidCredsResponse.class);
@@ -161,9 +162,9 @@ public class AuthorizationTest {
     public void checkAuthorizationWithSpacesBeforeValidLogin() {
         LoginRequest request = LoginRequests.getLoginRequestBodyValidCredsWithSpacesBeforeLogin();
 
-        given().contentType(Constant.getContentType()).log().body()
+        given().contentType(ContentType.JSON).log().body()
                 .body(request)
-                .when().post(Constant.getLoginUrl()).then().statusCode(200);
+                .when().post(LOGIN_URL).then().statusCode(200);
         logger.info("User has been authorized successfully. Spaces have been trimmed");
     }
 
@@ -171,9 +172,9 @@ public class AuthorizationTest {
     @Test
     public void checkAuthorizationWithSpacesAfterValidEmail() {
         LoginRequest request = LoginRequests.getLoginRequestBodyValidCredsWithSpacesAfterLogin();
-        given().contentType(Constant.getContentType()).log().body()
+        given().contentType(ContentType.JSON).log().body()
                 .body(request)
-                .when().post(Constant.getLoginUrl()).then().statusCode(200);
+                .when().post(LOGIN_URL).then().statusCode(200);
         logger.info("User has been authorized successfully. Spaces have been trimmed");
     }
 }
