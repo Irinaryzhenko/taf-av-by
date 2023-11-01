@@ -43,7 +43,7 @@ public class AuthorizationTest {
                 .given().contentType(ContentType.JSON).log().body()
                 .body(requestBody)
                 .when().post(LOGIN_URL);
-        if (responseBody.getStatusCode() == 400) {
+        if (responseBody.getStatusCode() == HttpStatus.BAD_REQUEST.value()) {
 
             String response = responseBody.getBody().asString();
             ObjectMapper objectMapper = new ObjectMapper();
@@ -51,7 +51,7 @@ public class AuthorizationTest {
             var actualResult = objectMapper.readValue(response, LoginFailedEmptyCredsResponse.class);
             Assertions.assertEquals(LoginResponses.getLoginResponseEmptyCredentials(), actualResult);
             Assertions.assertEquals("exception.validation.failed", actualResult.getMessage());
-            logger.info("Authorization failed: user sees error: \" {}\" . User need to input credentials",
+            logger.info("Authorization failed: user sees error: \"{}\" . User need to input credentials",
                     actualResult.getMessage());
         }
     }
@@ -67,7 +67,7 @@ public class AuthorizationTest {
                 .given().contentType(ContentType.JSON)
                 .body(requestBody).log().body()
                 .when().post(LOGIN_URL);
-        if (responseBody.getStatusCode() == 400) {
+        if (responseBody.getStatusCode() == HttpStatus.BAD_REQUEST.value()) {
 
             String response = responseBody.getBody().asString();
             ObjectMapper objectMapper = new ObjectMapper();
@@ -88,7 +88,7 @@ public class AuthorizationTest {
                 .given().contentType(ContentType.JSON)
                 .body(requestBody).log().body()
                 .when().post(LOGIN_URL);
-        if (responseBody.getStatusCode() == 400) {
+        if (responseBody.getStatusCode() == HttpStatus.BAD_REQUEST.value()) {
 
             String response = responseBody.getBody().asString();
             ObjectMapper objectMapper = new ObjectMapper();
@@ -110,7 +110,7 @@ public class AuthorizationTest {
                 .body(requestBody).log().body()
                 .when().post(LOGIN_URL);
 
-        if (responseBody.getStatusCode() == 400) {
+        if (responseBody.getStatusCode() == HttpStatus.BAD_REQUEST.value()) {
 
             String response = responseBody.getBody().asString();
             ObjectMapper objectMapper = new ObjectMapper();
@@ -131,7 +131,7 @@ public class AuthorizationTest {
                 .given().contentType(ContentType.JSON)
                 .body(requestBody).log().body()
                 .when().post(LOGIN_URL);
-        if (responseBody.getStatusCode() == 400) {
+        if (responseBody.getStatusCode() == HttpStatus.BAD_REQUEST.value()) {
 
             String response = responseBody.getBody().asString();
             ObjectMapper objectMapper = new ObjectMapper();
