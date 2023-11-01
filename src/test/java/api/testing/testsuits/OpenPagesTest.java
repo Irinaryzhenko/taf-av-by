@@ -1,5 +1,6 @@
 package api.testing.testsuits;
 
+import io.basc.framework.http.HttpStatus;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -15,7 +16,7 @@ public class OpenPagesTest {
     public void checkStatusCodeHomePage() {
         when().get(HOME_URL)
                 .then().log().status()
-                .assertThat().statusCode(200);
+                .assertThat().statusCode(HttpStatus.OK.value());
         logger.info("Home page opens");
     }
 
@@ -24,7 +25,7 @@ public class OpenPagesTest {
     public void checkStatusCodeCarPage() {
         when().get(VEHICLE_URL)
                 .then().log().status()
-                .assertThat().statusCode(200);
+                .assertThat().statusCode(HttpStatus.OK.value());
         logger.info("Vehicle page opens");
     }
 
@@ -33,7 +34,7 @@ public class OpenPagesTest {
     public void checkStatusCodeWheelsPartsPage() {
         when().get(WHEELS_PARTS_URL)
                 .then().log().status()
-                .assertThat().statusCode(200);
+                .assertThat().statusCode(HttpStatus.OK.value());
         logger.info("WheelPart page opens");
     }
 
@@ -42,7 +43,7 @@ public class OpenPagesTest {
     public void checkStatusCodeNewsPage() {
         when().get(NEWS_URL)
                 .then().log().status()
-                .assertThat().statusCode(200);
+                .assertThat().statusCode(HttpStatus.OK.value());
         logger.info("News page opens");
     }
 
@@ -51,7 +52,7 @@ public class OpenPagesTest {
     public void checkStatusCodeInfoPage() {
         when().get(INFO_URL)
                 .then().log().status()
-                .assertThat().statusCode(200);
+                .assertThat().statusCode(HttpStatus.OK.value());
         logger.info("Info page opens");
     }
 
@@ -60,7 +61,7 @@ public class OpenPagesTest {
     public void checkStatusCodeFinancePage() {
         when().get(FINANCE_URL)
                 .then().log().status()
-                .assertThat().statusCode(200);
+                .assertThat().statusCode(HttpStatus.OK.value());
         logger.info("Finance page opens");
     }
 
@@ -69,7 +70,7 @@ public class OpenPagesTest {
     public void checkStatusCodeVinCheckerPage() {
         when().get(VEHICLE_URL)
                 .then().log().status()
-                .assertThat().statusCode(200);
+                .assertThat().statusCode(HttpStatus.OK.value());
         logger.info("Vinchecker page opens");
     }
 

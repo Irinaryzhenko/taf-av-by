@@ -3,6 +3,7 @@ package api.testing.testsuits;
 import api.testing.pojo.requests.LoginRequest;
 import api.testing.pojo.responses.LoginFailedEmptyCredsResponse;
 import api.testing.pojo.responses.LoginFailedInvalidCredsResponse;
+import io.basc.framework.http.HttpStatus;
 import io.restassured.http.ContentType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,7 +29,7 @@ public class AuthorizationTest {
 
         given().contentType(ContentType.JSON).log().body()
                 .body(request)
-                .when().post(LOGIN_URL).then().statusCode(200);
+                .when().post(LOGIN_URL).then().statusCode(HttpStatus.OK.value());
         logger.info("User has been authorized successfully");
     }
 
@@ -164,7 +165,7 @@ public class AuthorizationTest {
 
         given().contentType(ContentType.JSON).log().body()
                 .body(request)
-                .when().post(LOGIN_URL).then().statusCode(200);
+                .when().post(LOGIN_URL).then().statusCode(HttpStatus.OK.value());
         logger.info("User has been authorized successfully. Spaces have been trimmed");
     }
 
@@ -174,7 +175,7 @@ public class AuthorizationTest {
         LoginRequest request = LoginRequests.getLoginRequestBodyValidCredsWithSpacesAfterLogin();
         given().contentType(ContentType.JSON).log().body()
                 .body(request)
-                .when().post(LOGIN_URL).then().statusCode(200);
+                .when().post(LOGIN_URL).then().statusCode(HttpStatus.OK.value());
         logger.info("User has been authorized successfully. Spaces have been trimmed");
     }
 }

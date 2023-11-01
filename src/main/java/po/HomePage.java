@@ -100,7 +100,7 @@ public class HomePage {
     }
 
     public void selectCarBrand() {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        Waiter.waitFor(2);
         driver.findElement(By.xpath(selectedCarLocator)).click();
     }
 

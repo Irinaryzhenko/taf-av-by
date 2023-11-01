@@ -3,6 +3,7 @@ package po;
 import driver.Singleton;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import util.Waiter;
 
 import java.time.Duration;
 
@@ -14,7 +15,7 @@ public class VehiclePage {
         driver = Singleton.getDriver();
     }
     public String getTransportTitleText() {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        Waiter.waitFor(2);
         return driver.findElement(By.xpath(transportTitleLocator)).getText();
     }
 }

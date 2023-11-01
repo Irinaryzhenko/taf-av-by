@@ -16,6 +16,7 @@ public class VinCheckPage {
     private String buyVinCodeResultButtonLocator = "//div [@class = 'vin-check-services']//button[@class = 'button button--secondary button--block button--large']";
     private String errorNumberVinMessageLocator = "//div[@class = 'error-message'][text() = 'VIN-номер состоит из 17 символов']";
     private String errorVinFormatMessageLocator = "//div[@class = 'error-message'][text() = 'Неверно указан VIN-номер']";
+    private String errorFormatSmthWentWrong = "//h1[text() = 'Что-то сломалось']";
 
     public VinCheckPage() {
         driver = Singleton.getDriver();
@@ -42,9 +43,11 @@ public class VinCheckPage {
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath(errorNumberVinMessageLocator)));
        return driver.findElement(By.xpath(errorNumberVinMessageLocator)).getText();
     }
-    public String getErrorVinFormatMessageText() {
-        new WebDriverWait(driver, Duration.ofSeconds(3))
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(errorVinFormatMessageLocator)));
+
+    public String getErrorSomethingWentWrong() {
+        return driver.findElement(By.xpath(errorFormatSmthWentWrong)).getText();
+    }
+    public String getErrorVinInvalidFormatText() {
         return driver.findElement(By.xpath(errorVinFormatMessageLocator)).getText();
     }
 }

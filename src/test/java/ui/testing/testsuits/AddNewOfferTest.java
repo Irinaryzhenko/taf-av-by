@@ -2,8 +2,6 @@ package ui.testing.testsuits;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import po.HomePage;
-import po.LoginFormPage;
 import ui.testing.steps.LoginSteps;
 import ui.testing.steps.NewOfferSteps;
 

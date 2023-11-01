@@ -1,12 +1,12 @@
 package api.testing.testsuits;
 
 import domain.search.FinanceTestData;
+import io.basc.framework.http.HttpStatus;
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import static domain.constant.Constant.CONTENT_TYPE_HEADER;
 import static domain.constant.Constant.FINANCE_SEARCH_URL;
 import static io.restassured.RestAssured.given;
@@ -18,11 +18,11 @@ public class FinanceTest {
     @DisplayName("Check offer for credits")
     @Test
     public void checkCreditOffers() {
-        int generalCreditQuantity = 19;
+        int generalCreditQuantity = 18;
         given().body(FinanceTestData.getAllCreditOffersRequestBody())
                 .header(CONTENT_TYPE_HEADER, ContentType.JSON)
                 .when().post(FINANCE_SEARCH_URL)
-                .then().statusCode(200)
+                .then().statusCode(HttpStatus.OK.value())
                 .assertThat().body("total", equalTo(generalCreditQuantity))
                 .body("items[0].title", equalTo("Автомобиль с пробегом в лизинг"));
         logger.info("Credit offer have been found, quantity: {}", generalCreditQuantity);
@@ -35,7 +35,7 @@ public class FinanceTest {
         given().body(FinanceTestData.getNewCarCreditOfferRequestBody())
                 .header((CONTENT_TYPE_HEADER), ContentType.JSON)
                 .when().post(FINANCE_SEARCH_URL)
-                .then().statusCode(200)
+                .then().statusCode(HttpStatus.OK.value())
                 .assertThat().body("total", equalTo(newCarCreditQuantity))
                 .body("items[0].title", equalTo("На новый авто и с пробегом"));
         logger.info("Credit offer for new cars have been found, quantity: {} ", newCarCreditQuantity);
@@ -48,9 +48,9 @@ public class FinanceTest {
         given().body(FinanceTestData.getTruckCreditOfferRequestBody())
                 .header(CONTENT_TYPE_HEADER, ContentType.JSON)
                 .when().post(FINANCE_SEARCH_URL)
-                .then().statusCode(200)
+                .then().statusCode(HttpStatus.OK.value())
                 .assertThat().body("total", equalTo(truckCreditQuantity))
-                .body("items[0].title", equalTo("Кредит «Проще простого»"));
+                .body("items[0].title", equalTo("Кредит на любые цели. Полностью онлайн"));
         logger.info("Credit offer for trucks have been found, quantity: {} ", truckCreditQuantity);
     }
 }

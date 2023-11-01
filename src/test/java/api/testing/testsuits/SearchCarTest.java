@@ -1,6 +1,7 @@
 package api.testing.testsuits;
 
 import domain.search.SearchCarTestData;
+import io.basc.framework.http.HttpStatus;
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -18,7 +19,7 @@ public class SearchCarTest {
     @Test
     public void checkSearchingAnyCar() {
         when().get(SEARCH_ANY_CAR_URL).then().log().status()
-                .assertThat().statusCode(200);
+                .assertThat().statusCode(HttpStatus.OK.value());
         logger.info("All cars are available for selecting");
     }
 
@@ -28,7 +29,7 @@ public class SearchCarTest {
                 given().body(SearchCarTestData.getCarBrandRequestBody())
                 .header(CONTENT_TYPE_HEADER, ContentType.JSON)
                 .when().post(SEARCH_CAR_BY_FILTER_URL)
-                .then().statusCode(200)
+                .then().statusCode(HttpStatus.OK.value())
                 .assertThat().body(SEARCH_RESULT_RESPONSE_KEY, equalTo(SEARCH_BY_BRAND_ACURA));
                 logger.info("Selected car has been found by brand");
     }
@@ -39,7 +40,7 @@ public class SearchCarTest {
                 given().body(SearchCarTestData.getTransmissionTypeRequestBody())
                 .header(CONTENT_TYPE_HEADER,ContentType.JSON)
                 .when().post(SEARCH_CAR_BY_FILTER_URL)
-                .then().statusCode(200)
+                .then().statusCode(HttpStatus.OK.value())
                 .assertThat().body(SEARCH_RESULT_RESPONSE_KEY,
                                 equalTo(SEARCH_BY_TRANSMISSION_TYPE_AUTOMATIC));
                 logger.info("Car has been found by selected transmission type");
@@ -51,7 +52,7 @@ public class SearchCarTest {
                 given().body(SearchCarTestData.getCustomTextRequestBody())
                 .header(CONTENT_TYPE_HEADER, ContentType.JSON)
                 .when().post(SEARCH_CAR_BY_FILTER_URL)
-                .then().statusCode(200)
+                .then().statusCode(HttpStatus.OK.value())
                 .assertThat().body(SEARCH_RESULT_RESPONSE_KEY,
                                 equalTo(SEARCH_CUSTOM_TEXT_QUERY_MULTIROULE));
         logger.info("Car offer has been found by selected word in custom client text");
@@ -63,7 +64,7 @@ public class SearchCarTest {
                 given().body(SearchCarTestData.getBodyTypeRequestBody())
                 .header(CONTENT_TYPE_HEADER, ContentType.JSON)
                 .when().post(SEARCH_CAR_BY_FILTER_URL)
-                .then().statusCode(200)
+                .then().statusCode(HttpStatus.OK.value())
                 .assertThat().body(SEARCH_RESULT_RESPONSE_KEY, equalTo(SEARCH_BODY_TYPE_CONVERTIBLE));
         logger.info("Car has been found by selected body type");
     }

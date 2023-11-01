@@ -4,19 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="Refactor constant class">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/CommonSteps.java" afterDir="false" />
+    <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="refactor structure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/po/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/po/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/SearchResultPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/steps/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/LoginSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/steps/NewOfferSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/NewOfferSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/steps/SearchSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/SearchSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/po/VehiclePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/VehiclePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/po/VinCheckPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/VinCheckPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/AuthorizationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/AuthorizationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/FinanceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/FinanceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/OpenPagesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/OpenPagesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/SearchCarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/SearchCarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/steps/CommonSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/CommonSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/steps/VinCheckerSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/VinCheckerSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/AddNewOfferTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/AddNewOfferTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/LoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/OpenPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/OpenPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/SearchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/VinCheckerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/VinCheckerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +58,8 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/Users/User/Desktop/Automation/taf-avby/src/test/java&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Desktop/Automation/taf-avby&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Desktop/Automation/taf-avby&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -66,54 +70,24 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SearchTest">
-    <configuration name="LoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.VinCheckerTest">
+    <configuration name="AuthorizationTest.checkAuthorizationWithSpacesAfterValidEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ui.testing.testsuits.*" />
+          <option name="PATTERN" value="api.testing.testsuits.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ui.testing.testsuits" />
-      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.LoginTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OpenPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="taf-av-by" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ui.testing.testsuits.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ui.testing.testsuits" />
-      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.OpenPageTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OpenPageTest.openVehiclePageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="taf-av-by" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ui.testing.testsuits.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ui.testing.testsuits" />
-      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.OpenPageTest" />
-      <option name="METHOD_NAME" value="openVehiclePageTest" />
+      <option name="PACKAGE_NAME" value="api.testing.testsuits" />
+      <option name="MAIN_CLASS_NAME" value="api.testing.testsuits.AuthorizationTest" />
+      <option name="METHOD_NAME" value="checkAuthorizationWithSpacesAfterValidEmail" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OpenPageTest.openFinancePageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
         <pattern>
@@ -122,7 +96,23 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ui.testing.testsuits" />
-      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.SearchTest" />
+      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.OpenPageTest" />
+      <option name="METHOD_NAME" value="openFinancePageTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SearchCarTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="taf-av-by" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="api.testing.testsuits.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="api.testing.testsuits" />
+      <option name="MAIN_CLASS_NAME" value="api.testing.testsuits.SearchCarTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -144,13 +134,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="VinCheckerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="taf-av-by" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ui.testing.testsuits.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ui.testing.testsuits" />
+      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.VinCheckerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SearchTest" />
+        <item itemvalue="JUnit.VinCheckerTest" />
         <item itemvalue="JUnit.SearchTest.searchCarByPopularParams" />
-        <item itemvalue="JUnit.OpenPageTest" />
-        <item itemvalue="JUnit.OpenPageTest.openVehiclePageTest" />
-        <item itemvalue="JUnit.LoginTest" />
+        <item itemvalue="JUnit.OpenPageTest.openFinancePageTest" />
+        <item itemvalue="JUnit.SearchCarTest" />
+        <item itemvalue="JUnit.AuthorizationTest.checkAuthorizationWithSpacesAfterValidEmail" />
       </list>
     </recent_temporary>
   </component>
@@ -261,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698649818669</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="refactor structure">
+      <created>1698685529936</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1698685529936</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -269,7 +281,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add new methods" />
-    <MESSAGE value="refactor structure" />
     <MESSAGE value="add test methods&#10;create searchresult page object" />
     <MESSAGE value="add search car test&#10;add step classes" />
     <MESSAGE value="add VinCheckerSteps" />
@@ -281,6 +292,7 @@
     <MESSAGE value="refactor code" />
     <MESSAGE value="update readme" />
     <MESSAGE value="Refactor constant class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor constant class" />
+    <MESSAGE value="refactor structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor structure" />
   </component>
 </project>

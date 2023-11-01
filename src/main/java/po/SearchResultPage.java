@@ -27,17 +27,17 @@ public class SearchResultPage {
     }
 
     public String getTitleTopCarText() {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+       Waiter.waitFor(1);
         return driver.findElement(By.xpath(topCarTitleLocator)).getText();
     }
 
     public String getTopCarPriceText() {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+       Waiter.waitFor(1);
         return driver.findElement(By.xpath(topCarPriceLocator)).getText();
     }
 
     public String getTopCarParamsText() {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        Waiter.waitFor(1);
         return driver.findElement(By.xpath(topCarParamsLocator)).getText();
     }
 
