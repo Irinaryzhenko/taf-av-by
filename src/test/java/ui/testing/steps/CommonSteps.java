@@ -12,7 +12,7 @@ public class CommonSteps {
         try {
             homePage.submitCookies();
         } catch (Exception e) {
-            logger.info("Cookies have been shown.");
+            logger.error("Exception in openHomePageSubmitCookies() - {}", e.getMessage(), e);
         };
     }
 }

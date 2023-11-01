@@ -63,7 +63,7 @@ public class VinCheckerSteps extends CommonSteps {
             logger.info("VinCode is invalid format. User sees \"{}\"", expectedPhrase2);
         } catch ( Exception e) {
             Assertions.assertEquals(expectedPhrase1, vinCheckPage.getErrorSomethingWentWrong());
-            logger.info("Error screen opens. User sees \"{}\"", expectedPhrase2);
+            logger.error("Error screen opens. User sees \"{}\"", expectedPhrase2);
         }
     }
 }

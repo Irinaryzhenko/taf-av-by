@@ -4,22 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="refactor structure">
+    <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="refactor code&#10;add errors logging">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/SearchResultPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/VehiclePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/VehiclePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/VinCheckPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/VinCheckPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/AuthorizationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/AuthorizationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/FinanceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/FinanceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/OpenPagesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/OpenPagesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/SearchCarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/SearchCarTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/steps/CommonSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/CommonSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/steps/VinCheckerSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/VinCheckerSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/AddNewOfferTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/AddNewOfferTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/VinCheckerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/VinCheckerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698685529936</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="refactor code&#10;add errors logging">
+      <created>1698822189142</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1698822189142</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -293,6 +288,7 @@
     <MESSAGE value="update readme" />
     <MESSAGE value="Refactor constant class" />
     <MESSAGE value="refactor structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor structure" />
+    <MESSAGE value="refactor code&#10;add errors logging" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor code&#10;add errors logging" />
   </component>
 </project>
