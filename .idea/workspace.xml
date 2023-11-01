@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="refactor code&#10;add errors logging">
+    <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="refactor error logging">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/steps/CommonSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/CommonSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/steps/VinCheckerSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/VinCheckerSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,16 +39,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/User/Desktop/Automation/taf-avby/src/test/java&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Desktop/Automation/taf-avby&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_directory_selection": "C:/Users/User/Desktop/Automation/taf-avby/src/test/java",
+    "last_opened_file_path": "C:/Users/User/Desktop/Automation/taf-avby",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\Desktop\Automation\taf-avby\src\main\java\util" />
@@ -58,8 +57,8 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.VinCheckerTest">
-    <configuration name="AuthorizationTest.checkAuthorizationWithSpacesAfterValidEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AuthorizationTest.checkAuthorizationWithSpacesBeforeValidLogin">
+    <configuration name="AuthorizationTest.checkAuthorizationWithSpacesBeforeValidLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
         <pattern>
@@ -69,7 +68,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="api.testing.testsuits" />
       <option name="MAIN_CLASS_NAME" value="api.testing.testsuits.AuthorizationTest" />
-      <option name="METHOD_NAME" value="checkAuthorizationWithSpacesAfterValidEmail" />
+      <option name="METHOD_NAME" value="checkAuthorizationWithSpacesBeforeValidLogin" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -139,11 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AuthorizationTest.checkAuthorizationWithSpacesBeforeValidLogin" />
         <item itemvalue="JUnit.VinCheckerTest" />
         <item itemvalue="JUnit.SearchTest.searchCarByPopularParams" />
         <item itemvalue="JUnit.OpenPageTest.openFinancePageTest" />
         <item itemvalue="JUnit.SearchCarTest" />
-        <item itemvalue="JUnit.AuthorizationTest.checkAuthorizationWithSpacesAfterValidEmail" />
       </list>
     </recent_temporary>
   </component>
@@ -268,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698822189142</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="refactor error logging">
+      <created>1698823366022</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1698823366022</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -289,6 +295,7 @@
     <MESSAGE value="Refactor constant class" />
     <MESSAGE value="refactor structure" />
     <MESSAGE value="refactor code&#10;add errors logging" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor code&#10;add errors logging" />
+    <MESSAGE value="refactor error logging" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor error logging" />
   </component>
 </project>

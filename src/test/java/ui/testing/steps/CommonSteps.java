@@ -13,6 +13,6 @@ public class CommonSteps {
             homePage.submitCookies();
         } catch (Exception e) {
             logger.error("Exception in openHomePageSubmitCookies() - {}", e.getMessage(), e);
-        };
+        }
     }
 }
