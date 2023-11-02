@@ -16,7 +16,7 @@ public class SearchTest extends BaseTest {
         SearchSteps.inputCarPrice();
         SearchSteps.selectEngineCapacity();
         SearchSteps.submitSearch();
-//        SearchSteps.checkTopCarSearchResult();
+        SearchSteps.checkTopCarSearchResult();
         SearchSteps.checkCarSearchResult();
     }
 }
