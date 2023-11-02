@@ -68,7 +68,7 @@ public class OpenPagesTest {
     @DisplayName("Check opening VinChecker page - status code")
     @Test
     public void checkStatusCodeVinCheckerPage() {
-        when().get(VEHICLE_URL)
+        when().get(VIN_CHECKER_URL)
                 .then().log().status()
                 .assertThat().statusCode(HttpStatus.OK.value());
         logger.info("Send GET-request.VinChecker page opens");

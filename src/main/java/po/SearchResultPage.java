@@ -1,5 +1,6 @@
 package po;
 
+import domain.constant.Constant;
 import driver.Singleton;
 import org.junit.jupiter.api.Assertions;
 
@@ -138,7 +139,7 @@ public class SearchResultPage {
     }
 
     public void checkCarSearchResult() {
-        Assertions.assertTrue((actualTitle.contains("Audi Q2 I")) && isPriceInRange
+        Assertions.assertTrue((actualTitle.contains(Constant.CAR_BRAND_SEARCH)) && isPriceInRange
                         && isYearInRange && isCapacityInRange,
                 "Warning! Search result don't match with request query!");
         logger.info("Searching was successfully ended");

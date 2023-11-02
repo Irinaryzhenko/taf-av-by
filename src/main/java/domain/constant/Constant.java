@@ -18,4 +18,7 @@ public class Constant {
     public final static String INFO_URL = "https://av.by/pages/info";
     public final static String FINANCE_URL = "https://av.by/finance";
     public final static String VIN_CHECKER_URL = "https://av.by/vin";
+    public static final String CAR_BRAND_SEARCH = "Audi Q2 I";
+    public final static String VALID_LOGIN = "irisha_box@mail.ru";
+    public final static String VALID_PASSWORD = "qatestteam12";
 }

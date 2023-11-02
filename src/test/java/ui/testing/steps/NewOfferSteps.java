@@ -1,5 +1,6 @@
 package ui.testing.steps;
 
+import domain.constant.Constant;
 import domain.login.LoginTestData;
 import org.junit.jupiter.api.Assertions;
 import org.slf4j.Logger;
@@ -22,7 +23,7 @@ public class NewOfferSteps extends CommonSteps{
         homePage.openLoginForm();
         LoginFormPage loginFormPage = new LoginFormPage();
         loginFormPage.openLoginFormViaMail();
-        loginFormPage.fillLoginPasswordField(LoginTestData.getValidLogin(), LoginTestData.getValidPassword());
+        loginFormPage.fillLoginPasswordField(Constant.VALID_LOGIN, Constant.VALID_PASSWORD);
         loginFormPage.submitAuthData();
         NewOfferPage newOfferPage = new NewOfferPage();
         homePage.clickAddNewOfferButton();

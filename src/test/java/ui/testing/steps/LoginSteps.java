@@ -1,5 +1,6 @@
 package ui.testing.steps;
 
+import domain.constant.Constant;
 import domain.login.LoginTestData;
 import org.junit.jupiter.api.Assertions;
 import org.slf4j.Logger;
@@ -27,7 +28,7 @@ public class LoginSteps extends CommonSteps{
     public static void fillAuthDataWithValidloginInvalidPassword() {
         LoginFormPage loginFormPage = new LoginFormPage();
         logger.info("Invalid password has been generated , valid login has been filled in login form");
-        loginFormPage.fillLoginPasswordField(LoginTestData.getValidLogin(),
+        loginFormPage.fillLoginPasswordField(Constant.VALID_LOGIN,
                 LoginTestData.generatePassword());
         loginFormPage.submitAuthData();
     }
@@ -35,14 +36,14 @@ public class LoginSteps extends CommonSteps{
         LoginFormPage loginFormPage = new LoginFormPage();
         logger.info("Invalid Login has been generated and filled in the login form with valid password");
         loginFormPage.fillLoginPasswordField(LoginTestData.generateLogin(),
-                LoginTestData.getValidPassword());
+                Constant.VALID_PASSWORD);
         loginFormPage.submitAuthData();
     }
     public static void fillAuthDataWithValidCredentials() {
         LoginFormPage loginFormPage = new LoginFormPage();
         logger.info("Valid credentials have been filled in the login form");
-        loginFormPage.fillLoginPasswordField(LoginTestData.getValidLogin(),
-                LoginTestData.getValidPassword());
+        loginFormPage.fillLoginPasswordField(Constant.VALID_LOGIN,
+                Constant.VALID_PASSWORD);
         loginFormPage.submitAuthData();
     }
     public static void checkErrorMessageLoginInvalidCredentials() {

@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="temporaly commented a part of code because the changes of websites">
+    <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="refactor logic for checking top offers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/constant/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/constant/Constant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/login/LoginTestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/login/LoginTestData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/po/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/SearchResultPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/steps/SearchSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/SearchSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/SearchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/OpenPagesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/OpenPagesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/steps/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/LoginSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/steps/NewOfferSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/NewOfferSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/LoginRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/LoginRequests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,38 +64,38 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.SearchTest.searchCarByPopularParams">
-    <configuration name="AddNewOfferTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AuthorizationTest.checkAuthorizationWithValidCredentials" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ui.testing.testsuits.*" />
+          <option name="PATTERN" value="api.testing.testsuits.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ui.testing.testsuits" />
-      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.AddNewOfferTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AddNewOfferTest.checkUserPossibilityToAddNewOffer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="taf-av-by" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ui.testing.testsuits.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ui.testing.testsuits" />
-      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.AddNewOfferTest" />
-      <option name="METHOD_NAME" value="checkUserPossibilityToAddNewOffer" />
+      <option name="PACKAGE_NAME" value="api.testing.testsuits" />
+      <option name="MAIN_CLASS_NAME" value="api.testing.testsuits.AuthorizationTest" />
+      <option name="METHOD_NAME" value="checkAuthorizationWithValidCredentials" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OpenPagesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="taf-av-by" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ui.testing.testsuits.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ui.testing.testsuits" />
+      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.LoginTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OpenPagesTest.checkStatusCodeVinCheckerPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
         <pattern>
@@ -102,7 +105,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="api.testing.testsuits" />
       <option name="MAIN_CLASS_NAME" value="api.testing.testsuits.OpenPagesTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="checkStatusCodeVinCheckerPage" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -141,10 +145,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.SearchTest.searchCarByPopularParams" />
+        <item itemvalue="JUnit.LoginTest" />
+        <item itemvalue="JUnit.AuthorizationTest.checkAuthorizationWithValidCredentials" />
+        <item itemvalue="JUnit.OpenPagesTest.checkStatusCodeVinCheckerPage" />
         <item itemvalue="JUnit.SearchTest" />
-        <item itemvalue="JUnit.AddNewOfferTest" />
-        <item itemvalue="JUnit.AddNewOfferTest.checkUserPossibilityToAddNewOffer" />
-        <item itemvalue="JUnit.OpenPagesTest" />
       </list>
     </recent_temporary>
   </component>
@@ -304,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698923743328</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="refactor logic for checking top offers">
+      <created>1698936431002</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1698936431003</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -328,6 +339,7 @@
     <MESSAGE value="refactor error logging" />
     <MESSAGE value="refactor info logging" />
     <MESSAGE value="temporaly commented a part of code because the changes of websites" />
-    <option name="LAST_COMMIT_MESSAGE" value="temporaly commented a part of code because the changes of websites" />
+    <MESSAGE value="refactor logic for checking top offers" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor logic for checking top offers" />
   </component>
 </project>

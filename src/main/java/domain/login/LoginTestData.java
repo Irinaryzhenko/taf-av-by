@@ -4,16 +4,7 @@ import java.security.SecureRandom;
 import java.util.Random;
 
 public class LoginTestData {
-    private final static String VALID_LOGIN = "irisha_box@mail.ru";
-    private final static String VALID_PASSWORD = "qatestteam12";
-    public static String getValidLogin() {
-        return VALID_LOGIN;
-    }
-    public static String getValidPassword() {
-        return VALID_PASSWORD;
-    }
-
-    public static String generatePassword() {
+        public static String generatePassword() {
         Random random = new SecureRandom();
         final String letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
         final String digits = "0123456789";

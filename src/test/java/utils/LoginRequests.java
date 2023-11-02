@@ -1,13 +1,14 @@
 package utils;
 
 import api.testing.pojo.requests.LoginRequest;
+import domain.constant.Constant;
 import domain.login.LoginTestData;
 
 public class LoginRequests {
     public static LoginRequest getLoginRequestBodyValidCredentials() {
         LoginRequest loginRequest = new LoginRequest();
-        loginRequest.login = LoginTestData.getValidLogin();
-        loginRequest.password = LoginTestData.getValidPassword();
+        loginRequest.login = Constant.VALID_LOGIN;
+        loginRequest.password = Constant.VALID_PASSWORD;
         return loginRequest;
     }
     public static LoginRequest getLoginRequestBodyInvalidCredentials() {
@@ -36,26 +37,26 @@ public class LoginRequests {
     }
     public static LoginRequest getLoginRequestBodyValidLoginInvalidPassword() {
         LoginRequest loginRequest = new LoginRequest();
-        loginRequest.login = LoginTestData.getValidLogin();
+        loginRequest.login = Constant.VALID_LOGIN;
         loginRequest.password = LoginTestData.generatePassword();
         return loginRequest;
     }
     public static LoginRequest getLoginRequestBodyInvalidLoginValidPassword() {
         LoginRequest loginRequest = new LoginRequest();
         loginRequest.login = LoginTestData.generateLogin();
-        loginRequest.password = LoginTestData.getValidPassword();
+        loginRequest.password = Constant.VALID_PASSWORD;
         return loginRequest;
     }
     public static LoginRequest getLoginRequestBodyValidCredsWithSpacesBeforeLogin() {
         LoginRequest loginRequest = new LoginRequest();
-        loginRequest.login = "   " + LoginTestData.getValidLogin();
-        loginRequest.password = LoginTestData.getValidPassword();
+        loginRequest.login = "   " + Constant.VALID_LOGIN;
+        loginRequest.password = Constant.VALID_PASSWORD;
         return loginRequest;
     }
     public static LoginRequest getLoginRequestBodyValidCredsWithSpacesAfterLogin() {
         LoginRequest loginRequest = new LoginRequest();
-        loginRequest.login = LoginTestData.getValidLogin() + "    ";
-        loginRequest.password = LoginTestData.getValidPassword();
+        loginRequest.login = Constant.VALID_LOGIN + "    ";
+        loginRequest.password = Constant.VALID_PASSWORD;
         return loginRequest;
     }
 }
