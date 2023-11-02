@@ -25,47 +25,47 @@ public class SearchResultPage {
     public SearchResultPage() {
         driver = Singleton.getDriver();
     }
+//с сайта удален раздел топовой машины
+//    public String getTitleTopCarText() {
+//       Waiter.waitFor(2);
+//        return driver.findElement(By.xpath(topCarTitleLocator)).getText();
+//    }
+//
+//    public String getTopCarPriceText() {
+//       Waiter.waitFor(1);
+//        return driver.findElement(By.xpath(topCarPriceLocator)).getText();
+//    }
+//
+//    public String getTopCarParamsText() {
+//        Waiter.waitFor(1);
+//        return driver.findElement(By.xpath(topCarParamsLocator)).getText();
+//    }
 
-    public String getTitleTopCarText() {
-       Waiter.waitFor(1);
-        return driver.findElement(By.xpath(topCarTitleLocator)).getText();
-    }
-
-    public String getTopCarPriceText() {
-       Waiter.waitFor(1);
-        return driver.findElement(By.xpath(topCarPriceLocator)).getText();
-    }
-
-    public String getTopCarParamsText() {
-        Waiter.waitFor(1);
-        return driver.findElement(By.xpath(topCarParamsLocator)).getText();
-    }
-
-    public void checkCarSearchTopResult() {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        String actualTitleTopCar = getTitleTopCarText();
-        String actualPriceTopCar = getTopCarPriceText();
-        int topPrice = Integer.parseInt(actualPriceTopCar.replaceAll("[^0-9]", ""));
-        boolean isTopPriceInRange = topPrice >= 10000 && topPrice <= 50000;
-
-        String topYear = getTopCarParamsText();
-        String actualTopYear = topYear.substring(0, 4);
-        int yearTopCar = Integer.parseInt(actualTopYear);
-        boolean isTopYearInRange = yearTopCar >= 2015 && yearTopCar <= 2023;
-
-        String str = topYear.substring(8);
-        String[] arr = str.split(", ");
-        double actualTopCapacity = Double.parseDouble(arr[1].substring(0, 3));
-        boolean isTopCapacityInRange = actualTopCapacity >= 1.6 && actualTopCapacity <= 3.0;
-
-        Assertions.assertTrue((actualTitleTopCar.contains("Audi Q2"))
-                && isTopPriceInRange && isTopYearInRange && isTopCapacityInRange,
-                "Warning! Top Results do not match with search query!");
+//    public void checkCarSearchTopResult() {
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+//        String actualTitleTopCar = getTitleTopCarText();
+//        String actualPriceTopCar = getTopCarPriceText();
+//        int topPrice = Integer.parseInt(actualPriceTopCar.replaceAll("[^0-9]", ""));
+//        boolean isTopPriceInRange = topPrice >= 10000 && topPrice <= 50000;
+//
+//        String topYear = getTopCarParamsText();
+//        String actualTopYear = topYear.substring(0, 4);
+//        int yearTopCar = Integer.parseInt(actualTopYear);
+//        boolean isTopYearInRange = yearTopCar >= 2015 && yearTopCar <= 2023;
+//
+//        String str = topYear.substring(8);
+//        String[] arr = str.split(", ");
+//        double actualTopCapacity = Double.parseDouble(arr[1].substring(0, 3));
+//        boolean isTopCapacityInRange = actualTopCapacity >= 1.6 && actualTopCapacity <= 3.0;
+//
+//        Assertions.assertTrue((actualTitleTopCar.contains("Audi Q2"))
+//                && isTopPriceInRange && isTopYearInRange && isTopCapacityInRange,
+//                "Warning! Top Results do not match with search query!");
 
         //        Car expectedCar = new Car("Audi Q2 I", 1.6, 2018, 19800);
 //        Car actualCar = new Car(actualTitleTopCar, actualTopCapacity, yearTopCar, topPrice);
 //        Assertions.assertEquals(expectedCar, actualCar);
-    }
+//    }
 
     public void getCarTitleSearchResults() {
         Waiter.waitFor(3);

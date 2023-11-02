@@ -8,7 +8,6 @@ import po.SearchResultPage;
 public class SearchSteps extends CommonSteps{
     private final static Logger logger = LoggerFactory.getLogger(SearchSteps.class);
     private static HomePage homePage;
-    private static SearchResultPage searchResultPage;
 
     public static void selectCarBrand() {
         homePage = new HomePage();
@@ -49,13 +48,14 @@ public class SearchSteps extends CommonSteps{
         homePage.submitSearchQuery();
     }
 
-    public static void checkTopCarSearchResult() {
-        logger.info("Checking top result");
-        searchResultPage = new SearchResultPage();
-        searchResultPage.checkCarSearchTopResult();
-    }
+//    public static void checkTopCarSearchResult() {    // закоментировано в связи с изменение результата поиска - отсуствие топовой машины
+//        logger.info("Checking top result");
+//        searchResultPage = new SearchResultPage();
+//        searchResultPage.checkCarSearchTopResult();
+//    }
 
     public static void checkCarSearchResult() {
+        SearchResultPage searchResultPage = new SearchResultPage();
         logger.info("Checking result");
         searchResultPage.getCarTitleSearchResults();
         searchResultPage.getCarPriceSearchResult();
