@@ -30,7 +30,7 @@ public class AuthorizationTest {
         given().contentType(ContentType.JSON).log().body()
                 .body(request)
                 .when().post(LOGIN_URL).then().statusCode(HttpStatus.OK.value());
-        logger.info("User has been authorized successfully");
+        logger.info("Sending POST request for authorization. User has been authorized successfully");
     }
 
     @DisplayName("Authorization testing. Negative case: login with empty credentials")
@@ -51,7 +51,7 @@ public class AuthorizationTest {
             var actualResult = objectMapper.readValue(response, LoginFailedEmptyCredsResponse.class);
             Assertions.assertEquals(LoginResponses.getLoginResponseEmptyCredentials(), actualResult);
             Assertions.assertEquals("exception.validation.failed", actualResult.getMessage());
-            logger.info("Authorization failed: user sees error: \"{}\" . User need to input credentials",
+            logger.info("Sending POST request for authorization. Authorization failed: user sees error: \"{}\" . User need to input credentials",
                     actualResult.getMessage());
         }
     }
@@ -74,7 +74,7 @@ public class AuthorizationTest {
 
             var actualResult = objectMapper.readValue(response, LoginFailedEmptyCredsResponse.class);
             Assertions.assertEquals(LoginResponses.getLoginResponseEmptyCredentials(), actualResult);
-            logger.info("Authorization failed. User sees error: \" {} \"", actualResult);
+            logger.info("Sending POST request for authorization. Authorization failed. User sees error: \" {} \"", actualResult);
         }
     }
 
@@ -95,7 +95,7 @@ public class AuthorizationTest {
 
             var actualResult = objectMapper.readValue(response, LoginFailedEmptyCredsResponse.class);
             Assertions.assertEquals(LoginResponses.getLoginResponseEmptyCredentials(), actualResult);
-            logger.info("Authorization failed. User sees error: \" {} \"", actualResult);
+            logger.info("Sending POST request for authorization. Authorization failed. User sees error: \" {} \"", actualResult);
         }
     }
 
@@ -117,7 +117,7 @@ public class AuthorizationTest {
             LoginFailedInvalidCredsResponse loginResponse = objectMapper
                     .readValue(response, LoginFailedInvalidCredsResponse.class);
             Assertions.assertEquals(LoginResponses.getLoginResponseInvalidCredentials(), loginResponse);
-            logger.info("Authorization failed. User sees error: \" {} \"", loginResponse);
+            logger.info("Sending POST request for authorization. Authorization failed. User sees error: \" {} \"", loginResponse);
         }
     }
 
@@ -137,7 +137,7 @@ public class AuthorizationTest {
             ObjectMapper objectMapper = new ObjectMapper();
             LoginFailedInvalidCredsResponse loginResponse = objectMapper.readValue(response, LoginFailedInvalidCredsResponse.class);
             Assertions.assertEquals(LoginResponses.getLoginResponseInvalidCredentials(), loginResponse);
-            logger.info("Authorization failed. User sees error: \" {} \"", loginResponse);
+            logger.info("Sending POST request for authorization.Authorization failed. User sees error: \" {} \"", loginResponse);
         }
     }
 
@@ -155,7 +155,7 @@ public class AuthorizationTest {
         ObjectMapper objectMapper = new ObjectMapper();
         LoginFailedInvalidCredsResponse loginResponse = objectMapper.readValue(response, LoginFailedInvalidCredsResponse.class);
         Assertions.assertEquals(LoginResponses.getLoginResponseInvalidCredentials(), loginResponse);
-        logger.info("Authorization failed. User sees error: \" {} \"", loginResponse);
+        logger.info("Sending POST request for authorization. Authorization failed. User sees error: \" {} \"", loginResponse);
     }
 
     @DisplayName("Authorization testing. Negative case: login with spaces before valid email. Spaces need to be trimmed.")
@@ -166,7 +166,7 @@ public class AuthorizationTest {
         given().contentType(ContentType.JSON).log().body()
                 .body(request)
                 .when().post(LOGIN_URL).then().statusCode(HttpStatus.OK.value());
-        logger.info("User has been authorized successfully. Spaces have been trimmed");
+        logger.info("Sending POST request for authorization.User has been authorized successfully. Spaces have been trimmed");
     }
 
     @DisplayName("Authorization testing. Negative case: login with spaces before valid email. Spaces need to be trimmed.")
@@ -176,6 +176,6 @@ public class AuthorizationTest {
         given().contentType(ContentType.JSON).log().body()
                 .body(request)
                 .when().post(LOGIN_URL).then().statusCode(HttpStatus.OK.value());
-        logger.info("User has been authorized successfully. Spaces have been trimmed");
+        logger.info("Sending POST request for authorization. User has been authorized successfully. Spaces have been trimmed");
     }
 }

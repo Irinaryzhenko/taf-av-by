@@ -14,11 +14,11 @@ public class OpenPageTest extends BaseTest {
     @DisplayName("Check home page opening")
     @Test
     public void openHomePageTest() {
-        logger.info("Home page opens");
         HomePage homePage = new HomePage();
         homePage.openHomePage();
         Assertions.assertEquals("© 2001, ООО «Автоклассифайд», УНП 192787977, Минск, ул. Кутузова, 15",
                 homePage.getCopyrightText());
+        logger.info("Home page opens");
     }
 
     @DisplayName("Check Finance Page opening")
@@ -30,6 +30,7 @@ public class OpenPageTest extends BaseTest {
         FinancePage financePage = new FinancePage();
         Assertions.assertEquals("Кредиты и лизинг на покупку транспорта и комплектующих",
                 financePage.getFinanceTitleText());
+        logger.info("Finance page opens");
     }
 
     @DisplayName("Check Vehicle Page opening")
@@ -41,6 +42,7 @@ public class OpenPageTest extends BaseTest {
         VehiclePage transportPage = new VehiclePage();
         Assertions.assertEquals("Объявления о продаже автомобилей с пробегом в Беларуси",
                 transportPage.getTransportTitleText());
+        logger.info("Vehicle page opens");
     }
     @DisplayName("Check Part Page opening")
     @Test
@@ -51,6 +53,7 @@ public class OpenPageTest extends BaseTest {
         PartPage partPage = new PartPage();
         Assertions.assertEquals("Продажа запчастей новых и б/у в Беларуси",
                 partPage.getPartTitlePageText());
+        logger.info("Part page opens");
     }
     @DisplayName("Check News Page opening")
     @Test
@@ -61,6 +64,7 @@ public class OpenPageTest extends BaseTest {
         NewsPage newsPage = new NewsPage();
         Assertions.assertEquals("Пишем про авторынок в Беларуси, делаем обзоры, интервью и помогаем людям выбирать себе автомобили",
                 newsPage.getNewsTitleText());
+        logger.info("News page opens");
     }
     @DisplayName("Check Info Page opening")
     @Test
@@ -70,6 +74,7 @@ public class OpenPageTest extends BaseTest {
         homePage.openInfoPage();
         InfoPage infoPage = new InfoPage();
         Assertions.assertEquals("Знания", infoPage.getInfoPageTitleText());
+        logger.info("Info page opens");
     }
     @DisplayName("Check VinChecker opening")
     @Test
@@ -80,5 +85,6 @@ public class OpenPageTest extends BaseTest {
         VinCheckPage vinCheckPage = new VinCheckPage();
         Assertions.assertEquals("Проверка истории транспорта по VIN",
                 vinCheckPage.getVinCheckPageTitleText());
+        logger.info("VinChecker page opens");
     }
 }

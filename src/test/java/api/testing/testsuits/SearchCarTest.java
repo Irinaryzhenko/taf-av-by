@@ -20,7 +20,7 @@ public class SearchCarTest {
     public void checkSearchingAnyCar() {
         when().get(SEARCH_ANY_CAR_URL).then().log().status()
                 .assertThat().statusCode(HttpStatus.OK.value());
-        logger.info("All cars are available for selecting");
+        logger.info("Send GET-request. All cars are available for selecting");
     }
 
     @DisplayName("Check searching by brand - Acura")
@@ -31,7 +31,7 @@ public class SearchCarTest {
                 .when().post(SEARCH_CAR_BY_FILTER_URL)
                 .then().statusCode(HttpStatus.OK.value())
                 .assertThat().body(SEARCH_RESULT_RESPONSE_KEY, equalTo(SEARCH_BY_BRAND_ACURA));
-                logger.info("Selected car has been found by brand");
+                logger.info("Send POST-request for searching car. Selected car has been found by brand");
     }
 
     @DisplayName("Check searching by transmission type - automatic transmission")
@@ -43,7 +43,7 @@ public class SearchCarTest {
                 .then().statusCode(HttpStatus.OK.value())
                 .assertThat().body(SEARCH_RESULT_RESPONSE_KEY,
                                 equalTo(SEARCH_BY_TRANSMISSION_TYPE_AUTOMATIC));
-                logger.info("Car has been found by selected transmission type");
+                logger.info("Send POST-request for searching car. Car has been found by selected transmission type");
     }
 
     @DisplayName("Check searching by custom client's text in description. Search word - multiroule")
@@ -55,7 +55,7 @@ public class SearchCarTest {
                 .then().statusCode(HttpStatus.OK.value())
                 .assertThat().body(SEARCH_RESULT_RESPONSE_KEY,
                                 equalTo(SEARCH_CUSTOM_TEXT_QUERY_MULTIROULE));
-        logger.info("Car offer has been found by selected word in custom client text");
+        logger.info("Send POST-request for searching car. Car offer has been found by selected word in custom client text");
     }
 
     @DisplayName("Check searching by car body type - convertible")
@@ -66,6 +66,6 @@ public class SearchCarTest {
                 .when().post(SEARCH_CAR_BY_FILTER_URL)
                 .then().statusCode(HttpStatus.OK.value())
                 .assertThat().body(SEARCH_RESULT_RESPONSE_KEY, equalTo(SEARCH_BODY_TYPE_CONVERTIBLE));
-        logger.info("Car has been found by selected body type");
+        logger.info("Send POST-request for searching car. Car has been found by selected body type");
     }
 }

@@ -17,7 +17,7 @@ public class OpenPagesTest {
         when().get(HOME_URL)
                 .then().log().status()
                 .assertThat().statusCode(HttpStatus.OK.value());
-        logger.info("Home page opens");
+        logger.info("Send GET-request. Home page opens");
     }
 
     @DisplayName("Check opening Vehicle page - status code")
@@ -26,7 +26,7 @@ public class OpenPagesTest {
         when().get(VEHICLE_URL)
                 .then().log().status()
                 .assertThat().statusCode(HttpStatus.OK.value());
-        logger.info("Vehicle page opens");
+        logger.info("Send GET-request. Vehicle page opens");
     }
 
     @DisplayName("Check opening WheelsParts page - status code")
@@ -35,7 +35,7 @@ public class OpenPagesTest {
         when().get(WHEELS_PARTS_URL)
                 .then().log().status()
                 .assertThat().statusCode(HttpStatus.OK.value());
-        logger.info("WheelPart page opens");
+        logger.info("Send GET-request. WheelPart page opens");
     }
 
     @DisplayName("Check opening News page - status code")
@@ -44,7 +44,7 @@ public class OpenPagesTest {
         when().get(NEWS_URL)
                 .then().log().status()
                 .assertThat().statusCode(HttpStatus.OK.value());
-        logger.info("News page opens");
+        logger.info("Send GET-request. News page opens");
     }
 
     @DisplayName("Check opening Info page - status code")
@@ -53,7 +53,7 @@ public class OpenPagesTest {
         when().get(INFO_URL)
                 .then().log().status()
                 .assertThat().statusCode(HttpStatus.OK.value());
-        logger.info("Info page opens");
+        logger.info("Send GET-request. Info page opens");
     }
 
     @DisplayName("Check opening Finance page - status code")
@@ -62,7 +62,7 @@ public class OpenPagesTest {
         when().get(FINANCE_URL)
                 .then().log().status()
                 .assertThat().statusCode(HttpStatus.OK.value());
-        logger.info("Finance page opens");
+        logger.info("Send GET-request. Finance page opens");
     }
 
     @DisplayName("Check opening VinChecker page - status code")
@@ -71,7 +71,7 @@ public class OpenPagesTest {
         when().get(VEHICLE_URL)
                 .then().log().status()
                 .assertThat().statusCode(HttpStatus.OK.value());
-        logger.info("Vinchecker page opens");
+        logger.info("Send GET-request.VinChecker page opens");
     }
 
     @DisplayName("Check Content Type of the Home page")
@@ -81,6 +81,6 @@ public class OpenPagesTest {
                 .then().log().headers()
                 .assertThat().headers(CONTENT_TYPE_HEADER,
                         equalTo("text/html; charset=utf-8"));
-        logger.info("Home page content type is equals to expected");
+        logger.info("Send GET-request. Home page content type is equals to expected");
     }
 }
