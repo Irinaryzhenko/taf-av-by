@@ -60,8 +60,9 @@ public class SearchResultPage {
 
     public void checkCarSearchTopResult() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        String actualTitleTopCar = getTitleTopCarText();;
+        String actualTitleTopCar = getTitleTopCarText();
         String actualPriceTopCar = getTopCarPriceText();
+
         if (actualTitleTopCar !=null && actualPriceTopCar !=null) {
             int topPrice = Integer.parseInt(actualPriceTopCar.replaceAll("[^0-9]", ""));
             boolean isTopPriceInRange = topPrice >= 10000 && topPrice <= 50000;
@@ -83,11 +84,6 @@ public class SearchResultPage {
             logger.error("There is no top car offer!");
         }
     }
-
-        //        Car expectedCar = new Car("Audi Q2 I", 1.6, 2018, 19800);
-//        Car actualCar = new Car(actualTitleTopCar, actualTopCapacity, yearTopCar, topPrice);
-//        Assertions.assertEquals(expectedCar, actualCar);
-//    }
 
     public void getCarTitleSearchResults() {
         Waiter.waitFor(3);
