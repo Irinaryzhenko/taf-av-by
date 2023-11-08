@@ -6,22 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="refactor code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/driver/Singleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/driver/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/FinancePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/FinancePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/InfoPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/InfoPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/LoginFormPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/LoginFormPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/NewOfferPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/NewOfferPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/NewsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/NewsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/PartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/PartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/PersonalAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/PersonalAccountPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/SearchResultPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/VehiclePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/VehiclePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/VinCheckPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/VinCheckPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/Waiter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/testing/pojo/requests/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testing/pojo/requests/LoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/steps/NewOfferSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/NewOfferSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/login/LoginTestData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/AuthorizationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/AuthorizationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/steps/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/LoginSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/LoginRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/LoginRequests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +61,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AddNewOfferTest.checkUserPossibilityToAddNewOffer">
+  <component name="RunManager" selected="JUnit.LoginTest.loginWithValidCredentials">
     <configuration name="AddNewOfferTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
@@ -88,39 +77,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddNewOfferTest.addNewOfferByNonAuthUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="taf-av-by" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ui.testing.testsuits.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ui.testing.testsuits" />
-      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.AddNewOfferTest" />
-      <option name="METHOD_NAME" value="addNewOfferByNonAuthUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AddNewOfferTest.checkUserPossibilityToAddNewOffer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="taf-av-by" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ui.testing.testsuits.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ui.testing.testsuits" />
-      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.AddNewOfferTest" />
-      <option name="METHOD_NAME" value="checkUserPossibilityToAddNewOffer" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SearchCarTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AuthorizationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
         <pattern>
@@ -129,13 +86,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="api.testing.testsuits" />
-      <option name="MAIN_CLASS_NAME" value="api.testing.testsuits.SearchCarTest" />
+      <option name="MAIN_CLASS_NAME" value="api.testing.testsuits.AuthorizationTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchTest.searchCarByPopularParams" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
         <pattern>
@@ -144,8 +101,39 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ui.testing.testsuits" />
-      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.SearchTest" />
-      <option name="METHOD_NAME" value="searchCarByPopularParams" />
+      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.LoginTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest.loginWithInvalidCredentials" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="taf-av-by" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ui.testing.testsuits.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ui.testing.testsuits" />
+      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.LoginTest" />
+      <option name="METHOD_NAME" value="loginWithInvalidCredentials" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest.loginWithValidCredentials" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="taf-av-by" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ui.testing.testsuits.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ui.testing.testsuits" />
+      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.LoginTest" />
+      <option name="METHOD_NAME" value="loginWithValidCredentials" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -153,11 +141,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AddNewOfferTest.checkUserPossibilityToAddNewOffer" />
-        <item itemvalue="JUnit.AddNewOfferTest.addNewOfferByNonAuthUser" />
+        <item itemvalue="JUnit.LoginTest.loginWithValidCredentials" />
+        <item itemvalue="JUnit.LoginTest" />
+        <item itemvalue="JUnit.AuthorizationTest" />
+        <item itemvalue="JUnit.LoginTest.loginWithInvalidCredentials" />
         <item itemvalue="JUnit.AddNewOfferTest" />
-        <item itemvalue="JUnit.SearchCarTest" />
-        <item itemvalue="JUnit.SearchTest.searchCarByPopularParams" />
       </list>
     </recent_temporary>
   </component>
@@ -338,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699002809484</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="refactor code">
+      <created>1699423563255</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1699423563255</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="UnknownFeatures">

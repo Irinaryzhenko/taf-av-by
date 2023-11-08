@@ -36,7 +36,7 @@ public class AuthorizationTest {
     @DisplayName("Authorization testing. Negative case: login with empty credentials")
     @Test
     public void checkAuthorizationWithEmptyCredentials() throws IOException {
-        LoginRequest request = LoginRequests.getLoginRequestBodyEmptyCredentals();
+        LoginRequest request = LoginRequests.getLoginRequestBodyEmptyCredentials();
         ObjectMapper objectMapperRequest = new ObjectMapper();
         var requestBody = objectMapperRequest.writeValueAsString(request);
         Response responseBody = RestAssured

@@ -1,7 +1,7 @@
 package ui.testing.steps;
 
+import com.github.javafaker.Faker;
 import domain.constant.Constant;
-import domain.login.LoginTestData;
 import org.junit.jupiter.api.Assertions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,6 +12,7 @@ import po.PersonalAccountPage;
 public class LoginSteps extends CommonSteps{
 
     private final static Logger logger = LoggerFactory.getLogger(LoginSteps.class);
+    public static Faker faker = new Faker();
     public static void openLoginFormViaEmail() {
         HomePage homePage = new HomePage();
         homePage.openLoginForm();
@@ -21,21 +22,21 @@ public class LoginSteps extends CommonSteps{
     public static void fillAuthDataWithInvalidCredentials() {
         LoginFormPage loginFormPage = new LoginFormPage();
         logger.info("Invalid creds have been generated and filled in login form");
-        loginFormPage.fillLoginPasswordField(LoginTestData.generateLogin(),
-                LoginTestData.generatePassword());
+        loginFormPage.fillLoginPasswordField(faker.internet().emailAddress(),
+                faker.internet().password());
         loginFormPage.submitAuthData();
     }
     public static void fillAuthDataWithValidloginInvalidPassword() {
         LoginFormPage loginFormPage = new LoginFormPage();
         logger.info("Invalid password has been generated , valid login has been filled in login form");
         loginFormPage.fillLoginPasswordField(Constant.VALID_LOGIN,
-                LoginTestData.generatePassword());
+                faker.internet().password());
         loginFormPage.submitAuthData();
     }
     public static void fillAuthDataInvalidLoginValidPasswords() {
         LoginFormPage loginFormPage = new LoginFormPage();
         logger.info("Invalid Login has been generated and filled in the login form with valid password");
-        loginFormPage.fillLoginPasswordField(LoginTestData.generateLogin(),
+        loginFormPage.fillLoginPasswordField(faker.internet().emailAddress(),
                 Constant.VALID_PASSWORD);
         loginFormPage.submitAuthData();
     }
