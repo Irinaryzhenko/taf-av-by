@@ -1,6 +1,6 @@
 package ui.testing.testsuits;
 
-import driver.Singleton;
+import driver.Driver;
 import org.junit.jupiter.api.AfterEach;
 
 
@@ -9,6 +9,6 @@ public class BaseTest {
 
     @AfterEach
     public void closeDriver() {
-        Singleton.quitDriver();
+        Driver.quitDriver();
     }
 }

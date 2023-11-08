@@ -1,6 +1,6 @@
 package po;
 
-import driver.Singleton;
+import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -11,7 +11,7 @@ public class InfoPage {
     private String infoPageTitleTextLocator = "//h1[@class = 'heading-title']";
 
     public InfoPage() {
-        driver = Singleton.getDriver();
+        driver = Driver.getDriver();
     }
     public String getInfoPageTitleText() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));

@@ -1,6 +1,6 @@
 package po;
 
-import driver.Singleton;
+import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -12,7 +12,7 @@ public class NewsPage {
     private String newsPageTitleLocator = "//p[@class = 'journal-logo__tagline']";
 
     public NewsPage() {
-        driver = Singleton.getDriver();
+        driver = Driver.getDriver();
     }
     public String getNewsTitleText() {
         new WebDriverWait(driver, Duration.ofSeconds(5))

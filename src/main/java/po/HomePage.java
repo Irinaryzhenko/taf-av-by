@@ -2,10 +2,8 @@ package po;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import driver.Singleton;
+import driver.Driver;
 import org.openqa.selenium.WebElement;
-import util.Waiter;
-
 import java.time.Duration;
 
 public class HomePage {
@@ -40,7 +38,7 @@ public class HomePage {
     private String selectedCapacityUntilLocator = "//ul[@class = 'dropdown-list dropdown-list--opened']/li[@class = 'dropdown__listitem']/button[@data-item-label = '3,0 л.']";
     private String showResultsButtonLocator = "//div[@class = 'filter__show-result']";
     public HomePage() {
-        this.driver = Singleton.getDriver();
+        this.driver = Driver.getDriver();
     }
 
     public void openHomePage() {
@@ -100,12 +98,12 @@ public class HomePage {
     }
 
     public void selectCarBrand() {
-        Waiter.waitFor(2);
+        Driver.waitFor(2);
         driver.findElement(By.xpath(selectedCarLocator)).click();
     }
 
     public void openModelDropDownMenu(){
-        Waiter.waitFor(3);
+        Driver.waitFor(3);
         driver.findElement(By.xpath(modelDropdownButtonLocator)).click();
     }
 
@@ -114,7 +112,7 @@ public class HomePage {
         driver.findElement(By.xpath(selectModelLocator)).click();
     }
     public void openCarGenerationDropDownMenu() {
-        Waiter.waitFor(3);
+        Driver.waitFor(3);
         driver.findElement(By.xpath(carGenerationDropDownLocator)).click();
     }
     public void selectCarGeneration() {

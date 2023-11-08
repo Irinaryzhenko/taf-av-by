@@ -1,6 +1,6 @@
 package po;
 
-import driver.Singleton;
+import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -18,7 +18,7 @@ public class LoginFormPage {
     private String logInTitleLocator = "//div[@class = 'auth__title'][text() = 'Вход']";
 
     public LoginFormPage() {
-        this.driver = Singleton.getDriver();
+        this.driver = Driver.getDriver();
     }
     public void openLoginFormViaMail() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));

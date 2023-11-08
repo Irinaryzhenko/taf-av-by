@@ -1,6 +1,6 @@
 package po;
 
-import driver.Singleton;
+import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -11,7 +11,7 @@ public class NewOfferPage {
     private String newOfferTitleLocator = "//div[@class = 'heading__main']/h1[@class = 'heading__text']";
 
     public NewOfferPage() {
-        driver = Singleton.getDriver();
+        driver = Driver.getDriver();
     }
     public String getNewOfferTitleText() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));

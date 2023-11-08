@@ -1,18 +1,15 @@
 package po;
 
 import domain.constant.Constant;
-import driver.Singleton;
+import driver.Driver;
 import org.junit.jupiter.api.Assertions;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import util.Waiter;
 import java.time.Duration;
 import java.util.List;
-
 
 public class SearchResultPage {
     WebDriver driver;
@@ -28,11 +25,11 @@ public class SearchResultPage {
     private boolean isCapacityInRange;
     private static Logger logger = LoggerFactory.getLogger(SearchResultPage.class);
     public SearchResultPage() {
-        driver = Singleton.getDriver();
+        driver = Driver.getDriver();
     }
     public String getTitleTopCarText() {
         try {
-            Waiter.waitFor(2);
+            Driver.waitFor(2);
             return driver.findElement(By.xpath(topCarTitleLocator)).getText();
         } catch (Exception e) {
             logger.error("No top car title was found");
@@ -41,7 +38,7 @@ public class SearchResultPage {
 
     public String getTopCarPriceText() {
         try {
-            Waiter.waitFor(1);
+            Driver.waitFor(2);
             return driver.findElement(By.xpath(topCarPriceLocator)).getText();
         } catch (Exception e) {
             logger.error("No top price was found");
@@ -50,7 +47,7 @@ public class SearchResultPage {
 
     public String getTopCarParamsText() {
         try {
-            Waiter.waitFor(1);
+            Driver.waitFor(2);
             return driver.findElement(By.xpath(topCarParamsLocator)).getText();
         } catch (Exception e) {
            logger.error("No top text was found");
@@ -86,7 +83,7 @@ public class SearchResultPage {
     }
 
     public void getCarTitleSearchResults() {
-        Waiter.waitFor(3);
+        Driver.waitFor(2);
         List<WebElement> searchTitles = driver.findElements(By.xpath(carTitleLocator));
         for (WebElement element : searchTitles) {
             try {
@@ -99,7 +96,7 @@ public class SearchResultPage {
     }
 
     public void getCarPriceSearchResult() {
-        Waiter.waitFor(5);
+        Driver.waitFor(2);
         List<WebElement> searchPrices = driver.findElements(By.xpath(carPriceLocator));
         for (WebElement element : searchPrices) {
             try {

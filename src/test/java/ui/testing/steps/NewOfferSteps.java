@@ -1,7 +1,6 @@
 package ui.testing.steps;
 
 import domain.constant.Constant;
-import domain.login.LoginTestData;
 import org.junit.jupiter.api.Assertions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

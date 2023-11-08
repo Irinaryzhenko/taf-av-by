@@ -1,6 +1,6 @@
 package po;
 
-import driver.Singleton;
+import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -19,7 +19,7 @@ public class VinCheckPage {
     private String errorFormatSmthWentWrong = "//h1[text() = 'Что-то сломалось']";
 
     public VinCheckPage() {
-        driver = Singleton.getDriver();
+        driver = Driver.getDriver();
     }
     public String getVinCheckPageTitleText() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));

@@ -1,6 +1,6 @@
 package po;
 
-import driver.Singleton;
+import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -11,7 +11,7 @@ public class FinancePage {
     private String financeTitleDescriptionLocator = "//div[@class = 'finance-type__description']";
 
     public FinancePage() {
-        driver = Singleton.getDriver();
+        driver = Driver.getDriver();
     }
     public String getFinanceTitleText() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
