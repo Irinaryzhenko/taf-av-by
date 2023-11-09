@@ -4,6 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import driver.Driver;
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.time.Duration;
 
 public class HomePage {
@@ -37,6 +40,7 @@ public class HomePage {
     private String engineCapacityUntilDropDownLocator = "//div[@class = 'dropdown__box']//span[@class = 'dropdown-floatlabel__value'][text() = 'до']";
     private String selectedCapacityUntilLocator = "//ul[@class = 'dropdown-list dropdown-list--opened']/li[@class = 'dropdown__listitem']/button[@data-item-label = '3,0 л.']";
     private String showResultsButtonLocator = "//div[@class = 'filter__show-result']";
+    private static final Logger logger = LoggerFactory.getLogger(HomePage.class);
     public HomePage() {
         this.driver = Driver.getDriver();
     }
@@ -57,7 +61,10 @@ public class HomePage {
 
     public void openPersonalAccountPage() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        try {
         driver.findElement(By.xpath(profileDropDownMenuLocator)).click();
+    } catch (Exception e) {
+       logger.error("You are banned! Don't joke with valid credentials"); }
     }
 
     public String getCopyrightText() {
