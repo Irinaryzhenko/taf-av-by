@@ -59,10 +59,9 @@ public class LoginSteps extends CommonSteps{
         HomePage homePage = new HomePage();
         homePage.openPersonalAccountPage();
         PersonalAccountPage accountPage = new PersonalAccountPage();
-        accountPage.getMyOffersTabLocatorTabText();
-        System.out.println(accountPage.getMyOffersTabLocatorTabText());
-        Assertions.assertEquals("Мои объявления", accountPage.getMyOffersTabLocatorTabText());
-        logger.info("Authorization done");
+            accountPage.getMyOffersTabLocatorTabText();
+            Assertions.assertEquals("Мои объявления", accountPage.getMyOffersTabLocatorTabText());
+            logger.info("Authorization done");
     }
     public static void checkNeedLoginTitle() {
         LoginFormPage loginFormPage = new LoginFormPage();
