@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="refactor code">
+    <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="add faker library">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/allure.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/login/LoginTestData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/AuthorizationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/AuthorizationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/steps/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/LoginSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/LoginRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/LoginRequests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +58,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LoginTest.loginWithValidCredentials">
+  <component name="RunManager" selected="JUnit.AuthorizationTest">
     <configuration name="AddNewOfferTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
@@ -141,11 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AuthorizationTest" />
+        <item itemvalue="JUnit.AddNewOfferTest" />
         <item itemvalue="JUnit.LoginTest.loginWithValidCredentials" />
         <item itemvalue="JUnit.LoginTest" />
-        <item itemvalue="JUnit.AuthorizationTest" />
         <item itemvalue="JUnit.LoginTest.loginWithInvalidCredentials" />
-        <item itemvalue="JUnit.AddNewOfferTest" />
       </list>
     </recent_temporary>
   </component>
@@ -333,7 +330,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699423563255</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="add faker library">
+      <created>1699426190475</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1699426190475</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -359,6 +363,7 @@
     <MESSAGE value="refactor logic for checking top offers" />
     <MESSAGE value="refactor constant" />
     <MESSAGE value="refactor code" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor code" />
+    <MESSAGE value="add faker library" />
+    <option name="LAST_COMMIT_MESSAGE" value="add faker library" />
   </component>
 </project>
