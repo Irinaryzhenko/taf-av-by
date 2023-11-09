@@ -4,7 +4,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ui.testing.steps.LoginSteps;
 
-public class LoginTest extends BaseTest {
+public class AuthorizationTest extends BaseTest {
 
     @DisplayName("Check login with invalid credentials")
     @Test

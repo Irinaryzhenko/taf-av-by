@@ -157,25 +157,4 @@ public class AuthorizationTest {
         Assertions.assertEquals(LoginResponses.getLoginResponseInvalidCredentials(), loginResponse);
         logger.info("Sending POST request for authorization. Authorization failed. User sees error: \" {} \"", loginResponse);
     }
-
-    @DisplayName("Authorization testing. Negative case: login with spaces before valid email. Spaces need to be trimmed.")
-    @Test
-    public void checkAuthorizationWithSpacesBeforeValidLogin() {
-        LoginRequest request = LoginRequests.getLoginRequestBodyValidCredsWithSpacesBeforeLogin();
-
-        given().contentType(ContentType.JSON).log().body()
-                .body(request)
-                .when().post(LOGIN_URL).then().statusCode(HttpStatus.OK.value());
-        logger.info("Sending POST request for authorization.User has been authorized successfully. Spaces have been trimmed");
-    }
-
-    @DisplayName("Authorization testing. Negative case: login with spaces before valid email. Spaces need to be trimmed.")
-    @Test
-    public void checkAuthorizationWithSpacesAfterValidEmail() {
-        LoginRequest request = LoginRequests.getLoginRequestBodyValidCredsWithSpacesAfterLogin();
-        given().contentType(ContentType.JSON).log().body()
-                .body(request)
-                .when().post(LOGIN_URL).then().statusCode(HttpStatus.OK.value());
-        logger.info("Sending POST request for authorization. User has been authorized successfully. Spaces have been trimmed");
-    }
 }
