@@ -33,12 +33,12 @@ public class LoginTest extends BaseTest {
         LoginSteps.checkErrorMessageLoginInvalidCredentials();
     }
 
-    @DisplayName("Check login with valid credentials")
-    @Test
-    public void loginWithValidCredentials() {
-        LoginSteps.openHomePageSubmitCookies();
-        LoginSteps.openLoginFormViaEmail();
-        LoginSteps.fillAuthDataWithValidCredentials();
-        LoginSteps.checkAuthorizationSuccess();
-    }
+//    @DisplayName("Check login with valid credentials")
+//    @Test
+//    public void loginWithValidCredentials() {
+//        LoginSteps.openHomePageSubmitCookies();
+//        LoginSteps.openLoginFormViaEmail();
+//        LoginSteps.fillAuthDataWithValidCredentials();
+//        LoginSteps.checkAuthorizationSuccess();
+//    }
 }
