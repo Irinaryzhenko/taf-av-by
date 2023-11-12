@@ -23,7 +23,6 @@ public class LoginFormPage {
     public void openLoginFormViaMail() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
        driver.findElement(By.xpath(loginViaMailLocator)).click();
-
     }
     public void fillLoginPasswordField(String loginText, String passwordText) {
         driver.findElement(By.xpath(loginInputFieldLocator)).sendKeys(loginText);

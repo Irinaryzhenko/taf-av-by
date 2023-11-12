@@ -10,7 +10,6 @@ import java.time.Duration;
 public class NewsPage {
     WebDriver driver;
     private String newsPageTitleLocator = "//p[@class = 'journal-logo__tagline']";
-
     public NewsPage() {
         driver = Driver.getDriver();
     }

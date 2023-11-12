@@ -1,5 +1,6 @@
 package api.testing.testsuits;
 
+import domain.constant.Constant;
 import domain.search.FinanceTestData;
 import io.basc.framework.http.HttpStatus;
 import io.restassured.http.ContentType;
@@ -24,7 +25,7 @@ public class FinanceTest {
                 .when().post(FINANCE_SEARCH_URL)
                 .then().statusCode(HttpStatus.OK.value())
                 .assertThat().body("total", equalTo(generalCreditQuantity))
-                .body("items[0].title", equalTo("Автомобиль с пробегом в лизинг"));
+                .body("items[0].title", equalTo(Constant.CREDIT_OFFER_TEXT));
         logger.info("Sending POST request for checking credit quantity. Credit offer have been found, quantity: {}",
                 generalCreditQuantity);
     }
@@ -38,7 +39,7 @@ public class FinanceTest {
                 .when().post(FINANCE_SEARCH_URL)
                 .then().statusCode(HttpStatus.OK.value())
                 .assertThat().body("total", equalTo(newCarCreditQuantity))
-                .body("items[0].title", equalTo("На новый авто и с пробегом"));
+                .body("items[0].title", equalTo(Constant.CREDIT_NEW_CAR_OFFER_TEXT));
         logger.info("Sending POST request for checking credit quantity. Credit offer for new cars have been found, quantity: {} ",
                 newCarCreditQuantity);
     }
@@ -52,7 +53,7 @@ public class FinanceTest {
                 .when().post(FINANCE_SEARCH_URL)
                 .then().statusCode(HttpStatus.OK.value())
                 .assertThat().body("total", equalTo(truckCreditQuantity))
-                .body("items[0].title", equalTo("Кредит на любые цели. Полностью онлайн"));
+                .body("items[0].title", equalTo(Constant.CREDIT_TRUCK_OFFER_TEXT));
         logger.info("Sending POST request for checking credit quantity. Credit offer for trucks have been found, quantity: {} ",
                 truckCreditQuantity);
     }

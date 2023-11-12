@@ -29,7 +29,7 @@ public class NewOfferSteps extends CommonSteps {
         try {
             NewOfferPage newOfferPage = new NewOfferPage();
             homePage.clickAddNewOfferButton();
-            Assertions.assertEquals("Новое объявление", newOfferPage.getNewOfferTitleText());
+            Assertions.assertEquals(Constant.NEW_OFFER_TITLE, newOfferPage.getNewOfferTitleText());
             logger.info("New offer are ready to be created");
         } catch (Exception e) {
             logger.error("You have been banned. Don't joke with valid credentials!");

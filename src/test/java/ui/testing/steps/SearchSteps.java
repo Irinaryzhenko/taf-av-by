@@ -55,7 +55,7 @@ public class SearchSteps extends CommonSteps {
         logger.info("Checking top result");
         searchResultPage = new SearchResultPage();
         searchResultPage.getCarSearchTopResult();
-        Assertions.assertTrue((searchResultPage.getActualTopTitle().contains("Audi Q2"))
+        Assertions.assertTrue((searchResultPage.getActualTopTitle().contains(Constant.CAR_BRAND_SEARCH))
                             && searchResultPage.isTopPriceInRange() && searchResultPage.isTopYearInRange()
                         && searchResultPage.isTopCapacityInRange(),
                     "Warning! Top Results do not match with search query!");

@@ -48,16 +48,4 @@ public class LoginRequests {
         loginRequest.password = Constant.VALID_PASSWORD;
         return loginRequest;
     }
-    public static LoginRequest getLoginRequestBodyValidCredsWithSpacesBeforeLogin() {
-        LoginRequest loginRequest = new LoginRequest();
-        loginRequest.login = "   " + Constant.VALID_LOGIN;
-        loginRequest.password = Constant.VALID_PASSWORD;
-        return loginRequest;
-    }
-    public static LoginRequest getLoginRequestBodyValidCredsWithSpacesAfterLogin() {
-        LoginRequest loginRequest = new LoginRequest();
-        loginRequest.login = Constant.VALID_LOGIN + "    ";
-        loginRequest.password = Constant.VALID_PASSWORD;
-        return loginRequest;
-    }
 }

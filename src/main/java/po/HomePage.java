@@ -6,11 +6,9 @@ import driver.Driver;
 import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.time.Duration;
 
 public class HomePage {
-
     private WebDriver driver;
     private String copyrightLocator = "//p[@class = 'footer__copy']";
     private String loginButtonLocator = "//span[@class = 'nav__link-text'] [text() = 'Войти']";
@@ -44,7 +42,6 @@ public class HomePage {
     public HomePage() {
         this.driver = Driver.getDriver();
     }
-
     public void openHomePage() {
         driver.get("https://av.by/");
     }
@@ -162,7 +159,6 @@ public class HomePage {
     public void selectEngineCapacityUntil() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         driver.findElement(By.xpath(selectedCapacityUntilLocator)).click();
-
     }
     public void submitSearchQuery() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));

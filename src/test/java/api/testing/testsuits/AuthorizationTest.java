@@ -3,6 +3,7 @@ package api.testing.testsuits;
 import api.testing.pojo.requests.LoginRequest;
 import api.testing.pojo.responses.LoginFailedEmptyCredsResponse;
 import api.testing.pojo.responses.LoginFailedInvalidCredsResponse;
+import domain.constant.Constant;
 import io.basc.framework.http.HttpStatus;
 import io.restassured.http.ContentType;
 import org.slf4j.Logger;
@@ -50,7 +51,7 @@ public class AuthorizationTest {
 
             var actualResult = objectMapper.readValue(response, LoginFailedEmptyCredsResponse.class);
             Assertions.assertEquals(LoginResponses.getLoginResponseEmptyCredentials(), actualResult);
-            Assertions.assertEquals("exception.validation.failed", actualResult.getMessage());
+            Assertions.assertEquals(Constant.LOGIN_VALIDATION_FAILED_MESSAGE, actualResult.getMessage());
             logger.info("Sending POST request for authorization. Authorization failed: user sees error: \"{}\" . User need to input credentials",
                     actualResult.getMessage());
         }
@@ -58,7 +59,7 @@ public class AuthorizationTest {
 
     @DisplayName("Authorization testing. Negative case: login with empty email and any password ")
     @Test
-    public void checkAuthorizationWithEmptyloginAndAnyPassword() throws JsonProcessingException {
+    public void checkAuthorizationWithEmptyLoginAndAnyPassword() throws JsonProcessingException {
         LoginRequest request = LoginRequests.getLoginRequestBodyEmptyloginAnyPassword();
         ObjectMapper objectMapperRequest = new ObjectMapper();
         var requestBody = objectMapperRequest.writeValueAsString(request);
@@ -74,7 +75,8 @@ public class AuthorizationTest {
 
             var actualResult = objectMapper.readValue(response, LoginFailedEmptyCredsResponse.class);
             Assertions.assertEquals(LoginResponses.getLoginResponseEmptyCredentials(), actualResult);
-            logger.info("Sending POST request for authorization. Authorization failed. User sees error: \" {} \"", actualResult);
+            logger.info("Sending POST request for authorization. Authorization failed. User sees error: \" {} \"",
+                    actualResult);
         }
     }
 
@@ -95,7 +97,8 @@ public class AuthorizationTest {
 
             var actualResult = objectMapper.readValue(response, LoginFailedEmptyCredsResponse.class);
             Assertions.assertEquals(LoginResponses.getLoginResponseEmptyCredentials(), actualResult);
-            logger.info("Sending POST request for authorization. Authorization failed. User sees error: \" {} \"", actualResult);
+            logger.info("Sending POST request for authorization. Authorization failed. User sees error: \" {} \"",
+                    actualResult);
         }
     }
 
@@ -117,7 +120,8 @@ public class AuthorizationTest {
             LoginFailedInvalidCredsResponse loginResponse = objectMapper
                     .readValue(response, LoginFailedInvalidCredsResponse.class);
             Assertions.assertEquals(LoginResponses.getLoginResponseInvalidCredentials(), loginResponse);
-            logger.info("Sending POST request for authorization. Authorization failed. User sees error: \" {} \"", loginResponse);
+            logger.info("Sending POST request for authorization. Authorization failed. User sees error: \" {} \"",
+                    loginResponse);
         }
     }
 
@@ -137,7 +141,8 @@ public class AuthorizationTest {
             ObjectMapper objectMapper = new ObjectMapper();
             LoginFailedInvalidCredsResponse loginResponse = objectMapper.readValue(response, LoginFailedInvalidCredsResponse.class);
             Assertions.assertEquals(LoginResponses.getLoginResponseInvalidCredentials(), loginResponse);
-            logger.info("Sending POST request for authorization.Authorization failed. User sees error: \" {} \"", loginResponse);
+            logger.info("Sending POST request for authorization.Authorization failed. User sees error: \" {} \"",
+                    loginResponse);
         }
     }
 
@@ -153,8 +158,10 @@ public class AuthorizationTest {
                 .when().post(LOGIN_URL);
         String response = responseBody.getBody().asString();
         ObjectMapper objectMapper = new ObjectMapper();
-        LoginFailedInvalidCredsResponse loginResponse = objectMapper.readValue(response, LoginFailedInvalidCredsResponse.class);
+        LoginFailedInvalidCredsResponse loginResponse = objectMapper.readValue(response,
+                LoginFailedInvalidCredsResponse.class);
         Assertions.assertEquals(LoginResponses.getLoginResponseInvalidCredentials(), loginResponse);
-        logger.info("Sending POST request for authorization. Authorization failed. User sees error: \" {} \"", loginResponse);
+        logger.info("Sending POST request for authorization. Authorization failed. User sees error: \" {} \"",
+                loginResponse);
     }
 }

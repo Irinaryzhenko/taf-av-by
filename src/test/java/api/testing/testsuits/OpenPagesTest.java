@@ -80,7 +80,7 @@ public class OpenPagesTest {
         when().get(HOME_URL)
                 .then().log().headers()
                 .assertThat().headers(CONTENT_TYPE_HEADER,
-                        equalTo("text/html; charset=utf-8"));
+                        equalTo(HOME_PAGE_CONTENT_TYPE));
         logger.info("Send GET-request. Home page content type is equals to expected");
     }
 }

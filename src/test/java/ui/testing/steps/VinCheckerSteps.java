@@ -1,5 +1,6 @@
 package ui.testing.steps;
 
+import domain.constant.Constant;
 import domain.vincode.Generator;
 import org.junit.jupiter.api.Assertions;
 import org.slf4j.Logger;
@@ -20,15 +21,14 @@ public class VinCheckerSteps extends CommonSteps {
     }
 
     public static void checkValidVinCode() {
-        String errorMessage = "Неверно указан VIN-номер";
         try {
-            String expectedPhrase = "Купить отчёт";
             VinCheckPage vinCheckPage = new VinCheckPage();
-            Assertions.assertEquals(expectedPhrase,
+            Assertions.assertEquals(Constant.VIN_CHECK_SUCCESS_MESSAGE,
                     vinCheckPage.getBuyVinCodeResultButtonText());
-            logger.info("VinCode has been checked. User sees: \"{}\",", expectedPhrase);
+            logger.info("VinCode has been checked. User sees: \"{}\",", Constant.VIN_CHECK_SUCCESS_MESSAGE);
         } catch (Exception e) {
-            logger.info("You couldn't create a valid vin code. User sees error message: \"{}\"", errorMessage);
+            logger.info("You couldn't create a valid vin code. User sees error message: \"{}\"",
+                    Constant.VIN_CODE_ERROR_FORMAT_MESSAGE);
         }
     }
 
@@ -40,12 +40,10 @@ public class VinCheckerSteps extends CommonSteps {
         vinCheckPage.clickCheckVinCode();
     }
     public static void checkInvalidNumberVinCode() {
-        String expectedPhrase = "VIN-номер состоит из 17 символов";
         VinCheckPage vinCheckPage = new VinCheckPage();
-
-        Assertions.assertEquals(expectedPhrase,
+        Assertions.assertEquals(Constant.VIN_CODE_NUMBER_ERROR_MESSAGE,
                 vinCheckPage.getErrorNumberVinMessageText());
-        logger.info("Vin Code is invalid, User sees \"{}\"", expectedPhrase);
+        logger.info("Vin Code is invalid, User sees \"{}\"", Constant.VIN_CODE_NUMBER_ERROR_MESSAGE);
     }
     public static void inputInvalidFormatVinCode() {
         HomePage homePage = new HomePage();
@@ -55,15 +53,15 @@ public class VinCheckerSteps extends CommonSteps {
         vinCheckPage.clickCheckVinCode();
     }
     public static void checkInvalidFormatVinCode() {
-        String expectedPhrase1 = "Что-то сломалось";
-        String expectedPhrase2 = "Неверно указан VIN-номер";
         VinCheckPage vinCheckPage = new VinCheckPage();
         try {
-            Assertions.assertEquals(expectedPhrase2, vinCheckPage.getErrorVinInvalidFormatText());
-            logger.info("VinCode is invalid format. User sees \"{}\"", expectedPhrase2);
+            Assertions.assertEquals(Constant.VIN_CODE_ERROR_FORMAT_MESSAGE,
+                    vinCheckPage.getErrorVinInvalidFormatText());
+            logger.info("VinCode is invalid format. User sees \"{}\"", Constant.VIN_CODE_ERROR_FORMAT_MESSAGE);
         } catch ( Exception e) {
-            Assertions.assertEquals(expectedPhrase1, vinCheckPage.getErrorSomethingWentWrong());
-            logger.error("Error screen opens. User sees \"{}\"", expectedPhrase2);
+            Assertions.assertEquals(Constant.VIN_CODE_GLOBAL_ERROR_SCREEN_MESSAGE,
+                    vinCheckPage.getErrorSomethingWentWrong());
+            logger.error("Error screen opens. User sees \"{}\"", Constant.VIN_CODE_GLOBAL_ERROR_SCREEN_MESSAGE);
         }
     }
 }

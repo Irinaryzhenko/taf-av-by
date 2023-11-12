@@ -6,6 +6,7 @@ public class Generator {
     public static String generateValidFormatVinCode() {
         Random random = new Random();
         StringBuilder vin = new StringBuilder();
+
         // Generation World Manufacturer Identifier
         for (int i = 0; i < 3; i++) {
             char randomChar = (char) (random.nextInt(26) + 'A');

@@ -21,7 +21,7 @@ public class LoginSteps extends CommonSteps{
     }
     public static void fillAuthDataWithInvalidCredentials() {
         LoginFormPage loginFormPage = new LoginFormPage();
-        logger.info("Invalid creds have been generated and filled in login form");
+        logger.info("Invalid credentials have been generated and filled in login form");
         loginFormPage.fillLoginPasswordField(faker.internet().emailAddress(),
                 faker.internet().password());
         loginFormPage.submitAuthData();
@@ -50,22 +50,21 @@ public class LoginSteps extends CommonSteps{
     public static void checkErrorMessageLoginInvalidCredentials() {
         LoginFormPage loginFormPage = new LoginFormPage();
         String actualErrorMessageText = loginFormPage.getErrorMessageText();
-        String expectedErrorMessageText = "Неверный логин или пароль. Если забыли пароль, восстановите его";
-        Assertions.assertEquals(expectedErrorMessageText, actualErrorMessageText);
-        logger.info("Error message:\"{}\" was checked and compare with expected query: \"{}\"",
-                actualErrorMessageText, expectedErrorMessageText);
+        Assertions.assertEquals(Constant.LOGIN_FAILED_INVALID_CREDS_MESSAGE, actualErrorMessageText);
+        logger.info("Authorization failed. User sees error message: \"{}\"",
+                actualErrorMessageText);
     }
     public static void checkAuthorizationSuccess() {
         HomePage homePage = new HomePage();
         homePage.openPersonalAccountPage();
         PersonalAccountPage accountPage = new PersonalAccountPage();
             accountPage.getMyOffersTabLocatorTabText();
-            Assertions.assertEquals("Мои объявления", accountPage.getMyOffersTabLocatorTabText());
+            Assertions.assertEquals(Constant.LOGIN_SUCCESS_TITLE, accountPage.getMyOffersTabLocatorTabText());
             logger.info("Authorization done");
     }
     public static void checkNeedLoginTitle() {
         LoginFormPage loginFormPage = new LoginFormPage();
-         Assertions.assertEquals("Вход", loginFormPage.getLogInTitleText());
+         Assertions.assertEquals(Constant.LOGIN_NEEDED_TITLE, loginFormPage.getLogInTitleText());
          logger.info("User needs to authorize");
     }
 }

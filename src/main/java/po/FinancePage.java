@@ -3,7 +3,6 @@ package po;
 import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
 import java.time.Duration;
 
 public class FinancePage {
@@ -18,4 +17,3 @@ public class FinancePage {
         return driver.findElement(By.xpath(financeTitleDescriptionLocator)).getText();
     }
 }
-
