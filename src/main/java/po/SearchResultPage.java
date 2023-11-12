@@ -89,13 +89,17 @@ public class SearchResultPage {
     public void getCarTitleSearchResults() {
         Driver.waitFor(2);
         List<WebElement> searchTitles = driver.findElements(By.xpath(carTitleLocator));
-        for (WebElement element : searchTitles) {
-            try {
-                driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-                actualTitle = element.getText();
-            } catch (Exception e) {
-                logger.error("Error! Text not found");
+        if (searchTitles != null) {
+            for (WebElement element : searchTitles) {
+                try {
+                    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+                    actualTitle = element.getText();
+                } catch (Exception e) {
+                    logger.error("Error! Text not found");
+                }
             }
+        } else {
+            logger.info("Not found any offers match with inputted search query");
         }
     }
 
