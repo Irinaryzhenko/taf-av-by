@@ -1,11 +1,13 @@
 package ui.testing.steps;
 
+import domain.constant.Constant;
+import org.junit.jupiter.api.Assertions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import po.HomePage;
 import po.SearchResultPage;
 
-public class SearchSteps extends CommonSteps{
+public class SearchSteps extends CommonSteps {
     private final static Logger logger = LoggerFactory.getLogger(SearchSteps.class);
     private static HomePage homePage;
     private static SearchResultPage searchResultPage;
@@ -52,14 +54,23 @@ public class SearchSteps extends CommonSteps{
     public static void checkTopCarSearchResult() {
         logger.info("Checking top result");
         searchResultPage = new SearchResultPage();
-        searchResultPage.checkCarSearchTopResult();
+        searchResultPage.getCarSearchTopResult();
+        Assertions.assertTrue((searchResultPage.getActualTopTitle().contains("Audi Q2"))
+                            && searchResultPage.isTopPriceInRange() && searchResultPage.isTopYearInRange()
+                        && searchResultPage.isTopCapacityInRange(),
+                    "Warning! Top Results do not match with search query!");
+        logger.info("Top car is equal to search query");
     }
 
     public static void checkCarSearchResult() {
         logger.info("Checking result");
         searchResultPage.getCarTitleSearchResults();
         searchResultPage.getCarPriceSearchResult();
-        searchResultPage.checkCarSearchParamsText();
-        searchResultPage.checkCarSearchResult();
+        searchResultPage.getCarSearchParamsText();
+        Assertions.assertTrue((searchResultPage.getActualTitle().contains(Constant.CAR_BRAND_SEARCH))
+                        && searchResultPage.isCapacityInRange() && searchResultPage.isPriceInRange()
+                        && searchResultPage.isYearInRange(),
+                "Warning! Search result don't match with request query!");
+        logger.info("Cars are equal to search query. Searching was successfully ended.");
     }
 }

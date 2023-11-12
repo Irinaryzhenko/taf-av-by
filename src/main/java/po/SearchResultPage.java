@@ -1,6 +1,5 @@
 package po;
 
-import domain.constant.Constant;
 import driver.Driver;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
@@ -8,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import java.time.Duration;
 import java.util.List;
 
@@ -19,21 +19,28 @@ public class SearchResultPage {
     private String carParamsLocator = "//div[@class = 'listing-item__params']";
     private String carTitleLocator = "//div[@class = 'listing__items']/div/div/div/h3/a/span";
     private String carPriceLocator = "//div[@class = 'listing-item__priceusd']";
+    private String actualTopTitle;
+    private boolean isTopYearInRange;
+    private boolean isTopPriceInRange;
+    private boolean isTopCapacityInRange;
     private String actualTitle;
-    boolean isPriceInRange;
+    private boolean isPriceInRange;
     private boolean isYearInRange;
     private boolean isCapacityInRange;
     private static Logger logger = LoggerFactory.getLogger(SearchResultPage.class);
+
     public SearchResultPage() {
         driver = Driver.getDriver();
     }
+
     public String getTitleTopCarText() {
         try {
             Driver.waitFor(2);
             return driver.findElement(By.xpath(topCarTitleLocator)).getText();
         } catch (Exception e) {
             logger.error("No top car title was found");
-        } return null;
+        }
+        return null;
     }
 
     public String getTopCarPriceText() {
@@ -42,7 +49,8 @@ public class SearchResultPage {
             return driver.findElement(By.xpath(topCarPriceLocator)).getText();
         } catch (Exception e) {
             logger.error("No top price was found");
-        } return null;
+        }
+        return null;
     }
 
     public String getTopCarParamsText() {
@@ -50,33 +58,29 @@ public class SearchResultPage {
             Driver.waitFor(2);
             return driver.findElement(By.xpath(topCarParamsLocator)).getText();
         } catch (Exception e) {
-           logger.error("No top text was found");
+            logger.error("No top text was found");
         }
         return null;
     }
 
-    public void checkCarSearchTopResult() {
+    public void getCarSearchTopResult() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        String actualTitleTopCar = getTitleTopCarText();
+        actualTopTitle = getTitleTopCarText();
         String actualPriceTopCar = getTopCarPriceText();
 
-        if (actualTitleTopCar !=null && actualPriceTopCar !=null) {
+        if (actualTopTitle != null && actualPriceTopCar != null) {
             int topPrice = Integer.parseInt(actualPriceTopCar.replaceAll("[^0-9]", ""));
-            boolean isTopPriceInRange = topPrice >= 10000 && topPrice <= 50000;
+            isTopPriceInRange = topPrice >= 10000 && topPrice <= 50000;
 
             String topYear = getTopCarParamsText();
             String actualTopYear = topYear.substring(0, 4);
             int yearTopCar = Integer.parseInt(actualTopYear);
-            boolean isTopYearInRange = yearTopCar >= 2015 && yearTopCar <= 2023;
+            isTopYearInRange = yearTopCar >= 2015 && yearTopCar <= 2023;
 
             String str = topYear.substring(8);
             String[] arr = str.split(", ");
             double actualTopCapacity = Double.parseDouble(arr[1].substring(0, 3));
-            boolean isTopCapacityInRange = actualTopCapacity >= 1.6 && actualTopCapacity <= 3.0;
-
-            Assertions.assertTrue((actualTitleTopCar.contains("Audi Q2"))
-                            && isTopPriceInRange && isTopYearInRange && isTopCapacityInRange,
-                    "Warning! Top Results do not match with search query!");
+            isTopCapacityInRange = actualTopCapacity >= 1.6 && actualTopCapacity <= 3.0;
         } else {
             logger.error("There is no top car offer!");
         }
@@ -90,7 +94,7 @@ public class SearchResultPage {
                 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
                 actualTitle = element.getText();
             } catch (Exception e) {
-                System.out.println("Error! Text not found");
+                logger.error("Error! Text not found");
             }
         }
     }
@@ -105,12 +109,12 @@ public class SearchResultPage {
                 int actualPrice = Integer.parseInt(price.replaceAll("[^0-9]", ""));
                 isPriceInRange = actualPrice >= 10000 && actualPrice <= 50000;
             } catch (Exception e) {
-                System.out.println("Error! Price not found");
+                logger.error("Error! Price not found");
             }
         }
     }
 
-    public void checkCarSearchParamsText() {
+    public void getCarSearchParamsText() {
         List<WebElement> paramsResults = driver.findElements(By.xpath(carParamsLocator));
         for (WebElement element : paramsResults) {
             try {
@@ -122,19 +126,44 @@ public class SearchResultPage {
 
                 String str = actualParamText.substring(8);
                 String[] arr = str.split(", ");
-               double actualCapacity = Double.parseDouble(arr[1].substring(0, 3));
+                double actualCapacity = Double.parseDouble(arr[1].substring(0, 3));
                 isCapacityInRange = actualCapacity >= 1.6 && actualCapacity <= 3.0;
 
             } catch (Exception e) {
-                System.out.println("Error! Param Text not found");
+                logger.error("Error! Param Text not found");
             }
         }
     }
 
-    public void checkCarSearchResult() {
-        Assertions.assertTrue((actualTitle.contains(Constant.CAR_BRAND_SEARCH)) && isPriceInRange
-                        && isYearInRange && isCapacityInRange,
-                "Warning! Search result don't match with request query!");
-        logger.info("Searching was successfully ended");
+    public String getActualTitle() {
+        return actualTitle;
+    }
+
+    public boolean isPriceInRange() {
+        return isPriceInRange;
+    }
+
+    public boolean isYearInRange() {
+        return isYearInRange;
+    }
+
+    public boolean isCapacityInRange() {
+        return isCapacityInRange;
+    }
+
+    public String getActualTopTitle() {
+        return actualTopTitle;
+    }
+
+    public boolean isTopYearInRange() {
+        return isTopYearInRange;
+    }
+
+    public boolean isTopPriceInRange() {
+        return isTopPriceInRange;
+    }
+
+    public boolean isTopCapacityInRange() {
+        return isTopCapacityInRange;
     }
 }

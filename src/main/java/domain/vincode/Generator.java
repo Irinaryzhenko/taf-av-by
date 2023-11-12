@@ -6,17 +6,17 @@ public class Generator {
     public static String generateValidFormatVinCode() {
         Random random = new Random();
         StringBuilder vin = new StringBuilder();
-        // Генерация World Manufacturer Identifier
+        // Generation World Manufacturer Identifier
         for (int i = 0; i < 3; i++) {
             char randomChar = (char) (random.nextInt(26) + 'A');
             vin.append(randomChar);
         }
-        // Генерация Vehicle Descriptor Section
+        // Generation Vehicle Descriptor Section
         for (int i = 0; i < 5; i++) {
             int randomDigit = random.nextInt(10);
             vin.append(randomDigit);
         }
-        // Генерация Vehicle Identifier Section
+        // Generation Vehicle Identifier Section
         for (int i = 0; i < 8; i++) {
             char randomChar = (char) (random.nextInt(26) + 'A');
             vin.append(randomChar);

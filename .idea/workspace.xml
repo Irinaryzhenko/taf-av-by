@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="updating read me">
+    <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="refactor constants">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/constant/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/constant/Constant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/OpenPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/OpenPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/vincode/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/vincode/Generator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/po/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/SearchResultPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/steps/SearchSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/SearchSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,23 +62,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.OpenPageTest">
-    <configuration name="AddNewOfferTest.checkUserPossibilityToAddNewOffer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="taf-av-by" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ui.testing.testsuits.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ui.testing.testsuits" />
-      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.AddNewOfferTest" />
-      <option name="METHOD_NAME" value="checkUserPossibilityToAddNewOffer" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.SearchTest.searchCarByPopularParams">
     <configuration name="OpenPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
@@ -141,13 +126,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SearchTest.searchCarByPopularParams" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="taf-av-by" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ui.testing.testsuits.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ui.testing.testsuits" />
+      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.SearchTest" />
+      <option name="METHOD_NAME" value="searchCarByPopularParams" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SearchTest.searchCarByPopularParams" />
         <item itemvalue="JUnit.OpenPageTest" />
         <item itemvalue="JUnit.OpenPageTest.openVehiclePageTest" />
         <item itemvalue="JUnit.OpenPageTest.openFinancePageTest" />
         <item itemvalue="JUnit.OpenPageTest.openHomePageTest" />
-        <item itemvalue="JUnit.AddNewOfferTest.checkUserPossibilityToAddNewOffer" />
       </list>
     </recent_temporary>
   </component>
@@ -398,7 +399,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699532192900</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="refactor constants">
+      <created>1699780209037</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1699780209037</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -439,7 +447,8 @@
     <MESSAGE value="add dependencies" />
     <MESSAGE value="refactor code" />
     <MESSAGE value="updating read me" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating read me" />
+    <MESSAGE value="refactor constants" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor constants" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
