@@ -1,5 +1,7 @@
 package domain.constant;
 
+import org.checkerframework.checker.index.qual.PolyUpperBound;
+
 public class Constant {
     public final static String LOGIN_URL = "https://api.av.by/auth/login/sign-in";
     public final static String CONTENT_TYPE_HEADER = "Content-Type";
@@ -21,4 +23,11 @@ public class Constant {
     public static final String CAR_BRAND_SEARCH = "Audi Q2 I";
     public final static String VALID_LOGIN = "platinumfoxirina@gmail.com";
     public final static String VALID_PASSWORD = "qatestteam123";
+    public final static String HOME_PAGE_COPYRIGHT = "© 2001, ООО «Автоклассифайд», УНП 192787977, Минск, ул. Кутузова, 15";
+    public final static String FINANCE_TITLE = "Кредиты и лизинг на покупку транспорта и комплектующих";
+    public final static String VEHICLE_TITLE = "Объявления о продаже автомобилей с пробегом в Беларуси";
+    public final static String PART_TITLE = "Продажа запчастей новых и б/у в Беларуси";
+    public final static String NEWS_TITLE = "Пишем про авторынок в Беларуси, делаем обзоры, интервью и помогаем людям выбирать себе автомобили";
+    public final static String INFO_TITLE = "Знания";
+    public final static String VIN_TITLE = "Проверка истории транспорта по VIN";
 }
