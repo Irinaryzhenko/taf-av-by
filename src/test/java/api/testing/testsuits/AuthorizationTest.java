@@ -43,8 +43,6 @@ public class AuthorizationTest {
                 .given().contentType(ContentType.JSON).log().body()
                 .body(requestBody)
                 .when().post(LOGIN_URL);
-        if (responseBody.getStatusCode() == HttpStatus.BAD_REQUEST.value()) {
-
             String response = responseBody.getBody().asString();
             ObjectMapper objectMapper = new ObjectMapper();
 
@@ -53,7 +51,6 @@ public class AuthorizationTest {
             logger.info("Sending POST request for authorization. Authorization failed: user sees error: \"{}\" . User need to input credentials",
                     actualResult.getMessage());
         }
-    }
 
     @DisplayName("Authorization testing. Negative case: login with empty email and any password ")
     @Test
@@ -66,8 +63,6 @@ public class AuthorizationTest {
                 .given().contentType(ContentType.JSON)
                 .body(requestBody).log().body()
                 .when().post(LOGIN_URL);
-        if (responseBody.getStatusCode() == HttpStatus.BAD_REQUEST.value()) {
-
             String response = responseBody.getBody().asString();
             ObjectMapper objectMapper = new ObjectMapper();
 
@@ -76,7 +71,6 @@ public class AuthorizationTest {
             logger.info("Sending POST request for authorization. Authorization failed. User sees error: \" {} \"",
                     actualResult.getMessage());
         }
-    }
 
     @DisplayName("Authorization testing. Negative case: login with password and any email")
     @Test
@@ -88,7 +82,6 @@ public class AuthorizationTest {
                 .given().contentType(ContentType.JSON)
                 .body(requestBody).log().body()
                 .when().post(LOGIN_URL);
-        if (responseBody.getStatusCode() == HttpStatus.BAD_REQUEST.value()) {
 
             String response = responseBody.getBody().asString();
             ObjectMapper objectMapper = new ObjectMapper();
@@ -98,7 +91,6 @@ public class AuthorizationTest {
             logger.info("Sending POST request for authorization. Authorization failed. User sees error: \" {} \"",
                     actualResult.getMessage());
         }
-    }
 
     @DisplayName("Authorization testing. Negative case: login with non-existing user's credentials ")
     @Test
@@ -111,8 +103,6 @@ public class AuthorizationTest {
                 .body(requestBody).log().body()
                 .when().post(LOGIN_URL);
 
-        if (responseBody.getStatusCode() == HttpStatus.BAD_REQUEST.value()) {
-
             String response = responseBody.getBody().asString();
             ObjectMapper objectMapper = new ObjectMapper();
            var actualResult = objectMapper
@@ -120,7 +110,6 @@ public class AuthorizationTest {
             Assertions.assertEquals(LoginResponses.getLoginResponseInvalidCredentials(), actualResult);
             logger.info("Sending POST request for authorization. Authorization failed. User sees error: \" {} \"",
                     actualResult.messageText);
-        }
     }
 
     @DisplayName("Authorization testing. Negative case: login with valid user's email and invalid password ")
@@ -133,7 +122,6 @@ public class AuthorizationTest {
                 .given().contentType(ContentType.JSON)
                 .body(requestBody).log().body()
                 .when().post(LOGIN_URL);
-        if (responseBody.getStatusCode() == HttpStatus.BAD_REQUEST.value()) {
 
             String response = responseBody.getBody().asString();
             ObjectMapper objectMapper = new ObjectMapper();
@@ -141,7 +129,6 @@ public class AuthorizationTest {
             Assertions.assertEquals(LoginResponses.getLoginResponseInvalidCredentials(), actualResult);
             logger.info("Sending POST request for authorization.Authorization failed. User sees error: \" {} \"",
                     actualResult.messageText);
-        }
     }
 
     @DisplayName("Authorization testing. Negative case: login with invalid user's email and valid password ")

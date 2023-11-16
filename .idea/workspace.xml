@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="refactor code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/driver/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/driver/Driver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/AuthorizationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/AuthorizationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +61,22 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AuthorizationTest.checkAuthorizationWithInvalidLoginAndValidPassword">
+  <component name="RunManager" selected="JUnit.SearchTest.searchCarByPopularParams">
+    <configuration name="AuthorizationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="taf-av-by" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="api.testing.testsuits.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="api.testing.testsuits" />
+      <option name="MAIN_CLASS_NAME" value="api.testing.testsuits.AuthorizationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AuthorizationTest.checkAuthorizationWithEmptyCredentials" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
@@ -77,7 +93,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthorizationTest.checkAuthorizationWithEmptyLoginAndAnyPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FinanceTest.checkCreditOffers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
         <pattern>
@@ -86,56 +102,39 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="api.testing.testsuits" />
-      <option name="MAIN_CLASS_NAME" value="api.testing.testsuits.AuthorizationTest" />
-      <option name="METHOD_NAME" value="checkAuthorizationWithEmptyLoginAndAnyPassword" />
+      <option name="MAIN_CLASS_NAME" value="api.testing.testsuits.FinanceTest" />
+      <option name="METHOD_NAME" value="checkCreditOffers" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthorizationTest.checkAuthorizationWithInvalidCredentials" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="api.testing.testsuits.*" />
+          <option name="PATTERN" value="ui.testing.testsuits.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="api.testing.testsuits" />
-      <option name="MAIN_CLASS_NAME" value="api.testing.testsuits.AuthorizationTest" />
-      <option name="METHOD_NAME" value="checkAuthorizationWithInvalidCredentials" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="ui.testing.testsuits" />
+      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.SearchTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthorizationTest.checkAuthorizationWithInvalidLoginAndValidPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchTest.searchCarByPopularParams" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="api.testing.testsuits.*" />
+          <option name="PATTERN" value="ui.testing.testsuits.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="api.testing.testsuits" />
-      <option name="MAIN_CLASS_NAME" value="api.testing.testsuits.AuthorizationTest" />
-      <option name="METHOD_NAME" value="checkAuthorizationWithInvalidLoginAndValidPassword" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthorizationTest.checkAuthorizationWithValidLoginAndInvalidPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="taf-av-by" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="api.testing.testsuits.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="api.testing.testsuits" />
-      <option name="MAIN_CLASS_NAME" value="api.testing.testsuits.AuthorizationTest" />
-      <option name="METHOD_NAME" value="checkAuthorizationWithValidLoginAndInvalidPassword" />
+      <option name="PACKAGE_NAME" value="ui.testing.testsuits" />
+      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.SearchTest" />
+      <option name="METHOD_NAME" value="searchCarByPopularParams" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -143,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AuthorizationTest.checkAuthorizationWithInvalidLoginAndValidPassword" />
-        <item itemvalue="JUnit.AuthorizationTest.checkAuthorizationWithValidLoginAndInvalidPassword" />
-        <item itemvalue="JUnit.AuthorizationTest.checkAuthorizationWithInvalidCredentials" />
-        <item itemvalue="JUnit.AuthorizationTest.checkAuthorizationWithEmptyLoginAndAnyPassword" />
+        <item itemvalue="JUnit.SearchTest.searchCarByPopularParams" />
+        <item itemvalue="JUnit.SearchTest" />
+        <item itemvalue="JUnit.AuthorizationTest" />
         <item itemvalue="JUnit.AuthorizationTest.checkAuthorizationWithEmptyCredentials" />
+        <item itemvalue="JUnit.FinanceTest.checkCreditOffers" />
       </list>
     </recent_temporary>
   </component>
@@ -426,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699806296984</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="refactor code">
+      <created>1699960377012</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1699960377012</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="UnknownFeatures">
