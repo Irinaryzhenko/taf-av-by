@@ -11,7 +11,7 @@ public class Driver {
     }
     public static WebDriver getDriver(){
         if(driver == null) {
-            driver = new FirefoxDriver();
+            driver = new ChromeDriver();
             driver.manage().window().maximize();
         } return driver;
     }
