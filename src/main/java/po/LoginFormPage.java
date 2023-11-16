@@ -21,7 +21,7 @@ public class LoginFormPage {
         this.driver = Driver.getDriver();
     }
     public void openLoginFormViaMail() {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        Driver.waitFor(3);
        driver.findElement(By.xpath(loginViaMailLocator)).click();
     }
     public void fillLoginPasswordField(String loginText, String passwordText) {
