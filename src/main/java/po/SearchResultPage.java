@@ -102,7 +102,7 @@ public class SearchResultPage {
                 try {
                     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
                     actualCarTitle = element.getText();
-                    System.out.println(actualCarTitle);
+                    logger.info("Car brand is {}", actualCarTitle);
                 } catch (Exception e) {
                     logger.error("Error! Text not found");
                 }
