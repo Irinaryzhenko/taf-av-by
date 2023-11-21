@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import driver.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.time.Duration;
@@ -29,9 +31,11 @@ public class HomePage {
     private String carGenerationDropDownLocator = "//span[@class = 'dropdown-floatlabel__value'][text() = 'Поколение']";
     private String selectedCarGenerationLocator = "//div[@class = 'dropdown__card']";
     private String yearFromDropDownLocator = "//span[@class = 'dropdown-floatlabel__value'][text() = 'Год от']";
-    private String selectedYearFromLocator = "//ul[@class='dropdown-list dropdown-list--opened']//button[@data-item-label='2015']";
+    private String selectedCarYearFromLocator = "//ul[@class='dropdown-list dropdown-list--opened']//button[@data-item-label='2015']";
+    private String selectedBusYearFromLocator = "//ul[@class='dropdown-list dropdown-list--opened']//button[@data-item-label='2010']";
     private String yearUntilDropDownLocator = "//span[@class = 'dropdown-floatlabel__value'][text() = 'до']";
-    private String selectedYearUntil = "//ul[@class = 'dropdown-list dropdown-list--opened']//button[@data-item-label = '2023']";
+    private String selectedCarYearUntilLocator = "//ul[@class = 'dropdown-list dropdown-list--opened']//button[@data-item-label = '2023']";
+    private String selectedBusYearUntilLocator = "//ul[@class = 'dropdown-list dropdown-list--opened']//button[@data-item-label = '2020']";
     private String priceFromDropDownMenuLocator = "//input[@id='p-9-price_usd']";
     private String priceUntilDropDownMenuLocator = "//div[@class ='richinput-control'] //input [@id='p-9-price_usd']";
     private String engineCapacityFromDropDownLocator ="//div[@class='dropdown__box']/button[@name = 'p-12-engine_capacity']//span[@class = 'dropdown-floatlabel__value'][text() = 'Объём от']";
@@ -129,16 +133,22 @@ public class HomePage {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         driver.findElement(By.xpath(yearFromDropDownLocator)).click();
     }
-    public void selectYearFrom() {
-        driver.findElement(By.xpath(selectedYearFromLocator)).click();
+    public void selectCarYearFrom() {
+        driver.findElement(By.xpath(selectedCarYearFromLocator)).click();
+    }
+    public void selectBusYearFrom() {
+        driver.findElement(By.xpath(selectedBusYearFromLocator)).click();
     }
     public void openYearUntilDropDown() {
        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         driver.findElement(By.xpath(yearUntilDropDownLocator)).click();
     }
-    public void selectYearUntil() {
+    public void selectCarYearUntil() {
        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-        driver.findElement(By.xpath(selectedYearUntil)).click();
+        driver.findElement(By.xpath(selectedCarYearUntilLocator)).click();
+    }
+    public void selectBusYearUntil() {
+        driver.findElement(By.xpath(selectedBusYearUntilLocator)).click();
     }
     public void inputPriceFrom(String priceFrom) {
        WebElement priceInputFieldElement = driver.findElement(By.xpath(priceFromDropDownMenuLocator));
@@ -151,12 +161,16 @@ public class HomePage {
         priceInputFieldElement.sendKeys(priceUntil);
     }
     public void openEngineCapacityFromDropDownMenu() {
+        new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(2))
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(engineCapacityFromDropDownLocator)));
         driver.findElement(By.xpath(engineCapacityFromDropDownLocator)).click();
     }
     public void selectEngineCapacityFrom() {
         driver.findElement(By.xpath(selectedCapacityFromLocator)).click();
     }
     public void openEngineCapacityUntilDropDownMenu() {
+        new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(2))
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(engineCapacityUntilDropDownLocator)));
         driver.findElement(By.xpath(engineCapacityUntilDropDownLocator)).click();
     }
     public void selectEngineCapacityUntil() {

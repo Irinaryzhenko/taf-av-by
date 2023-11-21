@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="add logger for logout">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/OpenPageSteps.java" afterDir="false" />
+    <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="add Bus page open test">
+      <change afterPath="$PROJECT_DIR$/src/main/java/po/BusPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/constant/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/constant/Constant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/po/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/VehiclePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/VehiclePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/OpenPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/OpenPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/po/SearchResultPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/SearchResultPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/steps/SearchSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/SearchSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/SearchTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,39 +64,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.OpenPageTest">
-    <configuration name="AuthorizationTest.logOut" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="taf-av-by" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ui.testing.testsuits.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ui.testing.testsuits" />
-      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.AuthorizationTest" />
-      <option name="METHOD_NAME" value="logOut" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthorizationTest.loginWithValidCredentials" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="taf-av-by" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ui.testing.testsuits.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ui.testing.testsuits" />
-      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.AuthorizationTest" />
-      <option name="METHOD_NAME" value="loginWithValidCredentials" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.SearchTest.searchBusByParams">
     <configuration name="OpenPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
@@ -112,7 +80,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OpenPageTest.openBusPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
         <pattern>
@@ -121,14 +89,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ui.testing.testsuits" />
-      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.OpenPageTest" />
-      <option name="METHOD_NAME" value="openBusPageTest" />
+      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.SearchTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SearchTest.searchBusByParams" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="taf-av-by" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ui.testing.testsuits.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ui.testing.testsuits" />
+      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.SearchTest" />
+      <option name="METHOD_NAME" value="searchBusByParams" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VinCheckerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchTest.searchBusByPopularParams" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
         <pattern>
@@ -137,19 +120,36 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ui.testing.testsuits" />
-      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.VinCheckerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.SearchTest" />
+      <option name="METHOD_NAME" value="searchBusByPopularParams" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SearchTest.searchCarByPopularParams" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="taf-av-by" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ui.testing.testsuits.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ui.testing.testsuits" />
+      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.SearchTest" />
+      <option name="METHOD_NAME" value="searchCarByPopularParams" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SearchTest.searchBusByParams" />
+        <item itemvalue="JUnit.SearchTest.searchCarByPopularParams" />
+        <item itemvalue="JUnit.SearchTest" />
+        <item itemvalue="JUnit.SearchTest.searchBusByPopularParams" />
         <item itemvalue="JUnit.OpenPageTest" />
-        <item itemvalue="JUnit.OpenPageTest.openBusPageTest" />
-        <item itemvalue="JUnit.AuthorizationTest.logOut" />
-        <item itemvalue="JUnit.VinCheckerTest" />
-        <item itemvalue="JUnit.AuthorizationTest.loginWithValidCredentials" />
       </list>
     </recent_temporary>
   </component>
@@ -470,7 +470,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700549503326</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="add Bus page open test">
+      <created>1700552823543</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1700552823543</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -488,7 +495,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add checkSearchResult method" />
     <MESSAGE value="add checkSearchTopCarResult method" />
     <MESSAGE value="add logger config" />
     <MESSAGE value="update gitignore file" />
@@ -513,6 +519,22 @@
     <MESSAGE value="change browser" />
     <MESSAGE value="add logout test" />
     <MESSAGE value="add logger for logout" />
-    <option name="LAST_COMMIT_MESSAGE" value="add logger for logout" />
+    <MESSAGE value="add Bus page open test" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Bus page open test" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/ui/testing/testsuits/SearchTest.java</url>
+          <line>10</line>
+          <properties class="ui.testing.testsuits.SearchTest" method="searchCarByPopularParams">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
