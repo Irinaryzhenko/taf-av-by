@@ -5,6 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class PersonalAccountPage {
 
@@ -12,6 +14,7 @@ public class PersonalAccountPage {
     private String myOffersTabLocator = "//a[@class = 'sidenav__link sidenav__link--active'][@href='https://av.by/profile/offers']";
     private String personalDropDownLocator = "//li [@class = 'nav__item nav__item--user nav__item--dropdown']";
     private String logOutButtonLocator = "//a[@href ='https://av.by/logout?redirect_to=https%3A%2F%2Fav.by']";
+    private final static Logger logger = LoggerFactory.getLogger(PersonalAccountPage.class);
 
 
     public PersonalAccountPage() {
@@ -28,6 +31,6 @@ public class PersonalAccountPage {
         WebElement logOutButtonElement = driver.findElement(By.xpath(logOutButtonLocator));
         actions.moveToElement(personalDropDownElement)
                 .moveToElement(logOutButtonElement).click().build().perform();
-
+        logger.info("User has logged out");
     }
 }
