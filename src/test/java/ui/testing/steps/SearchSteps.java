@@ -3,17 +3,11 @@ package ui.testing.steps;
 import domain.constant.Constant;
 import driver.Driver;
 import org.junit.jupiter.api.Assertions;
-import org.openqa.selenium.By;
-import org.openqa.selenium.DeviceRotation;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import po.BusPage;
 import po.HomePage;
 import po.SearchResultPage;
-
-import java.time.Duration;
 
 public class SearchSteps extends CommonSteps {
     private final static Logger logger = LoggerFactory.getLogger(SearchSteps.class);
@@ -158,5 +152,4 @@ public class SearchSteps extends CommonSteps {
                         && (busSearchResultPage.getActualBusEngineType().contains("дизель")),
                 "Warning! Search bus result don't match with request query!");
     }
-
 }
