@@ -119,7 +119,7 @@ public class SearchResultPage {
                 try {
                     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
                     actualBusTitle = element.getText();
-                    System.out.println(actualBusTitle);
+                    logger.info("Bus name is {}", actualBusTitle);
                 } catch (Exception e) {
                     logger.error("Error! Text not found");
                 }

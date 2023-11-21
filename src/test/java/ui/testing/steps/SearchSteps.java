@@ -146,9 +146,6 @@ public class SearchSteps extends CommonSteps {
     public static void checkBusSearchResult() {
         SearchResultPage busSearchResultPage = new SearchResultPage();
         Driver.waitFor(5);
-//        new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(3)).until(ExpectedConditions
-//                .presenceOfAllElementsLocatedBy(By.xpath(busSearchResultPage.getBusParamsLocator())));
-
         busSearchResultPage.getBusTitleSearchResults();
         busSearchResultPage.getBusPriceSearchResult();
         busSearchResultPage.getBusSearchParamsText();
