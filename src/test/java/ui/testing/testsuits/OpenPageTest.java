@@ -7,6 +7,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.slf4j.LoggerFactory;
 import po.*;
 import org.junit.jupiter.api.Test;
+import ui.testing.steps.OpenPageSteps;
 
 
 public class OpenPageTest extends BaseTest {
@@ -15,8 +16,8 @@ public class OpenPageTest extends BaseTest {
     @DisplayName("Check home page opening")
     @Test
     public void openHomePageTest() {
+        OpenPageSteps.openHomePageSubmitCookies();
         HomePage homePage = new HomePage();
-        homePage.openHomePage();
         Assertions.assertEquals(Constant.HOME_PAGE_COPYRIGHT,
                 homePage.getCopyrightText());
         logger.info("Home page opens");
@@ -25,8 +26,8 @@ public class OpenPageTest extends BaseTest {
     @DisplayName("Check Finance Page opening")
     @Test
     public void openFinancePageTest() {
+        OpenPageSteps.openHomePageSubmitCookies();
         HomePage homePage = new HomePage();
-        homePage.openHomePage();
         homePage.openFinancePage();
         FinancePage financePage = new FinancePage();
         Assertions.assertEquals(Constant.FINANCE_TITLE,
@@ -37,8 +38,8 @@ public class OpenPageTest extends BaseTest {
     @DisplayName("Check Vehicle Page opening")
     @Test
     public void openVehiclePageTest() {
+        OpenPageSteps.openHomePageSubmitCookies();
         HomePage homePage = new HomePage();
-        homePage.openHomePage();
         homePage.openTransportPage();
         VehiclePage transportPage = new VehiclePage();
         Assertions.assertEquals(Constant.VEHICLE_TITLE,
@@ -48,8 +49,8 @@ public class OpenPageTest extends BaseTest {
     @DisplayName("Check Part Page opening")
     @Test
     public void openPartPageTest() {
+        OpenPageSteps.openHomePageSubmitCookies();
         HomePage homePage = new HomePage();
-        homePage.openHomePage();
         homePage.openPartPage();
         PartPage partPage = new PartPage();
         Assertions.assertEquals(Constant.PART_TITLE,
@@ -59,8 +60,8 @@ public class OpenPageTest extends BaseTest {
     @DisplayName("Check News Page opening")
     @Test
     public void openNewsPageTest() {
+        OpenPageSteps.openHomePageSubmitCookies();
         HomePage homePage = new HomePage();
-        homePage.openHomePage();
         homePage.openNewsPage();
         NewsPage newsPage = new NewsPage();
         Assertions.assertEquals(Constant.NEWS_TITLE,
@@ -70,8 +71,8 @@ public class OpenPageTest extends BaseTest {
     @DisplayName("Check Info Page opening")
     @Test
     public void openInfoPageTest() {
+        OpenPageSteps.openHomePageSubmitCookies();
         HomePage homePage = new HomePage();
-        homePage.openHomePage();
         homePage.openInfoPage();
         InfoPage infoPage = new InfoPage();
         Assertions.assertEquals(Constant.INFO_TITLE, infoPage.getInfoPageTitleText());
@@ -80,12 +81,23 @@ public class OpenPageTest extends BaseTest {
     @DisplayName("Check VinChecker opening")
     @Test
     public void openVinCheckPageTest() {
-        HomePage homePage = new HomePage();
-        homePage.openHomePage();
+       OpenPageSteps.openHomePageSubmitCookies();
+       HomePage homePage = new HomePage();
         homePage.openVinCheckPage();
         VinCheckPage vinCheckPage = new VinCheckPage();
         Assertions.assertEquals(Constant.VIN_TITLE,
                 vinCheckPage.getVinCheckPageTitleText());
         logger.info("VinChecker page opens");
     }
+
+    @DisplayName("Check bus page opens")
+    @Test
+    public void openBusPageTest() {
+            OpenPageSteps.openHomePageSubmitCookies();
+            HomePage homePage = new HomePage();
+            homePage.openBusSearchPageFromVehicle();
+            VehiclePage vehiclePage = new VehiclePage();
+            Assertions.assertEquals(Constant.BUS_PAGE_TITLE_TEXT, vehiclePage.getBusPageTitleText());
+            logger.info("Bus page is opened");
+        }
 }

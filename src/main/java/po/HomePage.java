@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import driver.Driver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.time.Duration;
@@ -15,7 +16,7 @@ public class HomePage {
     private String cookiesButtonSubmitLocator = "//button[@class = 'button button--primary button--block button--large']";
     private String profileDropDownMenuLocator = "//li[@class = 'nav__item nav__item--user nav__item--dropdown']";
     private String financeTabLocator = "//span[@class = 'nav__link-text'][text() = 'Финансы']";
-    private String transportTabLocator = "//span[@class = 'nav__link-text'][text() = 'Транспорт']";
+    private String vehicleTabLocator = "//span[@class = 'nav__link-text'][text() = 'Транспорт']";
     private String partTabLocator = "//span[@class = 'nav__link-text'][text() = 'Запчасти и шины']";
     private String newsTabLocator = "//span[@class = 'nav__link-text'][text() = 'Журнал']";
     private String infoTabLocator = "//span[@class = 'nav__link-text'][text() = 'Знания']";
@@ -38,6 +39,8 @@ public class HomePage {
     private String engineCapacityUntilDropDownLocator = "//div[@class = 'dropdown__box']//span[@class = 'dropdown-floatlabel__value'][text() = 'до']";
     private String selectedCapacityUntilLocator = "//ul[@class = 'dropdown-list dropdown-list--opened']/li[@class = 'dropdown__listitem']/button[@data-item-label = '3,0 л.']";
     private String showResultsButtonLocator = "//div[@class = 'filter__show-result']";
+    private String busInDropDownLocator = "//a[@href='https://bus.av.by']/span[@class = 'nav__dropdown-text']";
+    Actions actions = new Actions(Driver.getDriver());
     private static final Logger logger = LoggerFactory.getLogger(HomePage.class);
     public HomePage() {
         this.driver = Driver.getDriver();
@@ -73,7 +76,7 @@ public class HomePage {
     }
 
     public void openTransportPage() {
-        driver.findElement(By.xpath(transportTabLocator)).click();
+        driver.findElement(By.xpath(vehicleTabLocator)).click();
     }
 
     public void openPartPage() {
@@ -163,5 +166,10 @@ public class HomePage {
     public void submitSearchQuery() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         driver.findElement(By.xpath(showResultsButtonLocator)).click();
+    }
+    public void openBusSearchPageFromVehicle() {
+        WebElement vehicleTabElement = driver.findElement(By.xpath(vehicleTabLocator));
+        WebElement busInDropDownElement = driver.findElement(By.xpath(busInDropDownLocator));
+        actions.moveToElement(vehicleTabElement).moveToElement(busInDropDownElement).click().build().perform();
     }
 }

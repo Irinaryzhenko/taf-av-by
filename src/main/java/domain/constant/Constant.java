@@ -44,4 +44,5 @@ public class Constant {
     public final static String VIN_CHECK_SUCCESS_MESSAGE = "Купить отчёт";
     public final static String VIN_CODE_NUMBER_ERROR_MESSAGE = "VIN-номер состоит из 17 символов";
     public final static String VIN_CODE_GLOBAL_ERROR_SCREEN_MESSAGE = "Что-то сломалось";
+    public final static String BUS_PAGE_TITLE_TEXT = "Продажа автобусов в Беларуси";
 }
