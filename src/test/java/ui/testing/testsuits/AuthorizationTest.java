@@ -41,4 +41,12 @@ public class AuthorizationTest extends BaseTest {
         LoginSteps.fillAuthDataWithValidCredentials();
         LoginSteps.checkAuthorizationSuccess();
     }
+    @DisplayName("Check log out")
+    @Test
+    public void logOut() {
+        LoginSteps.openHomePageSubmitCookies();
+        LoginSteps.openLoginFormViaEmail();
+        LoginSteps.fillAuthDataWithValidCredentials();
+        LoginSteps.logOut();
+    }
 }

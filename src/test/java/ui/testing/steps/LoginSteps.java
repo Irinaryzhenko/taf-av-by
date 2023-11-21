@@ -67,4 +67,8 @@ public class LoginSteps extends CommonSteps{
          Assertions.assertEquals(Constant.LOGIN_NEEDED_TITLE, loginFormPage.getLogInTitleText());
          logger.info("User needs to authorize");
     }
+    public static void logOut() {
+        PersonalAccountPage personalAccountPage = new PersonalAccountPage();
+        personalAccountPage.clickLogOut();
+    }
 }

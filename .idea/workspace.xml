@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="change browser">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/po/PersonalAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/PersonalAccountPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/steps/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/LoginSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/AuthorizationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/AuthorizationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +62,23 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.VinCheckerTest">
+  <component name="RunManager" selected="JUnit.AuthorizationTest.logOut">
+    <configuration name="AuthorizationTest.logOut" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="taf-av-by" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ui.testing.testsuits.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ui.testing.testsuits" />
+      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.AuthorizationTest" />
+      <option name="METHOD_NAME" value="logOut" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AuthorizationTest.loginWithInvalidLoginValidPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
@@ -108,21 +127,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OpenPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="taf-av-by" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ui.testing.testsuits.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ui.testing.testsuits" />
-      <option name="MAIN_CLASS_NAME" value="ui.testing.testsuits.OpenPageTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="VinCheckerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
@@ -140,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AuthorizationTest.logOut" />
         <item itemvalue="JUnit.VinCheckerTest" />
         <item itemvalue="JUnit.AuthorizationTest.loginWithValidCredentials" />
         <item itemvalue="JUnit.AuthorizationTest.loginWithInvalidLoginValidPassword" />
         <item itemvalue="JUnit.AuthorizationTest.loginWithValidLoginInvalidPassword" />
-        <item itemvalue="JUnit.OpenPageTest" />
       </list>
     </recent_temporary>
   </component>
@@ -444,7 +448,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700118290761</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="change browser">
+      <created>1700118792429</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1700118792429</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -488,5 +499,16 @@
     <MESSAGE value="refactor code" />
     <MESSAGE value="change browser" />
     <option name="LAST_COMMIT_MESSAGE" value="change browser" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ui/testing/testsuits/AuthorizationTest.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
