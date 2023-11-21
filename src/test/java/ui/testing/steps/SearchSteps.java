@@ -149,7 +149,7 @@ public class SearchSteps extends CommonSteps {
         busSearchResultPage.getBusTitleSearchResults();
         busSearchResultPage.getBusPriceSearchResult();
         busSearchResultPage.getBusSearchParamsText();
-        Assertions.assertTrue((busSearchResultPage.getActualBusTitle().contains("Fiat Ducato"))
+        Assertions.assertTrue((busSearchResultPage.getActualBusTitle().contains(Constant.BUS_BRAND_SEARCH))
                         && busSearchResultPage.isBusPriceInRange()
                         && busSearchResultPage.isBusCapacityInRange()
                         && busSearchResultPage.isBusYearInRange()
