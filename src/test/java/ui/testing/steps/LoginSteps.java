@@ -22,30 +22,30 @@ public class LoginSteps extends CommonSteps{
     public static void fillAuthDataWithInvalidCredentials() {
         LoginFormPage loginFormPage = new LoginFormPage();
         logger.info("Invalid credentials have been generated and filled in login form");
-        loginFormPage.fillLoginPasswordField(faker.internet().emailAddress(),
-                faker.internet().password());
-        loginFormPage.submitAuthData();
+        loginFormPage
+                .fillLoginPasswordField(faker.internet().emailAddress(), faker.internet().password())
+                .submitAuthData();
     }
     public static void fillAuthDataWithValidloginInvalidPassword() {
         LoginFormPage loginFormPage = new LoginFormPage();
         logger.info("Invalid password has been generated , valid login has been filled in login form");
-        loginFormPage.fillLoginPasswordField(Constant.VALID_LOGIN,
-                faker.internet().password());
-        loginFormPage.submitAuthData();
+        loginFormPage
+                .fillLoginPasswordField(Constant.VALID_LOGIN, faker.internet().password())
+                .submitAuthData();
     }
     public static void fillAuthDataInvalidLoginValidPasswords() {
         LoginFormPage loginFormPage = new LoginFormPage();
         logger.info("Invalid Login has been generated and filled in the login form with valid password");
-        loginFormPage.fillLoginPasswordField(faker.internet().emailAddress(),
-                Constant.VALID_PASSWORD);
-        loginFormPage.submitAuthData();
+        loginFormPage
+                .fillLoginPasswordField(faker.internet().emailAddress(), Constant.VALID_PASSWORD)
+                .submitAuthData();
     }
     public static void fillAuthDataWithValidCredentials() {
         LoginFormPage loginFormPage = new LoginFormPage();
         logger.info("Valid credentials have been filled in the login form");
-        loginFormPage.fillLoginPasswordField(Constant.VALID_LOGIN,
-                Constant.VALID_PASSWORD);
-        loginFormPage.submitAuthData();
+        loginFormPage
+                .fillLoginPasswordField(Constant.VALID_LOGIN, Constant.VALID_PASSWORD)
+                .submitAuthData();
     }
     public static void checkErrorMessageLoginInvalidCredentials() {
         LoginFormPage loginFormPage = new LoginFormPage();

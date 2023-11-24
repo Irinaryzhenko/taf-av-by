@@ -20,19 +20,22 @@ public class LoginFormPage {
     public LoginFormPage() {
         this.driver = Driver.getDriver();
     }
-    public void openLoginFormViaMail() {
+    public LoginFormPage openLoginFormViaMail() {
         Driver.waitFor(3);
        driver.findElement(By.xpath(loginViaMailLocator)).click();
+       return this;
     }
-    public void fillLoginPasswordField(String loginText, String passwordText) {
+    public LoginFormPage fillLoginPasswordField(String loginText, String passwordText) {
         driver.findElement(By.xpath(loginInputFieldLocator)).sendKeys(loginText);
         driver.findElement(By.xpath(passwordInputFieldLocator)).sendKeys(passwordText);
         new WebDriverWait(driver, Duration.ofSeconds(5))
                 .until(ExpectedConditions
                         .presenceOfAllElementsLocatedBy(By.xpath(authFormLocator)));
+        return this;
     }
-    public void submitAuthData() {
+    public LoginFormPage submitAuthData() {
         driver.findElement(By.xpath(submitAuthDataButtonLocator)).click();
+        return this;
     }
     public String getErrorMessageText() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
