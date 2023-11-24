@@ -3,6 +3,7 @@ package po;
 import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
@@ -28,9 +29,11 @@ public class BusPage {
         this.driver = Driver.getDriver();
     }
     public void selectBusBrand() {
-        new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(3))
-                .until(ExpectedConditions
-                        .presenceOfElementLocated(By.xpath(selectedBusLocator))).click();
+        Driver.waitFor(3);
+                driver.findElement(By.xpath(selectedBusLocator)).click();
+//        new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(3))
+//                .until(ExpectedConditions
+//                        .presenceOfElementLocated(By.xpath(selectedBusLocator))).click();
     }
     public void selectBusModel() {
         new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(3))

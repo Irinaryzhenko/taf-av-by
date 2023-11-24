@@ -185,5 +185,6 @@ public class HomePage {
         WebElement vehicleTabElement = driver.findElement(By.xpath(vehicleTabLocator));
         WebElement busInDropDownElement = driver.findElement(By.xpath(busInDropDownLocator));
         actions.moveToElement(vehicleTabElement).moveToElement(busInDropDownElement).click().build().perform();
+        Driver.waitFor(2);
     }
 }
