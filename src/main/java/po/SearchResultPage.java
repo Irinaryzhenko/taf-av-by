@@ -21,6 +21,7 @@ public class SearchResultPage {
     private String carPriceLocator = "//div[@class = 'listing-item__priceusd']";
     private String busPriceLocator = "//div[@class = 'listing-item__priceusd']";
     private String actualTopTitle;
+
     private boolean isTopYearInRange;
     private boolean isTopPriceInRange;
     private boolean isTopCapacityInRange;
@@ -68,7 +69,7 @@ public class SearchResultPage {
         } catch (Exception e) {
             logger.error("No top text was found");
         }
-        return null;
+        return "";
     }
 
     public void getCarSearchTopResult() {
@@ -90,6 +91,7 @@ public class SearchResultPage {
             double actualTopCapacity = Double.parseDouble(arr[1].substring(0, 3));
             isTopCapacityInRange = actualTopCapacity >= 1.6 && actualTopCapacity <= 3.0;
         } else {
+//            actualTopTitle = "";
             logger.error("There is no top car offer!");
         }
     }

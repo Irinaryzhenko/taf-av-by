@@ -9,7 +9,7 @@ public class Constant {
     public final static String SEARCH_CUSTOM_TEXT_QUERY_MULTIROULE = "https://cars.av.by/filter?brands[0][brand]=589&description=%D0%BC%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D1%80%D1%83%D0%BB%D1%8C";
     public final static String SEARCH_BODY_TYPE_CONVERTIBLE = "https://cars.av.by/filter?body_type[0]=7";
     public final static String SEARCH_BY_BRAND_ACURA = "https://cars.av.by/acura";
-    public final static  String SEARCH_BY_TRANSMISSION_TYPE_AUTOMATIC = "https://cars.av.by/filter?brands[0][brand]=1&transmission_type=1";
+    public final static  String SEARCH_BY_TRANSMISSION_TYPE_AUTOMATIC = "https://cars.av.by/filter?brands[0][brand]=1&transmission_type[0]=1";
     public final static String FINANCE_SEARCH_URL = "https://api.av.by/finance/products/search";
     public final static String HOME_URL = "https://av.by/";
     public final static String HOME_PAGE_CONTENT_TYPE = "text/html; charset=utf-8";
@@ -19,7 +19,7 @@ public class Constant {
     public final static String INFO_URL = "https://av.by/pages/info";
     public final static String FINANCE_URL = "https://av.by/finance";
     public final static String VIN_CHECKER_URL = "https://av.by/vin";
-    public static final String CAR_BRAND_SEARCH = "Audi Q2";
+    public static final String CAR_BRAND_SEARCH = "Audi A6";
     public final static String VALID_LOGIN = "platinumfoxirina@gmail.com";
     public final static String VALID_PASSWORD = "qatestteam123";
     public final static String HOME_PAGE_COPYRIGHT = "© 2001, ООО «Автоклассифайд», УНП 192787977, Минск, ул. Кутузова, 15";

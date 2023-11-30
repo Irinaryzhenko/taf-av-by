@@ -27,7 +27,7 @@ public class HomePage {
     private String brandDropdownButtonLocator = "//span[@class ='dropdown-floatlabel__value'][text() = 'Марка']";
     private String selectedCarLocator = "//li[@class ='dropdown__listitem']/ button[@data-item-label = 'Audi']";
     private String modelDropdownButtonLocator = "//span[@class = 'dropdown-floatlabel__value'][text() = 'Модель']";
-    private String selectModelLocator = "//li[@class ='dropdown__listitem']/button[@data-item-label = 'Q2']";
+    private String selectModelLocator = "//li[@class ='dropdown__listitem']/button[@data-item-label = 'A6']";
     private String carGenerationDropDownLocator = "//span[@class = 'dropdown-floatlabel__value'][text() = 'Поколение']";
     private String selectedCarGenerationLocator = "//div[@class = 'dropdown__card']";
     private String yearFromDropDownLocator = "//span[@class = 'dropdown-floatlabel__value'][text() = 'Год от']";

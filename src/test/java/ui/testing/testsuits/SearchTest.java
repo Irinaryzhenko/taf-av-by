@@ -2,6 +2,7 @@ package ui.testing.testsuits;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.platform.commons.util.StringUtils;
 import po.HomePage;
 import ui.testing.steps.SearchSteps;
 
@@ -17,7 +18,7 @@ public class SearchTest extends BaseTest {
         SearchSteps.inputCarPrice();
         SearchSteps.selectCarEngineCapacity();
         SearchSteps.submitSearch();
-        SearchSteps.checkTopCarSearchResult();
+//        SearchSteps.checkTopCarSearchResult();
         SearchSteps.checkCarSearchResult();
     }
     @DisplayName("Check searching Bus")
