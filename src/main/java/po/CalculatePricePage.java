@@ -39,7 +39,8 @@ public class CalculatePricePage {
         return actualCalculateResult;
     }
     public void checkPriceResult() {
-        System.out.println(actualCalculateResult);
-        Assertions.assertTrue(actualCalculateResult.contains("~")&& actualCalculateResult.contains("$"));
+        int price = Integer.parseInt(actualCalculateResult.replaceAll("[^0-9]", ""));
+        Assertions.assertTrue((actualCalculateResult.contains("~")&&actualCalculateResult.contains("$"))
+                && (price > 15000 && price < 30000));
     }
 }
