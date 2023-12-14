@@ -44,6 +44,8 @@ public class HomePage {
     private String selectedCapacityUntilLocator = "//ul[@class = 'dropdown-list dropdown-list--opened']/li[@class = 'dropdown__listitem']/button[@data-item-label = '3,0 л.']";
     private String showResultsButtonLocator = "//div[@class = 'filter__show-result']";
     private String busInDropDownLocator = "//a[@href='https://bus.av.by']/span[@class = 'nav__dropdown-text']";
+    private String calculatePriceDropDownLocator = "//span[@class = 'nav__dropdown-text'][text()='Оценка стоимости автомобиля']";
+
     Actions actions = new Actions(Driver.getDriver());
     private static final Logger logger = LoggerFactory.getLogger(HomePage.class);
     public HomePage() {
@@ -185,6 +187,12 @@ public class HomePage {
         WebElement vehicleTabElement = driver.findElement(By.xpath(vehicleTabLocator));
         WebElement busInDropDownElement = driver.findElement(By.xpath(busInDropDownLocator));
         actions.moveToElement(vehicleTabElement).moveToElement(busInDropDownElement).click().build().perform();
+        Driver.waitFor(2);
+    }
+    public void openCalculatePriceFromVehicle() {
+        WebElement vehicleTabElement = driver.findElement(By.xpath(vehicleTabLocator));
+        WebElement calculatePriceInDropDownElement = driver.findElement(By.xpath(calculatePriceDropDownLocator));
+        actions.moveToElement(vehicleTabElement).moveToElement(calculatePriceInDropDownElement).click().build().perform();
         Driver.waitFor(2);
     }
 }

@@ -5,8 +5,8 @@ import org.junit.jupiter.api.AfterEach;
 
 public class BaseTest {
 
-    @AfterEach
-    public void closeDriver() {
-        Driver.quitDriver();
-    }
+//    @AfterEach
+//    public void closeDriver() {
+//        Driver.quitDriver();
+//    }
 }

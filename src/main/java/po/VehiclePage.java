@@ -13,6 +13,7 @@ public class VehiclePage {
     private String transportTitleLocator = "//h1[@class = 'heading__text']";
     private String busPageTitleLocator = "//div[@class = 'heading__main']";
 
+
     public VehiclePage() {
         driver = Driver.getDriver();
     }
