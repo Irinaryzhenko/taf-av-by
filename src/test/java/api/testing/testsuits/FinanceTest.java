@@ -19,7 +19,7 @@ public class FinanceTest {
     @DisplayName("Check offer for credits")
     @Test
     public void checkCreditOffers() {
-        int generalCreditQuantity = 18;
+        int generalCreditQuantity = 17;
         given().body(FinanceTestData.getAllCreditOffersRequestBody())
                 .header(CONTENT_TYPE_HEADER, ContentType.JSON)
                 .when().post(FINANCE_SEARCH_URL)
@@ -33,7 +33,7 @@ public class FinanceTest {
     @DisplayName("Check offer for new car credits")
     @Test
     public void checkOffersForNewCarCredit() {
-        int newCarCreditQuantity = 2;
+        int newCarCreditQuantity = 1;
         given().body(FinanceTestData.getNewCarCreditOfferRequestBody())
                 .header((CONTENT_TYPE_HEADER), ContentType.JSON)
                 .when().post(FINANCE_SEARCH_URL)
@@ -47,7 +47,7 @@ public class FinanceTest {
     @DisplayName("Check offer for truck credits")
     @Test
     public void checkOffersForTruckCredit() {
-        int truckCreditQuantity = 7;
+        int truckCreditQuantity = 6;
         given().body(FinanceTestData.getTruckCreditOfferRequestBody())
                 .header(CONTENT_TYPE_HEADER, ContentType.JSON)
                 .when().post(FINANCE_SEARCH_URL)
