@@ -36,7 +36,10 @@ public class CalculatePricePage {
     }
     public String getResultPriceText() {
         actualCalculateResult = driver.findElement(By.xpath(resultPriceLocator)).getText();
-        return actualCalculateResult;
+        if (actualCalculateResult != null) {
+            return actualCalculateResult;
+        } else
+            return "";
     }
     public void checkPriceResult() {
         int price = Integer.parseInt(actualCalculateResult.replaceAll("[^0-9]", ""));

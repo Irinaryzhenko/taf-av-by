@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="add test for checking price">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="refactor code">
       <change beforePath="$PROJECT_DIR$/src/main/java/po/CalculatePricePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/CalculatePricePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/steps/CalculationPriceSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/CalculationPriceSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,13 +158,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1695906014273</updated>
-    </task>
-    <task id="LOCAL-00006" summary="add checkSearchResult method">
-      <created>1698305629505</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1698305629505</updated>
     </task>
     <task id="LOCAL-00007" summary="add checkSearchTopCarResult method">
       <created>1698387476757</created>
@@ -504,7 +495,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702546993578</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="refactor code">
+      <created>1702549888674</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1702549888674</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -545,8 +543,8 @@
     <MESSAGE value="add logger for logout" />
     <MESSAGE value="add Bus page open test" />
     <MESSAGE value="add search bus test" />
-    <MESSAGE value="refactor code" />
     <MESSAGE value="add test for checking price" />
-    <option name="LAST_COMMIT_MESSAGE" value="add test for checking price" />
+    <MESSAGE value="refactor code" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor code" />
   </component>
 </project>

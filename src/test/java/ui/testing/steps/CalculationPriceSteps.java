@@ -22,5 +22,6 @@ public class CalculationPriceSteps extends CommonSteps{
         calculatePricePage.getResultPriceText();
         logger.info("Car price has been get");
         calculatePricePage.checkPriceResult();
+        logger.info("Car price has been checked and correct");
     }
 }
