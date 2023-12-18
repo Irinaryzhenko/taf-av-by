@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="refactor code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/FinanceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/testing/testsuits/FinanceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/po/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/steps/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/LoginSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/OpenPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/OpenPageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +63,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CalculatePriceTest.checkCalculationPrice">
+  <component name="RunManager" selected="JUnit.SearchTest.searchCarByPopularParams">
     <configuration name="CalculatePriceTest.checkCalculationPrice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
@@ -143,8 +145,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CalculatePriceTest.checkCalculationPrice" />
         <item itemvalue="JUnit.SearchTest.searchCarByPopularParams" />
+        <item itemvalue="JUnit.CalculatePriceTest.checkCalculationPrice" />
         <item itemvalue="JUnit.SearchTest.searchBusByParams" />
         <item itemvalue="JUnit.SearchTest" />
         <item itemvalue="JUnit.SearchCarTest.searchingByTransmissionType" />
@@ -159,13 +161,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1695906014273</updated>
-    </task>
-    <task id="LOCAL-00008" summary="add logger config">
-      <created>1698391101608</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1698391101608</updated>
     </task>
     <task id="LOCAL-00009" summary="update gitignore file">
       <created>1698393423133</created>
@@ -503,7 +498,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702550394894</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="refactor code">
+      <created>1702577239752</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1702577239752</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -547,5 +549,20 @@
     <MESSAGE value="add test for checking price" />
     <MESSAGE value="refactor code" />
     <option name="LAST_COMMIT_MESSAGE" value="refactor code" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/ui/testing/testsuits/SearchTest.java</url>
+          <line>10</line>
+          <properties class="ui.testing.testsuits.SearchTest" method="searchCarByPopularParams">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

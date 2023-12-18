@@ -1,10 +1,12 @@
 package po;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import driver.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
@@ -107,7 +109,10 @@ public class HomePage {
     }
 
     public void openBrandDropDownMenu() {
-        driver.findElement(By.xpath(brandDropdownButtonLocator)).click();
+        Driver.waitFor(2);
+        WebElement carBrandElement = driver.findElement(By.xpath(brandDropdownButtonLocator));
+        actions.scrollToElement(carBrandElement).build().perform();
+        carBrandElement.click();
     }
 
     public void selectCarBrand() {

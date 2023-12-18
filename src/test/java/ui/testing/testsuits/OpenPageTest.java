@@ -99,5 +99,5 @@ public class OpenPageTest extends BaseTest {
             VehiclePage vehiclePage = new VehiclePage();
             Assertions.assertEquals(Constant.BUS_PAGE_TITLE_TEXT, vehiclePage.getBusPageTitleText());
             logger.info("Bus page is opened");
-        }
+    }
 }
