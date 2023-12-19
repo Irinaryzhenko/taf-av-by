@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="refactor code">
+    <list default="true" id="476c23bc-13c9-4821-92e3-5d6fdbae6800" name="Changes" comment="add action scroll to element for searching element">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/po/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/po/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/steps/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/steps/LoginSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/OpenPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ui/testing/testsuits/OpenPageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +60,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SearchTest.searchCarByPopularParams">
+  <component name="RunManager" selected="JUnit.FinanceTest.checkOffersForTruckCredit">
     <configuration name="CalculatePriceTest.checkCalculationPrice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
@@ -80,7 +77,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchCarTest.searchingByTransmissionType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FinanceTest.checkOffersForTruckCredit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="taf-av-by" />
       <extension name="coverage">
         <pattern>
@@ -89,8 +86,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="api.testing.testsuits" />
-      <option name="MAIN_CLASS_NAME" value="api.testing.testsuits.SearchCarTest" />
-      <option name="METHOD_NAME" value="searchingByTransmissionType" />
+      <option name="MAIN_CLASS_NAME" value="api.testing.testsuits.FinanceTest" />
+      <option name="METHOD_NAME" value="checkOffersForTruckCredit" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -145,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SearchTest.searchCarByPopularParams" />
+        <item itemvalue="JUnit.FinanceTest.checkOffersForTruckCredit" />
         <item itemvalue="JUnit.CalculatePriceTest.checkCalculationPrice" />
+        <item itemvalue="JUnit.SearchTest.searchCarByPopularParams" />
         <item itemvalue="JUnit.SearchTest.searchBusByParams" />
         <item itemvalue="JUnit.SearchTest" />
-        <item itemvalue="JUnit.SearchCarTest.searchingByTransmissionType" />
       </list>
     </recent_temporary>
   </component>
@@ -161,13 +158,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1695906014273</updated>
-    </task>
-    <task id="LOCAL-00009" summary="update gitignore file">
-      <created>1698393423133</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1698393423133</updated>
     </task>
     <task id="LOCAL-00010" summary="add logger&#10;refactor code">
       <created>1698397126872</created>
@@ -505,7 +495,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702577239752</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="add action scroll to element for searching element">
+      <created>1702900468610</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1702900468610</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -523,7 +520,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update gitignore file" />
     <MESSAGE value="add logger&#10;refactor code" />
     <MESSAGE value="update readme" />
     <MESSAGE value="Refactor constant class" />
@@ -548,7 +544,8 @@
     <MESSAGE value="add search bus test" />
     <MESSAGE value="add test for checking price" />
     <MESSAGE value="refactor code" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor code" />
+    <MESSAGE value="add action scroll to element for searching element" />
+    <option name="LAST_COMMIT_MESSAGE" value="add action scroll to element for searching element" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
