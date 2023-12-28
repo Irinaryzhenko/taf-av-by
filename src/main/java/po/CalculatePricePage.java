@@ -4,6 +4,9 @@ import driver.Driver;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.time.Duration;
 
 public class CalculatePricePage {
@@ -18,13 +21,17 @@ public class CalculatePricePage {
         driver = Driver.getDriver();
     }
     public void selectCarBrandForCalculation() {
+        new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions
+                .presenceOfElementLocated(By.xpath(selectCarBrandCalculationLocator)));
         driver.findElement(By.xpath(selectCarBrandCalculationLocator)).click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        new WebDriverWait(driver, Duration.ofSeconds(3));
     }
 
     public void selectCarModelCalculatorLocator() {
+        new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions
+                .presenceOfElementLocated(By.xpath(selectCarModelCalculatorLocator)));
         driver.findElement(By.xpath(selectCarModelCalculatorLocator)).click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        new WebDriverWait(driver, Duration.ofSeconds(3));
     }
     public void selectCarYearCalculatorLocator() {
         driver.findElement(By.xpath(selectCarYearCalculatorLocator)).click();
@@ -32,9 +39,11 @@ public class CalculatePricePage {
     }
     public void selectCarGenerationCalculatorLocator() {
         driver.findElement(By.xpath(selectGenerationLocator)).click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        new WebDriverWait(driver, Duration.ofSeconds(3));
     }
     public String getResultPriceText() {
+        new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions
+                .presenceOfElementLocated(By.xpath(resultPriceLocator)));
         actualCalculateResult = driver.findElement(By.xpath(resultPriceLocator)).getText();
         if (actualCalculateResult != null) {
             return actualCalculateResult;
